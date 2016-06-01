@@ -1,4 +1,3 @@
-
 Human.py
 =======
 
@@ -31,15 +30,21 @@ Running Human.py couldn't be easier, simply cd to the correct directory.
 
 And run the application (In this example we will monitor the www-data user).
 
-`/opt/human.py$` **`python ./human.py www-data`**
+`/opt/human.py$` **`python ./human.py`**
+    
+        Please run only as root
+        I want good privilage separation with these log files
+To run in root, just simply:
+
+`/opt/human.py$` **`sudo su`**
 
 This will show you the very very simple help dialog.
 
-		Human identification on service accounts
-		Proper Usage
-		human.py <username_to_monitor>
-		or
-		human.py <username_to_stop_monitoring> stop
+        Human identification on service accounts
+        Proper Usage
+        ./human.py <username_to_monitor>
+        or
+        ./human.py <username_to_stop_monitoring> stop
 
 Example 1: Setting up Monitoring on a service account
 -----------------------------------------------------
@@ -47,11 +52,11 @@ Example 1: Setting up Monitoring on a service account
 To set up monitoring on a service account run the tool with the name of the 
 account as the first command line argument.
 
-`/opt/human.py$` **`python ./human.py`**
+`/opt/human.py#` **`python ./human.py www-data`**
 
-	Starting mon service
-	NO ALERT SERVICE ATTACHED
-	ALERTS WILL BE PIPED TO STDOUT
+        Starting mon service
+        NO ALERT SERVICE ATTACHED
+        ALERTS WILL BE PIPED TO STDOUT
 
 The quasi error we can see in the output simply tells us that there is no
 dedicated alert service attached.  As such, alerts will appear in the output
@@ -60,8 +65,8 @@ human.py and setting the proper variables.
 
 At this point, if a human makes an error while using the irc account, an alert will 
 appear in our output.
-		Alert <www-data> is acting like a human.
-		
+        Alert <www-data> is acting like a human.
+        
 Example 2: Cancelling monitoring and purging records.
 -----------------------------------------------------
 
@@ -74,14 +79,14 @@ to output errors to this log file.
 
 Both of these two changes are reversed when you cancel monitoring.
 
-To cancel monitoring, simply run the script, with the account name as the first
-argument.  And the word "stop" as the second.
+To cancel monitoring, simply run the script in another terminal with the account name as the first argument and the word "stop" as the second.
 
-`/opt/human.py$` **`python ./human.py www-data stop`**
+`/opt/human.py#` **`python ./human.py www-data stop`**
 
-		User Monitoring already configured
-		Proceeding with monitoring.
-		Ending monitoring of User.
+        User Monitoring already configured
+        Proceeding with monitoring.
+        Ending monitoring of User.
+        
+This will delete the log file of the account. Because of this, the terminal that was running human.py will repeatedly output that the file is missing. Just Ctrl-c to stop it.
 
-
-
+        cat: /var/log/human/www-data: No such file or directory
