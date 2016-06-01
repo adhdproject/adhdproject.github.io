@@ -1,4 +1,3 @@
-
 OpenBAC POC
 =======
 
@@ -50,7 +49,13 @@ initialize the construct in order to build these two elements.
 
 **`cd /opt/OpenBAC/`**
 
-`/opt/OpenBAC$` **`python ./initialize.py`**
+`/opt/OpenBAC$` **`sudo python ./initialize.py`**
+
+        gold.chain
+        passwd
+        Done
+        Should now be initialized
+        Run cleanup.sh to revert
 
 Next we will add a user.
 
@@ -64,20 +69,20 @@ Make sure you are in the correct directory.
 
 Then run "add_user.py" and follow the prompts.
 
-`/opt/OpenBAC` **`python ./add_user.py`**
+`/opt/OpenBAC` **`sudo python ./add_user.py`**
 
-Put in your username, and your password of choise.  The output will 
+Put in your username, and your password of choice.  The output will 
 reflect everything the script does, including some debug data. 
 
-		[Username]: spectre
-		[Password]: pale_king
-		
-		***Debug Data***
-		Data, len: 9c4134c3a6c517cff9ac35b66889413d 32 Address:   19
-		Binary Output: 
-		
-		Username: spectre
-		Hash: faa53508e1643045cff236b5b2432fac31
+        [Username]: spectre
+        [Password]: pale_king
+        
+        ***Debug Data***
+        Data, len: 9c4134c3a6c517cff9ac35b66889413d 32 Address:   19
+        Binary Output: 
+        
+        Username: spectre
+        Hash: faa53508e1643045cff236b5b2432fac31
 
 Now you have a user registered.  If you want to check on your user
 you can look inside the passwd file generated in the OpenBAC directory.
@@ -88,6 +93,16 @@ Example 3: Authentication
 There is a final script that allows you to authenticate users.  
 
 `/opt/OpenBAC` **`python ./auth_user.py`**
+
+        Enter username: spectre
+        Enter password: pale_king
+        spectre:3e02c1058afc820e:c40ec8fe94806b72e36098e09d142c4729
+    
+        Decrypted Data: 17bbb54f34bc339d1c339a41311302ecf5
+        Decrypted Data Length: 34
+        Address: 23
+        Content, len: bbb54f34bc339d1c339a41311302ecf5 32
+        Access Allowed: True
 
 You can attempt to authenticate with your user using correct and incorrect
 passwords.  Everything should work perfectly.  If you manage to find something
