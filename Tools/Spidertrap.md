@@ -82,7 +82,7 @@ Follow the instructions in [Example 1: Basic Usage] or
 open a new terminal and tell wget to mirror the website. Wget will run
 until either it or Spidertrap is killed. Type Ctrl-c to kill wget.
 
-`$` **`wget -m http://127.0.0.1:8000`**
+`$` **`sudo wget -m http://127.0.0.1:8000`**
 
         --2013-01-14 12:54:15-- http://127.0.0.1:8000/
 

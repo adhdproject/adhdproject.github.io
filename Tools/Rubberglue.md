@@ -53,10 +53,10 @@ Example 1: Setting a Trap
 
 For this example, let's create a simple trap with Rubberglue.
 
-The usage is very simple.  If we want to have rubberglue listen on port 21
+The usage is very simple.  If we want to have rubberglue listen on port 4444
 we just run it like this.
 
-`/opt/rubberglue` **`python ./rubberglue.py 21`**
+`/opt/rubberglue` **`sudo python ./rubberglue.py 4444`**
 
 That's it.  
 

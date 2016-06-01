@@ -1,4 +1,3 @@
-
 Sweeper
 =======
 
@@ -36,9 +35,9 @@ And run the script
 
 The help dialog will be displayed.
 
-		Improper Usage
-		More like this...
-		sweeper.py <port1> <port2> <port3>
+        Improper Usage
+        More like this...
+        sweeper.py <port1> <port2> <port3>
 
 Example 1: Setting a Trap
 -----------------------------------------
@@ -57,10 +56,25 @@ activity that visits more than one of sweeper's listening ports.
 
 As such, choose your ports wisely, based on your unique situation.
 
-For this example, we will use 21, 139, and 445.  
+For this example, we will use 86, 75, and 309.  
 
-`/opt/rubberglue` **`python ./sweeper.py 21 139 445`**
+`/opt/sweeper$` **`python ./sweeper.py 86 75 309`**
 
-That's it.  
+On another machine, try to netcat to the ADHD machine. Say the IP address of the ADHD machine is 192.168.56.101 and the IP address of the other machine is 192.168.56.1:
 
+`$` **`nc 192.168.56.101 86`**
 
+The output on the ADHD machine will look like this:
+
+        Connection ('192.168.56.1', 49884)->86
+
+Do this a couple more times with the same port or one of the other two ports. The ADHD machine will stop connections entirely and output this:
+
+        Actions taken against 192.168.56.1
+        IP blocked via Iptables
+        
+You can try again by flushting the IP tables.
+
+`/opt/sweeper$` **`sudo iptables -F`**
+
+And there you have it.
