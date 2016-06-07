@@ -43,7 +43,7 @@ And run the application
 As long as the script is configued correctly, it should now be listening
 for the panic email, ready to protect you!
 
-Note that this script requires access to a gmail account. Some accounts will restrict this and Lockdown won't be able to listen for the failsafe email. To remove this restriction, log into the listening gmail account, go to https://www.google.com/settings/security/lesssecureapps, and 'Turn On' access for less secure apps.
+Note that this script requires access to a gmail account. Some accounts will restrict this and Lockdown won't be able to listen for the failsafe email. To remove this restriction, log into the listening gmail account, go to [https://www.google.com/settings/security/lesssecureapps](https://www.google.com/settings/security/lesssecureapps), and 'Turn On' access for less secure apps.
 
 Example 1: Customizing the Configurations
 -----------------------------------------
