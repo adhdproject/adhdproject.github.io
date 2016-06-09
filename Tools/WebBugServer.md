@@ -64,7 +64,7 @@ web bug server running on your ADHD machine. Change into
 /opt/webbugserver/ and use the following command to edit the provided
 .doc file. Replace 192.168.1.137 in the command with the IP address you found above.
 
-`/opt/webbugserver$` **`sed -r 's://.*/web-bug-server://192.168.1.137/web-bug-server:g' web_bug.html > web_bug.doc`**
+`/opt/webbugserver$` **`sudo sed -r 's://.*/web-bug-server://192.168.1.137/web-bug-server:g' web_bug.html > web_bug.doc`**
 
 Next, you will need to move web\_bug.doc to another machine. You can use
 Linux (LibreOffice), Windows (Microsoft Word), or Mac OS (Microsoft Word

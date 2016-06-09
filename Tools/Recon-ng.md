@@ -1,4 +1,3 @@
-
 Recon-ng
 ============
 
@@ -75,6 +74,8 @@ To set a global option:
 
 `[recon-ng][default] >` **`set USER-AGENT Google Chrome`**
 
+        USER-AGENT => Google Chrome
+
 Globally set options are set in all modules.
 
 Example 1: Finding Hosts With google_site_web
@@ -138,6 +139,8 @@ To do that, run this command.
 
 `[recon-ng][default][google_site_web] >` **`set source google.com`**
 
+        SOURCE => google.com
+
 Make sure you do not put `www` before your target domain.  This module is going to be searching 
 for subdomains of the specified domain so will find `www` and any others on its own.
 
@@ -173,6 +176,20 @@ built-in commands or direct access to the database.
 From within Recon-ng run:
 
 `[recon-ng][default] >` **`show schema`**
+
+        +--------------------+
+        |    repositories    |
+        +--------------------+
+        | name        | TEXT |
+        | owner       | TEXT |
+        | description | TEXT |
+        | resource    | TEXT |
+        | category    | TEXT |
+        | url         | TEXT |
+        | module      | TEXT |
+        +--------------------+
+
+That's an example of one of the schemas.
 
 To show the database layout.
 
@@ -260,5 +277,4 @@ From another terminal run:
 `~$` **`firefox /home/adhd/.recon-ng/workspaces/default/results.html &`**
 
 There you go!!
-
 

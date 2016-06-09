@@ -1,4 +1,3 @@
-
 Pushpin
 =======
 
@@ -42,7 +41,7 @@ And run the main application with the `--no-check` flag to tell Recon-ng to not 
         Recon
         -----
           recon/locations-pushpins/flickr
-		  recon/locations-pushpins/instagram
+          recon/locations-pushpins/instagram
           recon/locations-pushpins/picasa
           recon/locations-pushpins/shodan
           recon/locations-pushpins/twitter
@@ -57,7 +56,7 @@ Example 1: Find Tweets Sent from Times Square
 
 Open a new terminal, change into the recon-ng directory and launch recon-ng:
 
-`/opt/recon-ng$` **`./recon-ng`**
+`/opt/recon-ng$` **`./recon-ng --no-check`**
 
 Twitter requires an API key to process our requests.
 To get an API key you will need to first create a new app.
@@ -66,13 +65,17 @@ Visit https://dev.twitter.com/apps and create a new app.
 
 As soon as the app is created you should be able to access the key and secret key.
 
-These can be entered into the recon-ng database from the recon-ng prompt as follows:
+These can be entered into the recon-ng database from the recon-ng prompt as follows (the X's should be replaced with the keys):
 
-`[recon-ng][default] >` **`keys add twitter_api XXXXXXXXX`**
+`[recon-ng][default] >` **`keys add twitter_api XXXXXXXXXXX`**
+
+        [*] Key 'twitter_api' added.
 
 and
 
 `[recon-ng][default] >` **`keys add twitter_secret XXXXXXXXXXXXXXXXXXXXXX`**
+
+        [*] Key 'twitter_secret' added.
 
 You should only have to enter these once.
 
@@ -81,6 +84,8 @@ Now lets add a location record into the database to target our desired location.
 Run these commands to add a location record pointed at Times Square:
 
 `[recon-ng][default] >` **`query insert into locations (latitude, longitude) values ("40.758871","-73.985132");`**
+
+    [*] 1 rows affected.
 
 Now that the fun part is out of the way, let's load up the twitter module.
 
@@ -109,7 +114,7 @@ Now let's run the module.
         -------
         SUMMARY
         -------
-        [*] 862 total (862 new) items found.
+        [*] 862 total (862 new) pushpins found.
 
 
 Once the module completes execution the data has been saved to the database.
@@ -119,7 +124,7 @@ To view it, we will need to use the reporting module.
 
 It's always a good idea to show the options before executing a module
 
-`[recon-ng][default][twitter] >` **`show options`**
+`[recon-ng][default][pushpin] >` **`show options`**
 
         Name            Current Value                  Req  Description
         --------------  -------------                  ---  -----------
@@ -133,9 +138,15 @@ We will have to set the LATITUDE and LONGITUDE and RADIUS values real quick.
 
 `[recon-ng][default][twitter] >` **`set LATITUDE 40.758871`**
 
+        LATITUDE => 40.758871
+
 `[recon-ng][default][twitter] >` **`set LONGITUDE -73.985132`**
 
+        LONGITUDE => -73.985132
+
 `[recon-ng][default][twitter] >` **`set RADIUS 1`**
+    
+        RADIUS => 1
 
 `[recon-ng][default][twitter] >` **`show options`**
 
@@ -154,7 +165,7 @@ That's better, now let's run this module
         [*] Media data written to '/home/adhd/pushpin_media.html'
         [*] Mapping data written to '/home/adhd/pushpin_map.html'
 
-Once the module executes, it should automatically open firefox to your report.
+Once the module executes, it should automatically open Firefox to your report.
 
 ![](Pushpin_files/image001.png)
 
@@ -170,5 +181,4 @@ They can be set focus on differing geographical locations.
 Gathering loads information into the database.
 
 Reporting takes information from the database and prepares it for human consumption.
-
 

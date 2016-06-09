@@ -44,7 +44,7 @@ Launching invisiport is very easy.  Just cd into the directory.
 
 And run the application
 
-`/opt/invisiport$` **`python ./invisiport.py`**
+`/opt/invisiport$` **`sudo python ./invisiport.py`**
 
 You shouldn't see any output.  But the terminal should hang.  That's okay.
 The script is running in the background with the default configurations.

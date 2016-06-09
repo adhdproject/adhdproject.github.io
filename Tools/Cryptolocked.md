@@ -32,7 +32,7 @@ To run Cryptolocked navigate to the install location and run the tool as follows
 
 `~$` **`cd /opt/cryptolocked`**
 
-`/opt/cryptolocked$` **`python2 ./cryptolocked.py`**
+`/opt/cryptolocked$` **`sudo python2 ./cryptolocked.py`**
 
 This will start Cryptolocked in basic, unarmed mode.
 
@@ -40,7 +40,9 @@ To trigger the simulated failsafe, either modify or delete the tripfile (test.tx
 directory from which you ran Cryptolocked.
 Let's trigger the failsafe.
 
-`/opt/cryptolocked$` **`rm -f test.txt`**
+`/opt/cryptolocked$` **`sudo rm -f test.txt`**
+
+Note in Example 4 that the script requires access to a gmail account. Some accounts will restrict this and Cryptolock will crash. To remove this restriction, log into the listening gmail account, go to [https://www.google.com/settings/security/lesssecureapps](https://www.google.com/settings/security/lesssecureapps), and 'Turn On' access for less secure apps.
 
 Video Walkthrough
 -----------------
@@ -54,7 +56,7 @@ Video Walkthrough
 Example 1: Debug Mode
 ---------------------
 From here on out, we will be calling Cryptolocked as root.
-To su to root simply:
+To su to root simply and then cd to /opt/cryptolocked:
 `~$` **`sudo su -`**
 
 Cryptolocked comes with a debug mode.  It is important to run this debug mode before arming the tool.  

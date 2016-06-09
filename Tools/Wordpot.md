@@ -30,7 +30,7 @@ To run the script, first cd to the wordpot directory.
 
 And run the application
 
-`/opt/wordpot$` **`python ./wordpot.py --help`**
+`/opt/wordpot$` **`sudo python ./wordpot.py --help`**
 
 This will show you the help dialog.
 
@@ -57,11 +57,11 @@ your situation.  With ADHD, by default you should have apache listening
 on port 80.  So you might need to specify an alternative port number, or
 to disable apache for the time that you're running this script.
 
-`/opt/wordpot$` **`python ./wordpot.py --port=8080`**
+`/opt/wordpot$` **`sudo python ./wordpot.py --port=4444`**
 
 It's really that easy.
 
 You can view your fancy new fake wordpress install by opening your web
-browser and navigating to "http://localhost:8080"
+browser and navigating to "http://localhost:4444"
 
 ![Wordpress](Wordpot_files/Wordpot_0.png)

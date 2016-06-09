@@ -1,4 +1,3 @@
-
 Lockdown
 =======
 
@@ -33,7 +32,7 @@ Usage
 -----
 
 
-Running Lockdown is easy, simply cd to the correct directory.
+Running Lockdown is easy, cd to the correct directory.
 
 `~$` **`cd /opt/lockdown`**
 
@@ -43,6 +42,8 @@ And run the application
 
 As long as the script is configued correctly, it should now be listening
 for the panic email, ready to protect you!
+
+Note that this script requires access to a gmail account. Some accounts will restrict this and Lockdown won't be able to listen for the failsafe email. To remove this restriction, log into the listening gmail account, go to [https://www.google.com/settings/security/lesssecureapps](https://www.google.com/settings/security/lesssecureapps), and 'Turn On' access for less secure apps.
 
 Example 1: Customizing the Configurations
 -----------------------------------------
@@ -68,8 +69,8 @@ It should now be listening.
 Example 2: Triggering the failsafe
 ----------------------------------
 
-In the event of an emergency, as long as everything is configured correctly;
-and actively running.  All you need to do to trigger the failsafe is email the 
-panic phrase you set, to the email you configured the script to listen on.
+In the event of an emergency, as long as everything is configured correctly
+and actively running, all you need to do to trigger the failsafe is email the 
+panic phrase you set to the email address you configured the script to listen on with the subject line "panic" (not case sensitive). A browser will open and it will automatically change the passwords in front of your eyes.
 
 It's that easy.
