@@ -136,19 +136,19 @@ It's always a good idea to show the options before executing a module
 
 We will have to set the LATITUDE and LONGITUDE and RADIUS values real quick.
 
-`[recon-ng][default][twitter] >` **`set LATITUDE 40.758871`**
+`[recon-ng][default][pushpin] >` **`set LATITUDE 40.758871`**
 
         LATITUDE => 40.758871
 
-`[recon-ng][default][twitter] >` **`set LONGITUDE -73.985132`**
+`[recon-ng][default][pushpin] >` **`set LONGITUDE -73.985132`**
 
         LONGITUDE => -73.985132
 
-`[recon-ng][default][twitter] >` **`set RADIUS 1`**
+`[recon-ng][default][pushpin] >` **`set RADIUS 1`**
     
         RADIUS => 1
 
-`[recon-ng][default][twitter] >` **`show options`**
+`[recon-ng][default][pushpin] >` **`show options`**
 
         Name            Current Value                  Req  Description
         --------------  -------------                  ---  -----------
@@ -160,7 +160,7 @@ We will have to set the LATITUDE and LONGITUDE and RADIUS values real quick.
 
 That's better, now let's run this module
 
-`[recon-ng][default][twitter] >` **`run`**
+`[recon-ng][default][pushpin] >` **`run`**
 
         [*] Media data written to '/home/adhd/pushpin_media.html'
         [*] Mapping data written to '/home/adhd/pushpin_map.html'
