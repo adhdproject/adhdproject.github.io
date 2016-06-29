@@ -29,7 +29,6 @@
   - [Jar-Combiner](Tools/Jar-Combiner.md)
   - [Sqlite Bug Server](Tools/SqliteBugServer.md)
   - [Web Bug Server](Tools/WebBugServer.md)
-  - [!Whosthere](Tools/Whosthere.md)
 
 [Absolution]()
 
