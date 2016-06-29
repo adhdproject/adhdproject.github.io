@@ -50,7 +50,6 @@
   - [Pushpin](Tools/Pushpin.md)
   - [Recon-ng](Tools/Recon-ng.md)
   - [SET](Tools/SET.md)
-  - [!Sidejack](Tools/Sidejack.md)
 
 
 
