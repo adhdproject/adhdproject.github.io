@@ -1,5 +1,5 @@
 
-Web Bug Server
+Sqlite Bug Server
 ==============
 
 Website
