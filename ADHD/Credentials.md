@@ -37,12 +37,6 @@ PostgreSQL
 |------------------|----------|---------------|
 | decloakuser      | adhd     | decloak       |
 
-Nova
-----
-
-| Username   | Password | Login                                                    |
-|------------|----------|----------------------------------------------------------|
-| nova       | toor     | Run command 'quasar' and visit: <https://127.0.0.1:8080> |
 
 BeEF
 ----

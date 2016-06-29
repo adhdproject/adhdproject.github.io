@@ -11,7 +11,6 @@
   - [Honey Ports](Tools/HoneyPorts.md)
   - [Invisiport](Tools/Invisiport.md)
   - [Kippo](Tools/Kippo.md)
-  - [Nova](Tools/Nova.md)
   - [OsChameleon](Tools/OsChameleon.md)
   - [PHP-HTTP-Tarpit](Tools/PHP-HTTP-Tarpit.md)
   - [Portspoof](Tools/Portspoof.md)
