@@ -60,22 +60,24 @@ the following command. You should see that the python2 process is
 listening on a bunch of ports. These are the ports that are configured
 by default in the config file.
 
-`$` **`sudo netstat -nlp | grep python2`**
+`$` **`sudo netstat -nlp | grep python`**
 
-        tcp  0  0  0.0.0.0:5900   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:110    0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:10000  0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:8080   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:21     0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:1433   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:1337   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:25     0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:44443  0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:1723   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:445    0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:3389   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:135    0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:5800   0.0.0.0:*  LISTEN  9020/python2
+        tcp  0  0  0.0.0.0:21   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:22    0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:1337  0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:25   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:1433     0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:44443   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:1723   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:445     0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:3389  0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:135   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:5800    0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:5900   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:110    0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:8080   0.0.0.0:*  LISTEN  567/python
+        tcp  0  0  0.0.0.0:10000   0.0.0.0:*  LISTEN  567/python
+
 
 Example 2: Triggering a Honeyport
 ---------------------------------

@@ -41,7 +41,7 @@ Launching rubberglue is super simple.  Just cd into the directory.
 
 And run the script
 
-`/opt/rubberglue$` **`python ./rubberglue.py`**
+`/opt/rubberglue$` **`sudo python ./rubberglue.py`**
 
 The help dialog will be displayed.
 
