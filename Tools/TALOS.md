@@ -184,11 +184,11 @@ You can add your own aliases too.  That way if you have a framework you're more 
 
 Simple edit the `aliases` file located in the `conf` directory.  You can append your new alias like so: 
 		
-		**`myalias, command`**
+**`myalias, command`**
 
 For example:
 
-		**`open, module`**
+**`open, module`**
 
 It's that easy.
 
@@ -202,7 +202,7 @@ For example, if you go to the prompt and type `load ` then hit **TAB** twice the
 
 `TALOS>>>` **`load `**
 
-		**`deploy/phantom/ssh/basic             local/honeyports/basic_multiple
+		deploy/phantom/ssh/basic             local/honeyports/basic_multiple
 		deploy/phantom/ssh/basic+            local/honeyports/invisiports
 		deploy/phantom/ssh/multi             local/honeyports/rubberglue
 		generate/phantom/basic               local/listener/phantom/basic
@@ -211,7 +211,6 @@ For example, if you go to the prompt and type `load ` then hit **TAB** twice the
 		local/detection/human_py             local/listener/webbug/local_save
 		local/detection/simple-pivot-detect  local/listener/webbug/no_save
 		local/honeyports/basic               local/spidertrap/basic
-		`**
 
 That is a basic rundown of the autocomplete and alias system within TALOS.
 
@@ -222,7 +221,7 @@ TALOS is at its most basic level, simply an interpreter.  It takes in commands f
 
 `TALOS>>>` **`help`**
 
-		**`# Available commands
+		# Available commands
 		#  1) help
 		#     A) help <module>
 		#     B) help <command>
@@ -248,7 +247,6 @@ TALOS is at its most basic level, simply an interpreter.  It takes in commands f
 		#     A) invoke <filename>
 		#  10) update
 		#  99) exit
-		`**
 
 
 One thing that you can do with TALOS to make your life even easier, is to script up certain functions.  
@@ -257,9 +255,9 @@ For example, if you find yourself constantly needing to launch a honeyport (simp
 
 To launch a honeyport on port 445 we would write out a script that looks like this:
 
-		**`load local/honeyports/basic
+		load local/honeyports/basic
 		set port 445
-		run -j`**
+		run -j
 
 We then have two choices for launching this script.
 
@@ -430,38 +428,38 @@ TALOS can accept conditional statements in scripts in the form of **if**s
 
 You can write these into your scripts like so:
 
-		**`if 1 == 1
+		if 1 == 1
 		echo 1
 		echo 2
 		echo 3
-		fi`**
+		fi
 
 Don't be afraid to use variables inside these conditionals.
 
-		**`if $count == 1
+		if $count == 1
 		exit
-		`**
+		
 
 **Goto Statements**
 
 TALOS accepts goto statements inside of scripts.  Place a marker (usually a line you have commented out).  Then jump to it.
 
-		**`#gohere
+		#gohere
 		echo 1
-		goto #gohere`**
+		goto #gohere
 
 **Loops**
 
 You can increment and decrement variables in TALOS.  Combine this with ifs and gotos and you can create loops.
 
-		**`set count 10
+		set count 10
 		#gohere
 		if $count > 0
 		dec count
 		echo $count
 		goto #gohere
 		fi
-		`**
+		
 
 **Helper Commands**
 
@@ -597,7 +595,7 @@ And finally, launch the module
 
 In another terminal on your system you can confirm that the module was successfully launched by checking to see if something is listening on the port you specified.
 
-`/opt/talos#` **`lsof -i -P | grep 31337`
+`/opt/talos#` **`lsof -i -P | grep 31337`**
 
 		python 21344 	adhd	10u   IPv4   1994461		0t0   TCP  *:31337	(LISTEN)
 
