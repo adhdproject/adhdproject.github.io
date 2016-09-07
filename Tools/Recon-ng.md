@@ -78,8 +78,8 @@ To set a global option:
 
 Globally set options are set in all modules.
 
-Example 1: Finding Hosts With google_site_web
----------------------------------------------
+Example 1: Finding Hosts With Bing
+----------------------------------
 
 Let's take a look at how a Recon-ng module is used.
 
@@ -89,7 +89,7 @@ If you haven't already started recon-ng execute:
 
 From the main menu run:
 
-`[recon-ng][default] >` **`use google_site_web`**
+`[recon-ng][default] >` **`use bing_domain_web`**
 
 Recon-ng has smart module selection, so you don't need the full path to the module.  
 If you have a unique string, recon-ng will select the associated module. If your string 
@@ -97,23 +97,24 @@ matches multiple modules, Recon-ng will present them to you.
 
 For example:
 
-`[recon-ng][default][google_site_web] >` **`use google`**
+`[recon-ng][default][bing_domain_web] >` **`use bing`**
 
-        [*] Multiple modules match 'google'.
+        [*] Multiple modules match 'bing'.
         
         Recon
         -----
-            recon/domains-hosts/google_site_api
-            recon/domains-hosts/google_site_web
+            recon/domains-hosts/bing_domain_api
+            recon/domains-hosts/bing_domain_web
+	    recon/hosts-hosts/bing_ip
 
 
-As you can see "google_site_web" is a string unique to that specific module, that is why it loaded.
+As you can see "bing_domain_web" is a string unique to that specific module, that is why it loaded.
 
 Now that we have the module loaded up, let's show the options to see what we need to set before we can run.
 
 It is always a good idea to show the options before attempting to execute a module.
 
-`[recon-ng][default][google_site_web] >` **`show options`**
+`[recon-ng][default][bing_domain_web] >` **`show options`**
 
         Name    Current Value  Req  Description
         ------  -------------  ---  -----------
@@ -123,7 +124,7 @@ It looks like we only have one option to set.
 
 As in the description of the SOURCE option, to see more about the module let's run 'show info'
 
-`[recon-ng][default][google_site_web] >` **`show info`**
+`[recon-ng][default][bing_domain_web] >` **`show info`**
 
         <<<Output has been truncated due to length>>>
         Source Options:
@@ -137,7 +138,7 @@ we are going to be setting it to a single string.
 
 To do that, run this command.
 
-`[recon-ng][default][google_site_web] >` **`set source google.com`**
+`[recon-ng][default][bing_domain_web] >` **`set source google.com`**
 
         SOURCE => google.com
 
@@ -146,12 +147,12 @@ for subdomains of the specified domain so will find `www` and any others on its 
 
 Next let's run the module:
 
-`[recon-ng][default][google_site_web] >` **`run`**
+`[recon-ng][default][bing_domain_web] >` **`run`**
 
       ----------
       GOOGLE.COM
       ----------
-      [*] URL: http://www.google.com/search?start=0&filter=0&q=site%3Agoogle.com
+      [*] URL: https://www.bing.com/search?first=0&q=domain%3Agoogle.com
       [*] classroom.google.com
       [*] news.google.com
       [*] www.google.com
@@ -208,7 +209,7 @@ You can select all data from any of these tables with the show command, for exam
         +----------------------------------------------------------------------------+
 
 This displays all the information known about the one host we captured in 
-[Example 1: Finding Hosts With google_site_web]
+[Example 1: Finding Hosts With Bing]
 
 You can also query the database from within Recon-ng via the query command.
 
