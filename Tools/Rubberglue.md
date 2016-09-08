@@ -60,4 +60,4 @@ we just run it like this.
 
 That's it.  
 
-
+NOTE: I'm assuming you'll want to test this.  If you choose to, I would recommend not testing the script from the same machine you have it running on.  This can create an infinite loop.  Just go grab a different machine on the network and use netcat or telnet or ssh or whatever to attempt to connect.  Remebr rubberglue is going to forward the connection back to your machine on the same port.  So if you have ssh listening on your "attacker" machine, and you have rubberglue listening on port 22 on your "victim" machine, when you connect the connection will be funneled back to your attacker's machine on port 22 and when you try to login, you'll be logging into yourself.

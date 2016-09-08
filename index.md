@@ -101,7 +101,7 @@ ADHD
 - [Pushpin](Tools/Pushpin.md)
     - [Example 1: Find Tweets Sent from Times Square](Tools/Pushpin.md#Example_1:_Find_Tweets_Sent_from_Times_Square)
 - [Recon-ng](Tools/Recon-ng.md)
-    - [Example 1: Finding Hosts With google\_site](Tools/Recon-ng.md#Example_1:_Finding_Hosts_With_google\_site)
+    - [Example 1: Finding Hosts With Bing](Tools/Recon-ng.md#Example_1:_Finding_Hosts_With_Bing)
     - [Example 2: Viewing Stored Data](Tools/Recon-ng.md#Example_2:_Viewing_Stored_Data)
     - [Example 3: Reporting From Within Recon-ng](Tools/Recon-ng.md#Example_3:_Reporting_From_Within_Recon-ng)
 - [Rubberglue](Tools/Rubberglue.md)
