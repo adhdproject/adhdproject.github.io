@@ -71,16 +71,16 @@ The command line arguments are as follows
     -p2 the path to the entrypoint for the second jar
 
 We have included two jar files in ADHD for your testing convenience.
-They are located in /home/adhd/Documents/jars
+They are located in /opt/jar-combiner/jars
 
 The first applet is jrdesktop
 
-    -j1 /home/adhd/Documents/jars/jrdesktop.jar
+    -j1 /opt/jar-combiner/jars/jrdesktop.jar
     -p1 jrdesktop/mainApplet.class
 
 The second applet is Honeybadger's geolocation applet
 
-    -j2 /home/adhd/Documents/jars/honey.jar
+    -j2 /opt/jar-combiner/jars/honey.jar
     -p2 honey.class
 
 To combine the jars first **`cd`** into the Jar-Combiner folder:
@@ -89,7 +89,7 @@ To combine the jars first **`cd`** into the Jar-Combiner folder:
 
 Run Jar-Combiner like so:
 
-`/opt/jar-combiner/Linux$` **`./joining.sh -j1 /home/adhd/Documents/jars/jrdesktop.jar -p1 jrdesktop/mainApplet.class -j2 /home/adhd/Documents/jars/honey.jar -p2 honey.class`**
+`/opt/jar-combiner/Linux$` **`./joining.sh -j1 /opt/jar-combiner/jars/jrdesktop.jar -p1 jrdesktop/mainApplet.class -j2 /opt/jar-combiner/jars/honey.jar -p2 honey.class`**
 
 When this operation is complete a new jar file should appear at `/opt/jar-combiner/Linux/finished.jar`.
 This is your combined jar file.
