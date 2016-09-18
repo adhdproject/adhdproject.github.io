@@ -87,7 +87,7 @@ You need to set `pointerlengths` and `arrayfile` to be equal to the values you d
 One final thing to keep in mind is that server.py works on a whitelist only basis.  It only accepts connections from hosts on its whitelist.  By default the loopback interface is the only whitelisted host (localhost).  If you need to run server.py on one machine, and connect to it from another you'll need to add that machine to the whitelist.
 
 Once everything is configured.  Simply run the server like so:
-/opt/openbac$` **`sudo ./server.py`**
+`/opt/openbac$` **`sudo ./server.py`**
 
 		#################
 		Listening...
