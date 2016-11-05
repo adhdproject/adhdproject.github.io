@@ -64,12 +64,14 @@ Creating a user in Honey Badger is super simple.
 
 Change into the Honey Badger admin directory
 
-`~$` **`cd /var/www/honeybadger/hb-admin`**
+`~$` **`cd /var/www/honeybadger/admin`**
 
 Now run create_user.py and follow the prompts to create a new administrative user.
 Make sure to sudo this next command!
 
-`/var/www/honeybadger/hb-admin$` **`sudo ./create_user.py`**
+NOTE: There is probably already a user by the name adhd as this is the default user for this distro.  You may want to create a user with a different name and password.  Or change this user's password by deleting it and recreating it with a new password.
+
+`/var/www/honeybadger/admin$` **`sudo ./create_user.py`**
 
         Username: adhd 
         Password: adhd
