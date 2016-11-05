@@ -169,8 +169,7 @@ They must both be on the same subnet.
 
 Note: Newer Linux operating systems like ADHD often have builtin protection against this attack. 
 This protection mechanism is found in **/proc/sys/net/ipv4/conf/all/arp_accept**. A **1** in this
-file means that ADHD is configured to accept unsolicited ARP responses. This setting is already 
-set for you, but you may verify it by inspecting this file.
+file means that ADHD is configured to accept unsolicited ARP responses.  You can set this value by running the following command as root **`echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept`**
 
 If our ADHD machine (running the Honeyports) is at 192.168.1.144 and we want to spoof 192.168.1.1
 
@@ -182,7 +181,7 @@ Let's start by performing our MITM attack.
 
 If you want to confirm that the MITM attack is working first find the MAC address of the Kali box.
 
-`~#` **`ifconfig -a | head -n 1 | cut -d" " -f 11`**
+`~#` **`ifconfig -a | head -n 1 | awk '{print $5}'`**
 
         00:0c:29:40:1c:d3
 
@@ -201,9 +200,9 @@ This will convince the Kali machine to send packets as the spoofed host.
 
 The last step is to connect from the Kali box to the ADHD machine on a Honeyport, as 192.168.1.1
 
-For this example, lets say that port 1337 is a Honeyport.
+For this example, lets say that port 3389 is a Honeyport as we used before in [Example 1: Monitoring A Port With HoneyPorts].
 
-`~#` **`nc 192.168.1.144 1337 -s 192.168.1.1`**
+`~#` **`nc 192.168.1.144 3389 -s 192.168.1.1`**
 
 It's that easy, if you list the firewall rules of the ADHD machine you should find a rule rejecting 
 connections from 192.168.1.1
