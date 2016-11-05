@@ -36,13 +36,14 @@ Usage
         --config  -c <config file>    Filename to load configuration from [REQUIRED]
         --verbose -v                  Verbose output
         --debug   -d                  Debug output (very noisy)
+	--timeout -t		      Ban timeout in seconds
 
 Example 1: Basic Usage
 ----------------------
 
 Change into the Bear Trap install directory and start Bear Trap.
 
-`/opt/beartrap$` **`sudo ruby bear_trap.rb -c config.yml`**
+`/opt/beartrap$` **`sudo ruby bear_trap.rb -c config.yml -t 600`**
 
 Now find the ADHD machine's IP address by opening a new terminal and
 using ifconfig.
@@ -96,4 +97,4 @@ address.
 
 `$` **`sudo iptables -D INPUT -s 192.168.1.194 -j DROP`**
 
-
+Or since we set the -t option in our command (ban timeout) you can just wait for the ban to expire after 10 minutes.
