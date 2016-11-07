@@ -24,7 +24,7 @@ Launching psad is super simple.
 
 You just need to start the service.  (NOTE: You will need to make sure everything is installed first.)
 
-`$` **`/etc/init.d/psad-init start`**
+`$` **`sudo /etc/init.d/psad start`**
 
 This will start psad, kmsgsd and psadwatchd.
 
@@ -40,7 +40,7 @@ However, most likely you will not need to touch the script at all.  The configur
 
 Assuming everything will most likely be fine though.  Let's head over to the location of the script and launch it.
 
-Note: depending on your specific setup, you may or may not be required to run the install script as root.  For the sake of this tutorial, we will be assuming you run all commands as root.
+Note: depending on your specific setup, you may or may not be required to run the install script as root.  For the sake of this tutorial, we will be assuming you run all commands as root.  If you are not root already please become root by running this command **`sudo su -`**
 
 `#` **`cd /opt/psad`**
 
