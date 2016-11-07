@@ -22,7 +22,7 @@ Install Location
 Usage
 -----
 
-Visit [http://127.0.0.1/honeybadger/demo.html](http://127.0.0.1/honeybadger/demo.html) to log your location.
+Visit [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php) to log your location.
 
 Visit [http://127.0.0.1/honeybadger/index.php](http://127.0.0.1/honeybadger/index.php) to view the connection map.
 
@@ -38,7 +38,7 @@ Video Walkthrough
 Example 1: Web Browser Share Location
 -------------------------------------
 
-Open the web browser and enter [http://127.0.0.1/honeybadger/demo.html](http://127.0.0.1/honeybadger/demo.html)
+Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
 into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/) 
 and clicking `Honey Badger (Location Tracker)`.
 
@@ -94,6 +94,8 @@ Now that you have created a user, you are ready to proceed onto
 Example 3: Viewing the Honey Badger Map
 ---------------------------------------
 
+Note: Before you are able to view the honeybadger map you will need a Google Maps API key.  You can get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key  --> Simply put that key in the top of badger.php where it says $API="".
+
 Open the web browser and enter
 [http://127.0.0.1/honeybadger/badger.php](http://127.0.0.1/honeybadger/badger.php)
 into the address bar. This address is also available as a link by
@@ -139,7 +141,7 @@ that you will be connecting to it from within a local network.
 
 In this case the IP address for the machine is 192.168.1.137. Now, from
 another machine that has an active wireless card and Java installed,
-connect to <http://192.168.1.137/honeybadger/demo.html>.
+connect to <http://192.168.1.137/honeybadger/demo.php>.
 
 Honey Badger will attempt to gather your
 location using a variety of techniques. First, it uses the web browsers
