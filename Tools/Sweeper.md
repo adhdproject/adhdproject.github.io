@@ -58,7 +58,7 @@ As such, choose your ports wisely, based on your unique situation.
 
 For this example, we will use 86, 75, and 309.  
 
-`/opt/sweeper$` **`python ./sweeper.py 86 75 309`**
+`/opt/sweeper$` **`sudo python ./sweeper.py 86 75 309`**
 
 On another machine, try to netcat to the ADHD machine. Say the IP address of the ADHD machine is 192.168.56.101 and the IP address of the other machine is 192.168.56.1:
 
