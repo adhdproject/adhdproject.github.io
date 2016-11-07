@@ -34,7 +34,7 @@ To run the script, first cd to the TALOS directory.
 
 And run the application
 
-`/opt/TALOS$` **`python ./talos.py`**
+`/opt/TALOS$` **`sudo python ./talos.py`**
 
 		####################################################
 		####################################################
@@ -263,7 +263,7 @@ We then have two choices for launching this script.
 
 First, we can launch this script when we launch TALOS by specifying the `--script` option.  Like so:
 
-`/opt/talos#` **`./talos.py --script=/path/to/my/script`**
+`/opt/talos#` **`sudo ./talos.py --script=/path/to/my/script`**
 
 Or, if we're already inside the TALOS interpreter, we can launch the script using the invoke command.
 

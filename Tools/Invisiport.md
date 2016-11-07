@@ -59,6 +59,10 @@ Example 1: Customizing the Configurations
 The configurations for invisiport are very easy to set.  Simply
 edit the variables at the front of the script to set their respective components.
 
+Use your favorite text editor.  Nano is a simple choice.
+
+`/opt/invisiport$` **`sudo nano invisiport.py`**
+
 You can set the whitelist by editing the "whitelist" variable.
 It is in a python list format.  Just add another address in this format
 to add to the whitelist.  Any address on the whitelist cannot be blacklisted.
@@ -70,6 +74,7 @@ you like.  By default they mimic an ftp, http, and smb server.
 The PORT variable is a simple integer variable.  This sets the trigger/listen port
 that will blacklist those connecting to it.
 
+When you're all done you can write your changes in nano by hitting ctrl+o then enter.  And exit with ctrl+x.
 You can also configure the blacklist variable to change the blacklist file.  This file
 records all blacklisted hosts.
 
