@@ -45,7 +45,7 @@ Launching simple-pivot-detect is super simple.  Just cd into the directory.
 
 And run the script
 
-`/opt/simple-pivot-detect$` **`python ./simple-pivot-detect.py`**
+`/opt/simple-pivot-detect$` **`python ./simple_pivot_detect.py`**
 
 It's exactly that simple.  It will alert you if it finds anything suspicious
 by feeding back to stdout the PID trail of the process(es) it is alerting on.
