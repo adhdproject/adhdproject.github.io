@@ -30,10 +30,14 @@ Example 1: Deployment
 
 To get started, for our example we will copy the tarpit into the web root of out web application.
 
-`$` **`cp /opt/PHP-HTTP-Tarpit/la_brea.php /var/www/`**
+`$` **`sudo cp /opt/PHP-HTTP-Tarpit/la_brea.php /var/www/`**
 
 Next we want to insert a reference into some portion of your web application that points to this file.  For example, we might edit your application's index.php appending this line:
 
 		<a href="/la_brea.php" ></a>
+
+You may also want to chown the file to be owned by the web user.
+
+`$` **`sudo chown www-data:www-data /var/www/lab_brea.php`**
 
 It's that easy.
