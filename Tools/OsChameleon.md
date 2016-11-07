@@ -23,9 +23,9 @@ Using oschameleon is incredibly easy.  Simply cd into its directory:
 
 `$` **`cd /opt/oschameleon`**
 
-And run the osfuscate.py script as root
+And run the osfuscation.py script as root
 
-`$` **`sudo python ./osfuscate.py`**
+`$` **`sudo python ./osfuscation.py`**
 
 It should hang, and you should see no output until someone attempts to scan you.When someone does scan you however, you will see a ton of output as the probes hit your machine and oschameleon responds.
 
@@ -71,7 +71,7 @@ In your oschameleon terminal run these commands.
 
 `$` **`cd /opt/oschameleon`**
 
-`/opt/oschameleon$` **`sudo python ./osfuscate.py`**
+`/opt/oschameleon$` **`sudo python ./osfuscation.py`**
 
 It shouldn't show you any output yet.
 
