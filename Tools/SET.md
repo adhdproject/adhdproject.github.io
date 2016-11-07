@@ -27,7 +27,7 @@ SET comes with a built in menu driven UI.  All you need to do is launch it; and 
 
 `~#` **`cd /opt/set`**
 
-`/opt/set#` **`./set`**
+`/opt/set#` **`./setoolkit`**
 
 Example 1: Look over SET's features
 -----------------------------------
