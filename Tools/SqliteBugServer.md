@@ -47,13 +47,15 @@ Example 1: Initializing the database
 You will need to initialize the database.  From your deployment directory
 this is incredibly simple.  Just run the initialization script.
 
-**`python ./initialzie.py`**
+**`python ./initialize.py`**
+
+Note: You need to make sure you are running as a user with permissions to the folder you wish to write.  
 
 It's that easy.
 
 Note: This script will create the Sqlite database in the directory you're 
 currently in.  It will create it with a weird long random name.  The reason
-for thsi is to make it exceptionally difficult for an attacker to access your
+for this is to make it exceptionally difficult for an attacker to access your
 data; without forcing users to go through any special configurations.
 
 
