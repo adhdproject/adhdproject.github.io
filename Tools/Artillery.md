@@ -23,12 +23,12 @@ the offending IP address is banned.
 Install Location
 ----------------
 
-`/opt/artillery`
+`/var/artillery`
 
 Config File Location
 --------------------
 
-`/opt/artillery/config`
+`/var/artillery/config`
 
 Usage
 -----
@@ -36,7 +36,7 @@ Usage
 All options are set in the configuration file so there are no command
 line arguments for Artillery.
 
-`/var/artillery$` **`sudo python2 artillery.py`**
+`/var/artillery$` **`sudo python artillery.py`**
 
 Video Walkthrough
 -----------------
@@ -53,14 +53,14 @@ Example 1: Running Artillery
 Change to the install location and run Artillery. You will need to enter
 the password for adhd.
 
-`/var/artillery$` **`sudo python2 artillery.py 2> /dev/null`**
+`/var/artillery$` **`sudo python artillery.py 2> /dev/null`**
 
 Verify that Artillery is running by opening a new terminal and typing
 the following command. You should see that the python2 process is
 listening on a bunch of ports. These are the ports that are configured
 by default in the config file.
 
-`$` **`sudo netstat -nlp | grep python2`**
+`$` **`sudo netstat -nlp | grep python`**
 
         tcp  0  0  0.0.0.0:5900   0.0.0.0:*  LISTEN  9020/python2
         tcp  0  0  0.0.0.0:110    0.0.0.0:*  LISTEN  9020/python2
