@@ -36,7 +36,7 @@ Usage
 All options are set in the configuration file so there are no command
 line arguments for Artillery.
 
-`/var/artillery$` **`sudo python artillery.py`**
+`/var/artillery$` **`sudo python3 artillery.py`**
 
 Video Walkthrough
 -----------------
@@ -53,29 +53,29 @@ Example 1: Running Artillery
 Change to the install location and run Artillery. You will need to enter
 the password for adhd.
 
-`/var/artillery$` **`sudo python artillery.py 2> /dev/null`**
+`/var/artillery$` **`sudo python3 artillery.py 2> /dev/null`**
 
 Verify that Artillery is running by opening a new terminal and typing
-the following command. You should see that the python2 process is
+the following command. You should see that the python3 process is
 listening on a bunch of ports. These are the ports that are configured
 by default in the config file.
 
 `$` **`sudo netstat -nlp | grep python`**
 
-        tcp  0  0  0.0.0.0:5900   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:110    0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:10000  0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:8080   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:21     0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:1433   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:1337   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:25     0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:44443  0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:1723   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:445    0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:3389   0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:135    0.0.0.0:*  LISTEN  9020/python2
-        tcp  0  0  0.0.0.0:5800   0.0.0.0:*  LISTEN  9020/python2
+        tcp  0  0  0.0.0.0:5900   0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:110    0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:10000  0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:8080   0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:21     0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:1433   0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:1337   0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:25     0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:44443  0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:1723   0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:445    0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:3389   0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:135    0.0.0.0:*  LISTEN  9020/python3
+        tcp  0  0  0.0.0.0:5800   0.0.0.0:*  LISTEN  9020/python3
 
 Example 2: Triggering a Honeyport
 ---------------------------------
@@ -153,7 +153,7 @@ At the end of the output you should see a log entry similar to the
 above. Note the IP address as we will now undo the ban Artillery put
 into place. In this instance, the remote IP address is 192.168.1.193.
 
-`/var/artillery$` **`sudo python2 remove_ban.py 192.168.1.193`**
+`/var/artillery$` **`sudo python3 remove_ban.py 192.168.1.193`**
 
         Listing all iptables looking for a match... if there is a massive amount of blocked IP's this could take a few minutes..
         1
