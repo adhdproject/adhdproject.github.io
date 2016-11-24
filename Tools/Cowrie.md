@@ -49,7 +49,7 @@ To run Cowrie, cd into the Cowrie directory and execute:
 
 We can confirm Cowrie is listening with lsof:
 
-`~$` **`lsof -i -P | grep twistd`**
+`~$` **`sudo lsof -i -P | grep twistd`**
 
         twistd  548 adhd    6u  IPv4 523637      0t0  TCP *:2222 (LISTEN)
 
