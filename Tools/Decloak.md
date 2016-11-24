@@ -60,7 +60,7 @@ something else, and rename Decloak.flash8.hx to Decloak.hx.
 
 To compile the Java applet, the commands are as follows.
 
-`/opt/decloak$` **`javac -cp /usr/share/icedtea-web/plugin.jar HelloWorld.java`**
+`/opt/decloak$` **`javac -cp plugin.jar HelloWorld.java`**
 
 You should now have a newly created HelloWorld.class file in the decloak
 directory. You will need to copy these files to the decloak web
@@ -77,11 +77,33 @@ The backbone of Decloak is a custom DNS server that listens for
 specially formatted connections. It logs these connections to a
 database.
 
-In order to start Decloak's DNS server, first change into the **/opt/decloak** directory.
+In order to start Decloak's DNS server, you first need to deactivate the
+default one that comes with ADHD. 
 
+To deactivate it, you need to edit
+Network Manager's configuration file and restart Network Manager.
+
+`$` **`sudo sed -i 's/^dns/#dns/' /etc/NetworkManager/NetworkManager.conf`**
+`$` **`sudo service network-manager restart`**
+
+	network-manager stop/waiting
+	network-manager start/running, process 27931
+
+Since you are disabling ADHD's default method of using DNS, you need to
+add an alternative in order to have internet access. To do this, you can
+manually add Google's DNS server to /etc/resolv.conf
+
+`$` **`sudo sh -c "echo 'nameserver 8.8.8.8' >> /etc/resolv.conf"`**
+
+Decloak also uses port 5353 for communication with the Java applet.
+You'll need to stop Avahi to free port 5353 for Decloak's use.
+
+`$` **`sudo service avahi-daemon stop`**
+
+	avahi-daemon stop/waiting
+
+And finally, you can start the Decloak DNS server.
 `/opt/decloak$` **`sudo ./dnsreflect.pl`**
-
-This will run dnsreflect.pl in the background.
 
 Example 3: Browsing to a Decloak Activated Website
 --------------------------------------------------
