@@ -82,7 +82,7 @@ Example 1: Starting Portspoof
 
 Portspoof, when run, listens on a single port. By default this is port 4444. In order to fool a port scan, we have to allow Portspoof to listen on *every* port. To accomplish this we will use an `iptables` command that redirects every packet sent to any port to port 4444 where the Portspoof port will be listening. This allows Portspoof to respond on any port.
 
-`~#` **`iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 1:65535 -j REDIRECT --to-ports 4444`**
+`~#` **`iptables -t nat -A PREROUTING -p tcp -m tcp --dport 1:65535 -j REDIRECT --to-ports 4444`**
 
 Then run Portspoof with no options, which defaults it to "open port" mode. This mode will just return OPEN state for every connection attempt.
 
@@ -278,4 +278,4 @@ Example 3: Cleaning Up
 To reset ADHD, you may reboot (recommended) or:
 
 1. Kill Portspoof by pressing Ctrl-C.
-2. Flush all iptables rules by running the command (as root): `iptables -t nat -F`
+2. Flush all iptables rules by running the command (as root): `sudo iptables -t nat -F`
