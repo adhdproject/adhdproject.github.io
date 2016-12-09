@@ -24,9 +24,11 @@ Launching psad is super simple.
 
 You just need to start the service.  (NOTE: You will need to make sure everything is installed first.)
 
-`$` **`sudo /etc/init.d/psad start`**
+`#` **`/etc/init.d/psad start`**
 
 This will start psad, kmsgsd and psadwatchd.
+
+NOTE: Every command in this tutorial is run as the root user (signified with a `#` prompt).  If not running as the root user you may experience errors.  To become root execute this command **`sudo su -`**
 
 Example 1: Installing PSAD
 -----------------------------------------
@@ -48,16 +50,20 @@ And run the install script.
 
 `/opt/psad#` **`./install.pl`**
 
-It's that easy.  The install script will ask you a few questions.  You may answer them differently depending on the specifics you require.  If in doubt however, simply accept the defaults.
+It's that easy.  
+
+NOTE: The install script will ask you a few questions.  You may answer them differently depending on the specifics you require.  If in doubt however, simply accept the defaults.
 
 Example 2: Iptables Configuration
 ----------------------------------------------
 
-Now, iptables as a subject is a monstrosity.  There is simply so much to discuss if we were to attempt to cover all of it.  However for the sake of brevity, today we will simply be talking about the specific requirements psad has for iptables if it is to function correctly.
+Now, iptables as a subject is a monstrosity.  There is so much to discuss if we were to attempt to cover all of it.  However for the sake of brevity, today we will simply be talking about the specific requirements psad has for iptables if it is to function correctly.
 
 Your specific iptables setup is your own to determine.  But if you want it to work with psad you will need to set your configuration to log messages for psad to subsequently parse.
 
 For example, you might run these two commands
+
+NOTE: Make sure to run these commands as root
 
 `#` **`iptables -A INPUT -j LOG`**
 `#` **`iptables -A FORWARD -j LOG`**
@@ -68,7 +74,7 @@ According to the official psad documentation you would be advised to run these t
 Example 3: Checking for Messages
 ---------------------------------------------
 
-Checking for alerts from psad is quite simple.  To start with you can check to se if you have any new alerts by running:
+Checking for alerts from psad is quite simple.  To start with you can check to see if you have any new alerts by running:
 `#` **`psad --Status`**
 
 		Iptables prefix counters:
@@ -81,6 +87,8 @@ You can also check the contents of /var/log/messages for something similar to
 		MAC=00:11:d4:38:b7:e5:00:01:5c:22:9b:c2:08:00 SRC=127.0.0.1 DST=127.0.0.1 LEN=60
 		TOS=0x10 PREC=0x00 TTL=64 ID=47312 DF PROTO=TCP SPT=40945 DPT=30003 WINDOW = 32767
 		RES=0x00 SYN UGRP=0
+
+NOTE: If you don't have any alerts and want to try creating some, use nmap to scan yourself.  `#` **`nmap localhost`**
 
 
 Example 4: Email Alerts

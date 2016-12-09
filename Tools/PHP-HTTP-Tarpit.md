@@ -38,6 +38,6 @@ Next we want to insert a reference into some portion of your web application tha
 
 You may also want to chown the file to be owned by the web user.
 
-`$` **`sudo chown www-data:www-data /var/www/lab_brea.php`**
+`$` **`sudo chown www-data:www-data /var/www/la_brea.php`**
 
 It's that easy.

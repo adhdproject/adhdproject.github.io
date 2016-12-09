@@ -51,6 +51,8 @@ And run the main application with the `--no-check` flag to tell Recon-ng to not 
         ---------
           reporting/pushpin
 
+Note that this will show you the pushpin modules, it won't actually do anything yet. We'll cover how to start actually doing stuff next.
+
 Example 1: Find Tweets Sent from Times Square
 ---------------------------------------------
 
@@ -159,6 +161,8 @@ We will have to set the LATITUDE and LONGITUDE and RADIUS values real quick.
         RADIUS          1                              yes  radius from the epicenter in kilometers
 
 That's better, now let's run this module
+
+NOTE: If you have a completely fresh installation of ADHD you might experience an error when firefox opens for the first time.  Just close firefox and run this command again.
 
 `[recon-ng][default][pushpin] >` **`run`**
 

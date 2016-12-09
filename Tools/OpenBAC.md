@@ -196,6 +196,8 @@ Now we need to make the call to the unpack function.  You'll need the password a
 
 `GET /?up=d4f05105d7eb89e00cb342eea5e56915:::fa8bba56e5ad79017ef9856725ee2e952f49320dc1e71daed4350ca12618ce09fd67c859af4e2f341a965a37f0c2&passwd=mypasswd`
 
+NOTE: Everything in the previous GET is on one line.  It's a long line, but don't be confused.  It's all one line.
+
 If everything checks out, this should return *True*.  Otherwise it will return *False*.  Assuming that in your actual code, there wouldn't be any fear of typos or anything, the deciding factor would be whether or not the user entered the correct password.
 
 If the function returns *True* you would authenticate the user.  It's that simple.
