@@ -130,6 +130,8 @@ seem to click yes.
 
 If ADHD is configured as expected you should be able to find the payload at this address from the ADHD machine (open a web browser) `http://localhost/html/index.html`.  If you wish to trigger the payload you will want to connect to that page from a windows machine using a browser that will execute the applet (like Firefox or IE).  For this you will likely need the IP address to your ADHD instance which you can retrieve using the command `ifconfig`.
 
+NOTE: Getting the applet to fire on another machine can be quite a pain.  You will likely run into compatibility issues with Java version, browser and browser version, firewall rules, etc.  Obviously, we just can't control every variable for this tutorial.  
+
 If we look on the listening machine we see that SET now shows the
 Metasploit prompt and is creating sessions in the background.
 
