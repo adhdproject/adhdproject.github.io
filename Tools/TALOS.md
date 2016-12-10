@@ -536,7 +536,9 @@ As you can see, there are a number of variables we will need to set here before 
 		* rport is the remote ssh port to connect to (default: 22)
 		* listen tells TALOS whether or not to start a listener automatically
 
-Let's start setting values.  I am going to deploy Phantom in this case to my local system.  Your local system may or may not have SSH installed.  Installing it is outside of the scope of this tutorial.  
+Let's start setting values.  
+
+NOTE: I am going to deploy Phantom in this case to my local system.  Your local system may or may not have SSH installed.  Installing it is outside of the scope of this tutorial.  If you do not have an SSH server installed and running, obviously the connection won't be able to go through.
 
 You will likely need to set different values than I am setting.  But if you understand what each value does, that shouldn't be a problem.
 
