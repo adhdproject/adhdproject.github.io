@@ -263,7 +263,7 @@ We then have two choices for launching this script.
 
 First, we can launch this script when we launch TALOS by specifying the `--script` option.  Like so:
 
-`/opt/talos#` **`sudo ./talos.py --script=/path/to/my/script`**
+`/opt/TALOS#` **`sudo ./talos.py --script=/path/to/my/script`**
 
 Or, if we're already inside the TALOS interpreter, we can launch the script using the invoke command.
 
@@ -312,9 +312,9 @@ Everything should be good now.  Let's launch our module in the background.
 In another terminal now, let's explore what we did when we set that specific tripcode.
 Navigate to the TALOS directory and open up the file `mapping`.
 
-`#` **`cd /opt/talos`**
+`#` **`cd /opt/TALOS`**
 
-`/opt/talos#` **`cat mapping`**
+`/opt/TALOS#` **`cat mapping`**
 
 		###The format for this file is simple
 		# It goes: <tripcode>,<script>
@@ -338,19 +338,19 @@ Let's trigger our tripcode.
 
 Firstly we want to see that there's nothing listening on port 445 (You will need to be root for this, or use sudo).
 
-`/opt/talos#` **`lsof -i -P | grep 445`**
+`/opt/TALOS#` **`lsof -i -P | grep 445`**
 
 You shouldn't see anything.
 
 Now, attempt to connect to your honeyport
 
-`/opt/talos#` **`nc localhost 1337`**
+`/opt/TALOS#` **`nc localhost 1337`**
 
 If the connection hangs simply hit ctrl+C.
 
 If we run lsof again...
 
-`/opt/talos#` **`lsof -i -P | grep 445`**
+`/opt/TALOS#` **`lsof -i -P | grep 445`**
 
 		python  17565     root    3u  IPv4 19923014      0t0  TCP *:445 (LISTEN)
 
@@ -595,7 +595,7 @@ And finally, launch the module
 
 In another terminal on your system you can confirm that the module was successfully launched by checking to see if something is listening on the port you specified.
 
-`/opt/talos#` **`lsof -i -P | grep 31337`**
+`/opt/TALOS#` **`lsof -i -P | grep 31337`**
 
 		python 21344 	adhd	10u   IPv4   1994461		0t0   TCP  *:31337	(LISTEN)
 
