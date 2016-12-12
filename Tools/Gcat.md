@@ -119,6 +119,9 @@ It's just a simple python script.
 Example 2: Running a Command & Retrieving Output
 ------------------------------------------------
 
+NOTE: Make sure that you have configured your gmail account to work with "less secure apps."  To get instructions on how to do that (it's easy, I promise) go here: https://support.google.com/accounts/answer/6010255?hl=en
+
+
 Once you have an implant or two running you can control them from gcat.py.
 To start we will want to get the list of all attached implants and their ids.
 To do this run gcat.py with the -list option.

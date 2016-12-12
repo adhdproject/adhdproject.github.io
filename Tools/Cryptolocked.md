@@ -34,7 +34,7 @@ To run Cryptolocked navigate to the install location and run the tool as follows
 
 `/opt/cryptolocked$` **`sudo python2 ./cryptolocked.py`**
 
-This will start Cryptolocked in basic, unarmed mode.
+This will start Cryptolocked in basic, unarmed mode.  This means that only an alert will be sent, no other actions will be performed if the tripfile is accessed.
 
 To trigger the simulated failsafe, either modify or delete the tripfile (test.txt) located in the 
 directory from which you ran Cryptolocked.

@@ -50,10 +50,10 @@ transfer the file to your victim machine.
         ****************************************************
         Serving HTTP on 0.0.0.0 port 8000 ...
 
-On your victim machine, open a web browser, and navigate to the ip address of your ADHD machine.
+On your victim machine, open a web browser, and navigate to the ip address of your ADHD machine on port 8000.
 You should see two files.  Click to download "EveryVillainIsLemons.exe".
 
-![Downloads in Chrome](Ghostwriting.sh_files/downloads.png)
+![Downloads in Chrome](Ghostwriting.sh_files/downloads.PNG)
 
 Here is the moment of truth, depending on your AV this specific file may or may not be detected 
 and block upon download (or later upon execution).  If you need to, go ahead and disable your AV's 

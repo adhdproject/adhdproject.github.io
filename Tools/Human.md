@@ -49,6 +49,8 @@ This will show you the very very simple help dialog.
 Example 1: Setting up Monitoring on a service account
 -----------------------------------------------------
 
+NOTE: From this point on all commands in this tutorial will be run as root.  To become root as a normal user with sudo privileges execute this command **`sudo su -`**
+
 To set up monitoring on a service account run the tool with the name of the 
 account as the first command line argument.
 

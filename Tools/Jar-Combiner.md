@@ -127,7 +127,7 @@ First create a keystore.
         Enter key password for <signFiles>
             (RETURN if same as keystore password): 
 
-You can just hit enter for most of the options, but fill the form out if you desire.
+You can just hit enter for most of the options, but fill the form out if you desire.  Do make sure to type *yes* when it asks you if all the preceding information was correct or else it will loop back to the start.
 
 Now that the keystore is created, let's sign our new jar.
 

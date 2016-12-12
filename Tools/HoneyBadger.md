@@ -109,6 +109,8 @@ The reporting page will contain a map showing the locations that Honey Badger ha
 Honey Badger keeps track of each connection and displays one at a time on the map. To choose a 
 different connection than the one shown, click on the drop-down menu and select another entry.
 
+NOTE: Obviously there's not going to be anything there if you haven't logged any connection attemps yet.  Try using the techniques in Example 1 or Example 4 to get some data logged. Then check back here.
+
 Example 4: Using Java to Find Nearby Wireless APs
 -------------------------------------------------
 
