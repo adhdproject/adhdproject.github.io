@@ -105,6 +105,8 @@ You'll need to stop Avahi to free port 5353 for Decloak's use.
 And finally, you can start the Decloak DNS server.
 `/opt/decloak$` **`sudo ./dnsreflect.pl`**
 
+NOTE: You might have trouble starting dnsreflect if dnsmasq is still listening on port 53.  You can kill it with this command **`sudo killall dnsmasq`**
+
 Example 3: Browsing to a Decloak Activated Website
 --------------------------------------------------
 
