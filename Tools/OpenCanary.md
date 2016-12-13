@@ -25,7 +25,7 @@ NOTE: If opencanary throws any sort of error while launching, the most likely ex
 
 `~$` **`cd /opt/opencanary`**
 
-`/opt/opencanary$` **`sudo bin/opencanaryd --start`**
+`/opt/opencanary$` **`sudo venv/bin/opencanaryd --start`**
 
 This will launch the opencanary daemon. 
 
@@ -61,7 +61,7 @@ If you're using nano, then all you need to do to save is hit `Ctrl+O` then `Ctrl
 
 Now that we've done that, let's spool up the daemon and see if our changes worked.
 
-`/opt/opencanary$` **`sudo bin/opencanaryd --start`**
+`/opt/opencanary$` **`sudo venv/bin/opencanaryd --start`**
 
 Now, assuming that opencanary didn't throw any errors, let's connect via ftp.
 From the same console type this command:
@@ -74,27 +74,19 @@ You can attempt to authenticate by typing in a user name and password.
 
 Then type "quit" to exit the ftp client.
 
-Now let's check your syslog to see if opencanary reported on the attempted intrusion.
+Now let's check the opencanary log to see if opencanary reported on the attempted intrusion.
 
-`/opt/opencanaryd$` **`sudo tail -n 15 /var/log/syslog`**
+`/opt/opencanary$` **`sudo tail -n 15 /var/tmp/opencanary.log`**
 
-		SYSLOG HERE
-		.
-		.
-		.
-		.
-		.
-		.
-		.
-		.
-		.
-		.
-		.
-		.
-		.
+		{"dst_host": "127.0.0.1", "dst_port": 21, "local_time": "2016-12-13 04:25:15.774305", "logdata": {"PASSWORD": "dragon", "USERNAME": "root"}, "logtype": 2000, "node_id": "opencanary-1", "src_host": "127.0.0.1", "src_port": 37778}
 
 That's it.
 
 To kill opencanary simply:
 
+`/opt/opencanary$` **`venv/bin/opencanaryd --stop`**
+
+or
+
 `/opt/opencanary$` **`sudo killall twistd`**
+
