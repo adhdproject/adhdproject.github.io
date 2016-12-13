@@ -50,9 +50,11 @@ By default Kippo listens on port 2222 and emulates an ssh server.
 To run Kippo, cd into the kippo directory and execute:
 
 `~$` **`cd /opt/kippo`**
-`~$` **`./start.sh`**
+`~$` **`./start.sh kippo_venv`**
 
         Starting kippo in the background...
+
+NOTE: the option "kippo_venv" is simply specifying a python virtual environment for Kippo since it requires old python modules to be installed.
 
 We can confirm Kippo is listening with lsof:
 
