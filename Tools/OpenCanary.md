@@ -19,6 +19,8 @@ Install location
 Usage
 -----
 
+NOTE: For all of these commands make sure that you are in the right directory and are a sudo capable user with permissions to /opt/opencanary.
+
 To start opencanary cd to the install directory and launch the daemon.
 
 NOTE: If opencanary throws any sort of error while launching, the most likely explanation is that you already have something running on a port it needs.  Either stop that running service or modify the file opencanary.conf to disable the opencanary service on that port.
@@ -32,7 +34,7 @@ This will launch the opencanary daemon.
 Example 1: Deploying OpenCanary as a Service
 --------------------------------------------
 
-As was covered in the [Usage] section above.  All you need to do in order t obe able to run opencanary is launch the daemon with the --start flag.
+As was covered in the [Usage] section above.  All you need to do in order to be able to run opencanary is launch the daemon with the --start flag.
 Before we do that however, let's dig a little deeper into what exactly it is that opencanary does.
 
 Head over to the opencanary directory and open up the config file.
@@ -60,6 +62,8 @@ Edit the line to read something more like this: "ADHD FTP Server v0.1".
 If you're using nano, then all you need to do to save is hit `Ctrl+O` then `Ctrl+X` to exit.
 
 Now that we've done that, let's spool up the daemon and see if our changes worked.
+
+NOTE: if you already have the daemon running you can kill it with **`sudo venv/bin/opencanaryd --stop`** before trying to restart it with the new configuration.  (Make sure you're in /opt/opencanary)
 
 `/opt/opencanary$` **`sudo venv/bin/opencanaryd --start`**
 
