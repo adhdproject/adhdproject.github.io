@@ -80,32 +80,17 @@ database.
 In order to start Decloak's DNS server, you first need to deactivate the
 default one that comes with ADHD. 
 
-To deactivate it, you need to edit
-Network Manager's configuration file and restart Network Manager.
-
-`$` **`sudo sed -i 's/^dns/#dns/' /etc/NetworkManager/NetworkManager.conf`**
-`$` **`sudo service network-manager restart`**
-
-	network-manager stop/waiting
-	network-manager start/running, process 27931
-
-Since you are disabling ADHD's default method of using DNS, you need to
-add an alternative in order to have internet access. To do this, you can
-manually add Google's DNS server to /etc/resolv.conf
-
-`$` **`sudo sh -c "echo 'nameserver 8.8.8.8' >> /etc/resolv.conf"`**
+`$` **`sudo killall dnsmasq`**
 
 Decloak also uses port 5353 for communication with the Java applet.
 You'll need to stop Avahi to free port 5353 for Decloak's use.
 
-`$` **`sudo service avahi-daemon stop`**
+However, avahi-daemon is a tricky little sucker that usually requires a reboot to stop.  Here's a sneaky way we can steal it's port.  We'll kill the process, and before it can restart itself, we'll start our process to take over port 5353.  You'll do it all in the one line command next.
 
-	avahi-daemon stop/waiting
+This starts the decloak DNS server
+`/opt/decloak$` **`sudo killall avahi-daemon -9 && sudo ./dnsreflect.pl`**
 
-And finally, you can start the Decloak DNS server.
-`/opt/decloak$` **`sudo ./dnsreflect.pl`**
-
-NOTE: You might have trouble starting dnsreflect if dnsmasq is still listening on port 53.  You can kill it with this command **`sudo killall dnsmasq`**
+NOTE: You might have trouble starting dnsreflect if dnsmasq is still listening on port 53.  You can force kill it with this command **`sudo killall dnsmasq -9`** if the first kill didn't work.
 
 Example 3: Browsing to a Decloak Activated Website
 --------------------------------------------------
@@ -185,3 +170,22 @@ Example 5: Tearing Down the Decloak DNS Server
 To undo everything done in [Example 2: Setting Up the Decloak DNS Server] you'll need to kill the DNS server.
 
 `$` **`sudo pkill dnsreflect`**
+
+Next you can restart the avahi-daemon service.
+
+`$` **`sudo service avahi-daemon start`**
+
+Finally restart dnsmasq
+
+`$` **`sudo dnsmasq`**
+
+To confirm that everything has worked run this command and check the output. It should look something like the following.
+
+`$` **`sudo lsof -i -P | awk '(/:53/)'
+
+		avahi-dae 2127	avahi  12u  IPv4 26071	0t0  UDP *:5353
+		avahi-dae 2127  avahi  13u  IPv6 26072  0t0  UDP *:5353
+		dnsmasq   2137 nobody   4u  IPv4 26260  0t0  UDP *:53
+		dnsmasq   2137 nobody   5u  IPv4 26261  0t0  TCP *:53 (LISTEN)
+		dnsmasq   2137 nobody   6u  IPv6 26262  0t0  UDP *:53
+		dnsmasq   2137 nobody   7u  IPv6 26263  0t0  TCP *:53 (LISTEN)
