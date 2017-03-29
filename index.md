@@ -30,6 +30,13 @@ ADHD
     - [Example 2: Arming Cryptolocked](Tools/Cryptolocked.md#Example_2:_Arming_Cryptolocked)
     - [Example 3: Cryptolocked's Tentacles](Tools/Cryptolocked.md#Example_3:_Cryptolocked's_Tentacles)
     - [Example 4: Email Alerts](Tools/Cryptolocked.md#Example_4:_Email_Alerts)
+- [Cryptolocked-ng](Tools/Cryptolocked-ng.md)
+    - [Example 1: Debug Mode](Tools/Cryptolocked-ng.md#Example_1:_Debug_Mode)
+    - [Example 2: Arming Cryptolocked-ng](Tools/Cryptolocked-ng.md#Example_2:_Arming_Cryptolocked-ng)
+    - [Example 3: Cryptolocked-ng's Tentacles](Tools/Cryptolocked-ng.md#Example_3:_Cryptolocked-ng's_Tentacles)
+    - [Example 4: Cryptolocked-ng's Huntr](Tools/Cryptolocked-ng.md#Example_4:_Cryptolocked-ng's_Huntr)
+    - [Example 5: Email Alerts](Tools/Cryptolocked-ng.md#Example_5:_Email_Alerts)
+
 - [Decloak](Tools/Decloak.md)
     - [Example 1: Compiling Flash and Java Objects](Tools/Decloak.md#Example_1:_Compiling_Flash_and_Java_Objects)
     - [Example 2: Setting Up the Decloak DNS Server](Tools/Decloak.md#Example_2:_Setting_Up_the_Decloak_DNS_Server)
