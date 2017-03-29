@@ -118,3 +118,9 @@ Docz.py will create a new file called output.docx identical to your input file b
 
 
 
+Example 2: Creating a Webbug for Webbugserver
+---------------------------------------------
+
+The process by which docz.py is used to create a webbug for webbugserver or sqlitebugserver is identical to [Example 1: Creating a Webbug for Honeybadger](Example_1:_Creating_a_Webbug_for_Honeybadger).  
+
+Just put in the new URL to your sqlitebugserver, an change any other parameters you may need based on your situation.

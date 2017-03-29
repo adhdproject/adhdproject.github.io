@@ -43,6 +43,7 @@ ADHD
 - [Docz.py](Tools/Docz.md)
 	- [Usage: Basic Usage](Tools/Docz.md#Usage)
 	- [Example 1: Creating a Webbug for Honeybadger](Tools/Docz.md#Example_1:_Creating_a_Webbug_for_Honeybadger)
+	- [Example 2: Creating a Webbug for Webbugserver](Tools/Docz.md#Example_2:_Creating_a_Webbug_for_Webbugserver)
 - [Gcat](Tools/Gcat.md)
 	- [Example 1: Deploying an Implant](Tools/Gcat.md#Example_1:_Deploying_an_Implant)
 	- [Example 2: Running a Command & Retrieving Output](Tools/Gcat.md#Example_2:_Running_a_Command_&_Retrieving_Output)
