@@ -37,7 +37,6 @@ PostgreSQL
 |------------------|----------|---------------|
 | decloakuser      | adhd     | decloak       |
 
-
 BeEF
 ----
 
@@ -52,4 +51,10 @@ HoneyBadger
 |------------|----------|--------------------------------------------------|
 | adhd       | adhd     | Visit: <http://127.0.0.1/honeybadger/badger.php> |
 
+Honeybadgerv2
+-------------
+
+| Username   | Password | Login                                            |
+|------------|----------|--------------------------------------------------|
+| adhd       | adhd     | Run the server & Visit: <http://127.0.0.1:5000>  |
 
