@@ -51,7 +51,7 @@ HoneyBadger
 |------------|----------|--------------------------------------------------|
 | adhd       | adhd     | Visit: <http://127.0.0.1/honeybadger/badger.php> |
 
-HoneyBadgerv2
+HoneyBadgerV2
 -------------
 
 | Username   | Password | Login                                            |
