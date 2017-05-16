@@ -66,7 +66,7 @@ We can see the extensive commenting right away.  The comments should be enough t
 First we will need to specify a builder string.  This is a string pointing to the generator service and telling molehunt the type of service.
 
 Replace the line **`BUILDER_STRING=None`** with
-**`BUILDER_STRING=docz:/opt/docz.py/docz.py`**
+**`BUILDER_STRING="docz:/opt/docz.py/docz.py"`**
 
 Next we have the source string.  This ties your documents back to a collection source.  You have the choice of using a number of sources.  Let's go with webbugserver as it is the simplest.
 
@@ -81,14 +81,14 @@ NOTE: We are also expecting that your host machine will have a compatible versio
 If you are following this tutorial to do a real deployment please don't forget to change your internal IP to the IP/domain of your machine on the web wherin your collection service lies.
 
 Edit the line **`SOURCE_STRING=None`** to (with your ADHD's IP address)
-**`SOURCE_STRING=http://192.168.1.102/web-bug-server/index.php?id=::ID&type=img`**
+**`SOURCE_STRING="http://192.168.1.102/web-bug-server/index.php?id=::ID&type=img"`**
 
 NOTE: You might have guessed that "::ID" is a special value for molehunt.  That is where molehunt places the unique ID for each callback.  If you ever wanted to modify the callback you would want to make sure to place this value in the right place.
 
 Finally we will set the monitor string.  This is the string molehunt uses to connect to the results of the campaign and map callbacks to names for you.
 
 Change the line **`MON_STRING=None`** to
-**`MON_STRING=webbugserver:root:adhd:webbug`**
+**`MON_STRING="webbugserver:root:adhd:webbug"`**
 
 This specifiese the type of collection service, the mysql username, pass and db.
 
