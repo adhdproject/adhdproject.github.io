@@ -3,7 +3,7 @@
 ADHD Tools Usage Document
 =========================
 
-ADHD Version: **0.7.2** 	| [Github Page](https://github.com/adhdproject)      | [Sourceforge Page](http://sourceforge.net/projects/adhd/)
+ADHD Version: **0.7.3** 	| [Github Page](https://github.com/adhdproject)      | [Sourceforge Page](http://sourceforge.net/projects/adhd/)
 
 [Black Hills Information Security](http://www.blackhillsinfosec.com)
 

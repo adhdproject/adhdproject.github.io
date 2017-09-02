@@ -1,59 +1,33 @@
 
-Honey Badger: Red Edition
-=========================
+Honey Badger
+============
 
 Website
 -------
 
-<https://github.com/prometheaninfosec/honeybadger-red>
+<https://github.com/LaNMaSteR53/honeybadger>
 
 Description
 -----------
 
-Used to identify the physical location of a web user with a combination
-of geolocation techniques using a browser's share location feature, the
+A framework used to identify the physical location of a web user with a combination
+of geolocation techniques such as using a browser's share location feature, the
 visible WiFi networks, and the IP address.
 
-
-Updates
--------
-
-Honeybadger Red Edition contains a number of fresh additions to the venerable frameowrk.  Chief among them being support for new agents, as well as new data collection strategies.
-
-* New Agents!
-* New Data Encodings!
-* New Swagger!
-* New .htaccess file!
-* New Dependencies!
-* New Network Profile Stealing Capabilities!
-
-More sure to be added soon!
+Particularly effective at unmasking remote attackers, and pinpointing their exact location.
 
 Install Location
 ----------------
 
-`/var/www/honeybadger/`
+`/opt/honeybadgerv2`
 
 Usage
 -----
 
-Visit [http://127.0.0.1/honeybadger/demo.html](http://127.0.0.1/honeybadger/demo.html) to log your location.
-
-Visit [http://127.0.0.1/honeybadger/index.php](http://127.0.0.1/honeybadger/index.php) to view the connection map.
-
-Video Walkthrough
------------------
-
-<video controls>
-  <source src="Videos/1_550_HoneyBadger.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
-
 Example 1: Web Browser Share Location
 -------------------------------------
 
-Open the web browser and enter [http://127.0.0.1/honeybadger/demo.html](http://127.0.0.1/honeybadger/demo.html)
+Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
 into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/) 
 and clicking `Honey Badger (Location Tracker)`.
 
@@ -71,41 +45,6 @@ That's it. Honey Badger has now logged your location. Go to
 [Example 3: Viewing the Honey Badger Map] to find how to view the
 location Honey Badger gathered.
 
-Example 2: Creating a Honey Badger User
----------------------------------------
-
-Before you can view the data Honey Badger has collected you will need to create a user. 
-Creating a user in Honey Badger is super simple.
-
-Change into the Honey Badger admin directory
-
-`~$` **`cd /var/www/honeybadger/admin`**
-
-Now run create_user.py and follow the prompts to create a new administrative user.
-Make sure to sudo this next command!
-
-NOTE: There is probably already a user by the name adhd as this is the default user for this distro.  You may want to create a user with a different name and password.  Or change this user's password by deleting it and recreating it with a new password.
-
-`/var/www/honeybadger/admin$` **`sudo ./create_user.py`**
-
-        Username: adhd 
-        Password: adhd
-        User Role Options:
-        0 - Administrator
-        1 - User
-        Role: 0
-        Salt: rWeKE
-        Hash: 6de86dd5a8a5e3309c1c9587d44a337b1cfd523d
-        [!] Database not initialized.
-
-For this example I created a user named **adhd** with password **adhd**
-I also made this user an administrator.  Honey Badger administrators are given permissions to 
-purge the database and logs from within the Honey Badger interface.
-
-Now that you have created a user, you are ready to proceed onto 
-[Example 3: Viewing the Honey Badger Map].
-
-        
 Example 3: Viewing the Honey Badger Map
 ---------------------------------------
 
@@ -158,7 +97,7 @@ that you will be connecting to it from within a local network.
 
 In this case the IP address for the machine is 192.168.1.137. Now, from
 another machine that has an active wireless card and Java installed,
-connect to <http://192.168.1.137/honeybadger/demo.html>.
+connect to <http://192.168.1.137/honeybadger/demo.php>.
 
 Honey Badger will attempt to gather your
 location using a variety of techniques. First, it uses the web browsers
@@ -182,17 +121,4 @@ That's it. If successful, Honey Badger has now logged your location. Go
 to [Example 3: Viewing the Honey Badger Map] to find how to view the
 location Honey Badger gathered.
 
-Example 5: Red Edition Updates
-------------------------------
 
-A number of additions have been made to bring Honeybadger back to full fighting form.  
-
-For starters there is now a .htaccess file.  As long as your site configuration allows htaccess overrides, everything you need to keep the honeybadger install safe should be set.  Honeybadger has a few security needs that have to be implemented at the level of the web service.  For example, you shouldn't be able to just download the database without authenticating and reading the data through the app.  An attacker could potentially do this if the web server is not configured to disallow it.  Those configurations can be made in Apache at the level of the virtual host, or in this case, with an htaccess file.
-
-You can test whether or not this is working by attempting to visit the a disallowed resource.  like [admin/vhost_config.txt](http://localhost/honeybadger/admin/vhost_config.txt) from your web browser.  If you see anything other than a 404 error, something is wrong.
-
-There are also some new agents.  You can check out the agents by navigating to the folder admin/agents from a console on your webserver.  
-
-Honeybadger is now able to handle multiple types of encodings.  You can specify the encoding type that the agent will be using in the call to service.php using the parameter "decode" (current choices are base64 and hex).
-
-The new agents are also gaining new capabilities (pulling stored network profiles) more will be added in time.  
