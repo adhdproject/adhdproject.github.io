@@ -78,7 +78,7 @@ So if you have an html page that you would like to embed into, feel free.
 However, we have already created a page which performs dynamic embedding of the BeEF hook.
 
 
-This page is located at: /var/www/beef/hook.php
+This page is located at: /var/www/adhd/beef/hook.php
 
 
 
