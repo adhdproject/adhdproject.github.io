@@ -110,7 +110,7 @@ Now that you have created a user, you are ready to proceed onto
 Example 3: Viewing the Honey Badger Map
 ---------------------------------------
 
-Note: Before you are able to view the honeybadger map you will need a Google Maps API key.  There is one that comes with Honeybadger-red.  HOWEVER, if you choose to get one for yourself: You can get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key  --> Simply put that key in the top of badger.php where it says $API="".
+NOTE: Before you are able to view the honeybadger map you will need a Google Maps API key.  There is one that comes with Honeybadger-red.  HOWEVER, if you choose to get one for yourself: You can get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key  --> Simply put that key in the top of badger.php where it says $API="".
 
 Open the web browser and enter
 [http://127.0.0.1/honeybadger/badger.php](http://127.0.0.1/honeybadger/badger.php)
