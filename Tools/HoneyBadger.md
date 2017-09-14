@@ -32,12 +32,12 @@ More sure to be added soon!
 Install Location
 ----------------
 
-`/var/www/honeybadger/`
+`/var/www/adhd/honeybadger/`
 
 Usage
 -----
 
-Visit [http://127.0.0.1/honeybadger/demo.html](http://127.0.0.1/honeybadger/demo.html) to log your location.
+Visit [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php) to log your location.
 
 Visit [http://127.0.0.1/honeybadger/index.php](http://127.0.0.1/honeybadger/index.php) to view the connection map.
 
@@ -53,9 +53,10 @@ Video Walkthrough
 Example 1: Web Browser Share Location
 -------------------------------------
 
-Open the web browser and enter [http://127.0.0.1/honeybadger/demo.html](http://127.0.0.1/honeybadger/demo.html)
+Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
 into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/) 
 and clicking `Honey Badger (Location Tracker)`.
+![](HoneyBadger_files/webkit_root.PNG)
 
 Honey Badger will then attempt to gather your location using a variety of
 techniques. First, it uses the web browser's built in location sharing
@@ -63,9 +64,8 @@ functionality. The web browser will first prompt you whether or not to
 share your location with Honey Badger.
 Click "Share Location."
 
-![](HoneyBadger_files/image002.png)
+![](HoneyBadger_files/share_location.PNG)
 
-First, the web browser will ask whether or not to share your location.
 
 That's it. Honey Badger has now logged your location. Go to
 [Example 3: Viewing the Honey Badger Map] to find how to view the
@@ -74,19 +74,20 @@ location Honey Badger gathered.
 Example 2: Creating a Honey Badger User
 ---------------------------------------
 
+
 Before you can view the data Honey Badger has collected you will need to create a user. 
 Creating a user in Honey Badger is super simple.
 
 Change into the Honey Badger admin directory
 
-`~$` **`cd /var/www/honeybadger/admin`**
+`~$` **`cd /var/www/adhd/honeybadger/admin`**
 
 Now run create_user.py and follow the prompts to create a new administrative user.
 Make sure to sudo this next command!
 
 NOTE: There is probably already a user by the name adhd as this is the default user for this distro.  You may want to create a user with a different name and password.  Or change this user's password by deleting it and recreating it with a new password.
 
-`/var/www/honeybadger/admin$` **`sudo ./create_user.py`**
+`/var/www/adhd/honeybadger/admin$` **`sudo ./create_user.py`**
 
         Username: adhd 
         Password: adhd
@@ -109,25 +110,34 @@ Now that you have created a user, you are ready to proceed onto
 Example 3: Viewing the Honey Badger Map
 ---------------------------------------
 
-Note: Before you are able to view the honeybadger map you will need a Google Maps API key.  You can get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key  --> Simply put that key in the top of badger.php where it says $API="".
+Note: Before you are able to view the honeybadger map you will need a Google Maps API key.  There is one that comes with Honeybadger-red.  HOWEVER, if you choose to get one for yourself: You can get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key  --> Simply put that key in the top of badger.php where it says $API="".
 
 Open the web browser and enter
 [http://127.0.0.1/honeybadger/badger.php](http://127.0.0.1/honeybadger/badger.php)
 into the address bar. This address is also available as a link by
 visiting [http://127.0.0.1/](http://127.0.0.1/) and clicking "Honey Badger (Reporting)."
 
+Use your credentials on the login screen to authenticate.
+
+![](HoneyBadger_files/login_screen.PNG)
+
 After you log in with the username and password we created in 
 [Example 2: Creating a Honey Badger User] you will be taken to the reporting page.
 
-The reporting page will contain a map showing the locations that Honey Badger has logged.
+
+![](HoneyBadger_files/viewing_default_target.PNG)
+
+The reporting page contains a map showing the locations that Honey Badger has logged.  You can select your target from the dropdown menu on the left.
 
 Honey Badger keeps track of each connection and displays one at a time on the map. To choose a 
 different connection than the one shown, click on the drop-down menu and select another entry.
 
-NOTE: Obviously there's not going to be anything there if you haven't logged any connection attemps yet.  Try using the techniques in Example 1 or Example 4 to get some data logged. Then check back here.
+NOTE: Obviously there's not going to be anything there if you haven't logged any connection attemps yet.  Try using the techniques in the other examples to get some data logged. Then check back here.
 
 Example 4: Using Java to Find Nearby Wireless APs
 -------------------------------------------------
+
+NOTE: Support for Java Applets has been waning across the internet as of late.  If you can't get this technique to work, try some of the new agents below.
 
 What happens if you follow [Example 1: Web Browser Share Location], but you decide not 
 to share your location?  Honey Badger has another way to discover your physical
@@ -158,7 +168,7 @@ that you will be connecting to it from within a local network.
 
 In this case the IP address for the machine is 192.168.1.137. Now, from
 another machine that has an active wireless card and Java installed,
-connect to <http://192.168.1.137/honeybadger/demo.html>.
+connect to <http://192.168.1.137/honeybadger/demo.php>.
 
 Honey Badger will attempt to gather your
 location using a variety of techniques. First, it uses the web browsers
@@ -196,3 +206,53 @@ There are also some new agents.  You can check out the agents by navigating to t
 Honeybadger is now able to handle multiple types of encodings.  You can specify the encoding type that the agent will be using in the call to service.php using the parameter "decode" (current choices are base64 and hex).
 
 The new agents are also gaining new capabilities (pulling stored network profiles) more will be added in time.  
+
+
+Example 6: Powershell Via HTA
+-----------------------------
+
+Honeybadger now has a powershell based agent.  As of the latest updates there are also two stagers for the powershell agent, an HTA launcher, and a word macro.  Herre we'll discuss the HTA launcher.
+
+But first, what is an HTA?  This rather obscure executable type is an "HTML Application"; which is described as a "Microsoft Windows program whose source code consists of HTML, Dynamic HTML, and one or more scripting languages" (Wikipedia).  Simply put, it's a rare executable format.
+
+You'll find a link to download the HTA agent on Honeyadger's demo page.
+
+![](HoneyBadger_files/demo_page.PNG)
+
+Assumedly, you'll be running Honeybadger on some type of Linux host.  The HTA format is an agent designed to target only Windows machines.  So you'll need to navigate to Honeybadger from a remote windows host.  The specifics of how this will be accomplished are entirely dependent on your particular setup.
+
+In general though, if the Honeybadger instance and Windows machine are on the same network, all you'll need to do is run **`ifconfig`** on the machine serving Honeybadger to grab it's IP.  Then navigate to <honeybadger_ip>/honeybadger/demo.php
+
+Then click "HTA Launcher" to download the HTA.
+
+NOTE: Depending on your web browser you might see different warning messages.  Click through all of them.
+
+![](HoneyBadger_files/run_hta.PNG)
+
+Click "Run" to launch the HTA.
+
+After a moment you should see a window like this pop up.
+![](HoneyBadger_files/hta_window.PNG)
+
+That's it.  Wait a few seconds and close the window.  
+In the background, the HTA has downloaded and executed Honeybadger's powershell agent.  To view the gathered results, head over to [Example 3: Viewing the Honey Badger Map].
+
+
+Example 7: Powershell Via Macro
+-------------------------------
+
+Another option that the new Honeybadger has, is the ability to user a word doc macro to stage the powershell script.  Word macros allow the execution of code from within a word document.  In this case the macro embedded into the Honeybadger docm agent will connect back to the Honeybadger service, pull down and execute the powershell script that gathers location data and sends it once again, back to the service.
+
+To get the document, simply navigate as before (In example 6) to the demo page.  
+
+![](Honeybadger_files/demo_page.PNG)
+
+This time, click "Doc File".  Your browser should download and open the document.
+
+![](HoneyBadger_files/protected_docm_view.PNG)
+If word opens the document up in protected view, click "Enable Editing".
+
+![](HoneyBadger_files/enable_docm_macros.PNG)
+You may also need to click "Enable Content"; a deceptively benign button press.
+
+That's it.  You might notice a powershell window open on your taskbar, before fading away after a few seconds.  Your location has been transmitted back to the Honeybadger server.  To view the data use the process from [Example 3: Viewing the Honey Badger Map].
