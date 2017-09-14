@@ -247,7 +247,7 @@ Another option that the new Honeybadger has, is the ability to user a word doc m
 
 To get the document, simply navigate as before (In example 6) to the demo page.  
 
-![](Honeybadger_files/demo_page.PNG)
+![](HoneyBadger_files/demo_page.PNG)
 
 This time, click "Doc File".  Your browser should download and open the document.
 
