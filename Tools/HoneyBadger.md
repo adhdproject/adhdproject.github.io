@@ -56,6 +56,7 @@ Example 1: Web Browser Share Location
 Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
 into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/) 
 and clicking `Honey Badger (Location Tracker)`.
+
 ![](HoneyBadger_files/webkit_root.PNG)
 
 Honey Badger will then attempt to gather your location using a variety of
@@ -232,6 +233,7 @@ NOTE: Depending on your web browser you might see different warning messages.  C
 Click "Run" to launch the HTA.
 
 After a moment you should see a window like this pop up.
+
 ![](HoneyBadger_files/hta_window.PNG)
 
 That's it.  Wait a few seconds and close the window.  
@@ -250,9 +252,11 @@ To get the document, simply navigate as before (In example 6) to the demo page.
 This time, click "Doc File".  Your browser should download and open the document.
 
 ![](HoneyBadger_files/protected_docm_view.PNG)
+
 If word opens the document up in protected view, click "Enable Editing".
 
 ![](HoneyBadger_files/enable_docm_macros.PNG)
+
 You may also need to click "Enable Content"; a deceptively benign button press.
 
 That's it.  You might notice a powershell window open on your taskbar, before fading away after a few seconds.  Your location has been transmitted back to the Honeybadger server.  To view the data use the process from [Example 3: Viewing the Honey Badger Map].
