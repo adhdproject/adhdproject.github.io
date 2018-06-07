@@ -4,7 +4,7 @@ OsChameleon
 Website
 -------
 
-<https://github.com/zaeyx/oschameleon>
+<https://github.com/mushorg/oschameleon>
 
 Description
 -----------
