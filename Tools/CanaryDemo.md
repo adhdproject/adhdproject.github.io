@@ -39,7 +39,7 @@ Find the line that says CANARY_PUBLIC_IP= and substitue your ip address
 for whatever is there.  To save the changes, type ctrl+o, enter, and then
 ctrl+x
 
-![Nano](/home/adhd/adhdproject.github.io/Tools/CanaryDemo_files/Selection_001.png  "Nano edit")
+![Nano](CanaryDemo_files/Selection_001.png  "Nano edit")
 
 Before we can start the app, we need to shut
 down dnsmasq and apache and master.
@@ -54,23 +54,23 @@ Now we can start Canary with this command: $sudo docker-compose up
 Next, in firefox browse to http://localhost/generator and you wil see
 the Canary UI.
 
-![UI](/home/adhd/adhdproject.github.io/Tools/CanaryDemo_files/Selection_003.png  "UI")
+![UI](CanaryDemo_files/Selection_003.png  "UI")
 
 
 Now, lets create a WebBug URL token.
 
 Select the dropdown and then select WebBug URL Token:
 
-![URI](/home/adhd/adhdproject.github.io/Tools/CanaryDemo_files/Selection_004.png  "URI")
+![URI](CanaryDemo_files/Selection_004.png  "URI")
 
 Please fill in adhd@localhost.com and adhd in the email and notes respectivily. Please note, we are not going to be using this.
 
-![Notes](/home/adhd/adhdproject.github.io/Tools/CanaryDemo_files/Selection_006.png  "Notes")
+![Notes](CanaryDemo_files/Selection_006.png  "Notes")
 
 
 Next select Create My Canary Token.
 
-![Manage](/home/adhd/adhdproject.github.io/Tools/CanaryDemo_files/Token Created.png  "Manage")
+![Manage](CanaryDemo_files/TokenCreated.png  "Manage")
 
 
 Now you should be able to view and trigger to token.
