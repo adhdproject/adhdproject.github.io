@@ -193,4 +193,4 @@ Windows
 Introduction to SANS 550
 ------------------------
 
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155670&authkey=AEFDwOc9yf-Uyxk" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155670&authkey=AEFDwOc9yf-Uyxk" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>

@@ -32,7 +32,7 @@ Requests should be in the form `http://<server IP addres>/web-bug-server/index.p
 Video Walkthrough
 -----------------
 
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155683&authkey=AGDz4h2cf-SaKbM" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155683&authkey=AGDz4h2cf-SaKbM" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
 
 Example 1: Setting up the Web Bug Doc
 -------------------------------------

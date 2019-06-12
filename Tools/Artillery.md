@@ -41,7 +41,7 @@ line arguments for Artillery.
 Video Walkthrough
 -----------------
 
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155680&authkey=ABFf2c6CSDAMzFQ" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox=""></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155680&authkey=ABFf2c6CSDAMzFQ" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
 
 Example 1: Running Artillery
 ----------------------------

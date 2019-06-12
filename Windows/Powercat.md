@@ -22,7 +22,7 @@ rewarding and interesting to try!
 Video Walkthrough
 -----------------
 
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155688&authkey=AHB538Hnsqz7-E8" width="320" height="200" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155688&authkey=AHB538Hnsqz7-E8" width="320" height="200" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
 
 Example 1: Setup
 ----------------

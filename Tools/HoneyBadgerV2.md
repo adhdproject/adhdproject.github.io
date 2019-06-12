@@ -24,11 +24,16 @@ Install Location
 Usage
 -----
 
+Video Walkthrough
+-----------------
+
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&authkey=AM_U5oxKFN3Tc8k" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
+
 Example 1: Web Browser Share Location
 -------------------------------------
 
 Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
-into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/) 
+into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/)
 and clicking `Honey Badger (Location Tracker)`.
 
 Honey Badger will then attempt to gather your location using a variety of
@@ -55,12 +60,12 @@ Open the web browser and enter
 into the address bar. This address is also available as a link by
 visiting [http://127.0.0.1/](http://127.0.0.1/) and clicking "Honey Badger (Reporting)."
 
-After you log in with the username and password we created in 
+After you log in with the username and password we created in
 [Example 2: Creating a Honey Badger User] you will be taken to the reporting page.
 
 The reporting page will contain a map showing the locations that Honey Badger has logged.
 
-Honey Badger keeps track of each connection and displays one at a time on the map. To choose a 
+Honey Badger keeps track of each connection and displays one at a time on the map. To choose a
 different connection than the one shown, click on the drop-down menu and select another entry.
 
 NOTE: Obviously there's not going to be anything there if you haven't logged any connection attemps yet.  Try using the techniques in Example 1 or Example 4 to get some data logged. Then check back here.
@@ -68,7 +73,7 @@ NOTE: Obviously there's not going to be anything there if you haven't logged any
 Example 4: Using Java to Find Nearby Wireless APs
 -------------------------------------------------
 
-What happens if you follow [Example 1: Web Browser Share Location], but you decide not 
+What happens if you follow [Example 1: Web Browser Share Location], but you decide not
 to share your location?  Honey Badger has another way to discover your physical
 location if your machine has Java installed and an active wireless card.
 First, find the IP address of the ADHD machine. The assumption here is
@@ -85,7 +90,7 @@ that you will be connecting to it from within a local network.
                 collisions:0 txqueuelen:1000
                 RX bytes:146777599 (146.7 MB)  TX bytes:7955605 (7.9 MB)
                 Interrupt:19 Base address:0x2000
-                
+
         lo      Link encap:Local Loopback
                 inet addr:127.0.0.1  Mask:255.0.0.0
                 inet6 addr: ::1/128 Scope:Host
@@ -103,7 +108,7 @@ Honey Badger will attempt to gather your
 location using a variety of techniques. First, it uses the web browsers
 built in location sharing functionality. The web browser will
 prompt you whether or not to share your location with Honey Badger.
-Instead of accepting, click the 'x' to close the prompt so that the Java 
+Instead of accepting, click the 'x' to close the prompt so that the Java
 technique will run.
 
 ![](HoneyBadger_files/image004.png)

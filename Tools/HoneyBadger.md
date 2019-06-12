@@ -44,7 +44,7 @@ Visit [http://127.0.0.1/honeybadger/index.php](http://127.0.0.1/honeybadger/inde
 Video Walkthrough
 -----------------
 
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&authkey=AM_U5oxKFN3Tc8k" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&authkey=AM_U5oxKFN3Tc8k" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
 
 Example 1: Web Browser Share Location
 -------------------------------------
