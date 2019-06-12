@@ -44,17 +44,13 @@ Visit [http://127.0.0.1/honeybadger/index.php](http://127.0.0.1/honeybadger/inde
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_HoneyBadger.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&authkey=AM_U5oxKFN3Tc8k" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Web Browser Share Location
 -------------------------------------
 
 Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
-into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/) 
+into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/)
 and clicking `Honey Badger (Location Tracker)`.
 
 ![](HoneyBadger_files/webkit_root.PNG)
@@ -76,7 +72,7 @@ Example 2: Creating a Honey Badger User
 ---------------------------------------
 
 
-Before you can view the data Honey Badger has collected you will need to create a user. 
+Before you can view the data Honey Badger has collected you will need to create a user.
 Creating a user in Honey Badger is super simple.
 
 Change into the Honey Badger admin directory
@@ -90,7 +86,7 @@ NOTE: There is probably already a user by the name adhd as this is the default u
 
 `/var/www/adhd/honeybadger/admin$` **`sudo ./create_user.py`**
 
-        Username: adhd 
+        Username: adhd
         Password: adhd
         User Role Options:
         0 - Administrator
@@ -101,13 +97,13 @@ NOTE: There is probably already a user by the name adhd as this is the default u
         [!] Database not initialized.
 
 For this example I created a user named **adhd** with password **adhd**
-I also made this user an administrator.  Honey Badger administrators are given permissions to 
+I also made this user an administrator.  Honey Badger administrators are given permissions to
 purge the database and logs from within the Honey Badger interface.
 
-Now that you have created a user, you are ready to proceed onto 
+Now that you have created a user, you are ready to proceed onto
 [Example 3: Viewing the Honey Badger Map].
 
-        
+
 Example 3: Viewing the Honey Badger Map
 ---------------------------------------
 
@@ -122,7 +118,7 @@ Use your credentials on the login screen to authenticate.
 
 ![](HoneyBadger_files/login_screen.PNG)
 
-After you log in with the username and password we created in 
+After you log in with the username and password we created in
 [Example 2: Creating a Honey Badger User] you will be taken to the reporting page.
 
 
@@ -130,7 +126,7 @@ After you log in with the username and password we created in
 
 The reporting page contains a map showing the locations that Honey Badger has logged.  You can select your target from the dropdown menu on the left.
 
-Honey Badger keeps track of each connection and displays one at a time on the map. To choose a 
+Honey Badger keeps track of each connection and displays one at a time on the map. To choose a
 different connection than the one shown, click on the drop-down menu and select another entry.
 
 NOTE: Obviously there's not going to be anything there if you haven't logged any connection attemps yet.  Try using the techniques in the other examples to get some data logged. Then check back here.
@@ -140,7 +136,7 @@ Example 4: Using Java to Find Nearby Wireless APs
 
 NOTE: Support for Java Applets has been waning across the internet as of late.  If you can't get this technique to work, try some of the new agents below.
 
-What happens if you follow [Example 1: Web Browser Share Location], but you decide not 
+What happens if you follow [Example 1: Web Browser Share Location], but you decide not
 to share your location?  Honey Badger has another way to discover your physical
 location if your machine has Java installed and an active wireless card.
 First, find the IP address of the ADHD machine. The assumption here is
@@ -157,7 +153,7 @@ that you will be connecting to it from within a local network.
                 collisions:0 txqueuelen:1000
                 RX bytes:146777599 (146.7 MB)  TX bytes:7955605 (7.9 MB)
                 Interrupt:19 Base address:0x2000
-                
+
         lo      Link encap:Local Loopback
                 inet addr:127.0.0.1  Mask:255.0.0.0
                 inet6 addr: ::1/128 Scope:Host
@@ -175,7 +171,7 @@ Honey Badger will attempt to gather your
 location using a variety of techniques. First, it uses the web browsers
 built in location sharing functionality. The web browser will
 prompt you whether or not to share your location with Honey Badger.
-Instead of accepting, click the 'x' to close the prompt so that the Java 
+Instead of accepting, click the 'x' to close the prompt so that the Java
 technique will run.
 
 ![](HoneyBadger_files/image004.png)
@@ -196,17 +192,17 @@ location Honey Badger gathered.
 Example 5: Red Edition Updates
 ------------------------------
 
-A number of additions have been made to bring Honeybadger back to full fighting form.  
+A number of additions have been made to bring Honeybadger back to full fighting form.
 
 For starters there is now a .htaccess file.  As long as your site configuration allows htaccess overrides, everything you need to keep the honeybadger install safe should be set.  Honeybadger has a few security needs that have to be implemented at the level of the web service.  For example, you shouldn't be able to just download the database without authenticating and reading the data through the app.  An attacker could potentially do this if the web server is not configured to disallow it.  Those configurations can be made in Apache at the level of the virtual host, or in this case, with an htaccess file.
 
 You can test whether or not this is working by attempting to visit the a disallowed resource.  like [admin/vhost_config.txt](http://localhost/honeybadger/admin/vhost_config.txt) from your web browser.  If you see anything other than a 404 error, something is wrong.
 
-There are also some new agents.  You can check out the agents by navigating to the folder admin/agents from a console on your webserver.  
+There are also some new agents.  You can check out the agents by navigating to the folder admin/agents from a console on your webserver.
 
 Honeybadger is now able to handle multiple types of encodings.  You can specify the encoding type that the agent will be using in the call to service.php using the parameter "decode" (current choices are base64 and hex).
 
-The new agents are also gaining new capabilities (pulling stored network profiles) more will be added in time.  
+The new agents are also gaining new capabilities (pulling stored network profiles) more will be added in time.
 
 
 Example 6: Powershell Via HTA
@@ -236,7 +232,7 @@ After a moment you should see a window like this pop up.
 
 ![](HoneyBadger_files/hta_window.PNG)
 
-That's it.  Wait a few seconds and close the window.  
+That's it.  Wait a few seconds and close the window.
 In the background, the HTA has downloaded and executed Honeybadger's powershell agent.  To view the gathered results, head over to [Example 3: Viewing the Honey Badger Map].
 
 
@@ -245,7 +241,7 @@ Example 7: Powershell Via Macro
 
 Another option that the new Honeybadger has, is the ability to user a word doc macro to stage the powershell script.  Word macros allow the execution of code from within a word document.  In this case the macro embedded into the Honeybadger docm agent will connect back to the Honeybadger service, pull down and execute the powershell script that gathers location data and sends it once again, back to the service.
 
-To get the document, simply navigate as before (In example 6) to the demo page.  
+To get the document, simply navigate as before (In example 6) to the demo page.
 
 ![](HoneyBadger_files/demo_page.PNG)
 

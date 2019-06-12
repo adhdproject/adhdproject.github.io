@@ -16,7 +16,7 @@ health of a server monitoring-tool; to create a comprehensive way to secure a sy
 Artillery was written to be an addition to security on a server and make it very
 difficult for attackers to penetrate a system. The concept is simple: project
 Artillery will monitor the filesystem looking for indicators of change. If one is
-detected, an email is sent to the server owner. Artillery also listens for rogue 
+detected, an email is sent to the server owner. Artillery also listens for rogue
 connections. If detected, a notification is sent to the server owner, and
 the offending IP address is banned.
 
@@ -41,11 +41,7 @@ line arguments for Artillery.
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Artillery.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155680&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155680&authkey=ABFf2c6CSDAMzFQ" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Running Artillery
 ----------------------------
@@ -120,9 +116,9 @@ you are in a place where you could disturb others.
         <<<snip>>>
         ?????P??N?+???T?Z???~0?Connection closed by foreign host.
 
-The reason for muting your speakers should be apparent now.  
-Artillery sends a bunch of garbage characters when a connection is made.  
-Some of these characters are usually ASCII bell characters that will make 
+The reason for muting your speakers should be apparent now.
+Artillery sends a bunch of garbage characters when a connection is made.
+Some of these characters are usually ASCII bell characters that will make
 your computer ding a whole lot.
 
 The result of our connection attempt should be that Artillery
@@ -158,7 +154,7 @@ into place. In this instance, the remote IP address is 192.168.1.193.
         Listing all iptables looking for a match... if there is a massive amount of blocked IP's this could take a few minutes..
         1
 
-If for some reason the script doesn't work, try running it a few times to unban your IP, 
+If for some reason the script doesn't work, try running it a few times to unban your IP,
 or simply flush iptables like so:
 
 `/var/artillery$` **`sudo iptables -F`**

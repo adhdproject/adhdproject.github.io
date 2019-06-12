@@ -15,7 +15,7 @@ Install Location
 Usage
 -----
 
-Ghostwriting.sh is quite easy to use.  Simply change directory to the install location, 
+Ghostwriting.sh is quite easy to use.  Simply change directory to the install location,
 run the script, and follow the prompts.
 
 Let me show you an example.
@@ -23,11 +23,7 @@ Let me show you an example.
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Ghost.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155674&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155674&authkey=AFzauuwLy7HXj-M" width="320" height="179" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Obfuscating an executable with Ghostwriting.sh
 ---------------------------------------------------------
@@ -38,10 +34,10 @@ Let's first launch the script
 
 `/opt/ghostwriting$` **`sudo ./ghostwriting.sh`**
 
-Ghostwriting will first download and install any missing gems it may need.  It will then create a 
+Ghostwriting will first download and install any missing gems it may need.  It will then create a
 meterpreter reverse tcp binary ready to connect back to your machine's private IP address.
 Next it will disassemble that executable, and insert junk code as a form of signature evasion.
-Finally it will reassemble the binary with the junk code inside, and open a webserver so you can 
+Finally it will reassemble the binary with the junk code inside, and open a webserver so you can
 transfer the file to your victim machine.
 
         ****************************************************
@@ -55,12 +51,12 @@ You should see two files.  Click to download "EveryVillainIsLemons.exe".
 
 ![Downloads in Chrome](Ghostwriting.sh_files/downloads.PNG)
 
-Here is the moment of truth, depending on your AV this specific file may or may not be detected 
-and block upon download (or later upon execution).  If you need to, go ahead and disable your AV's 
-real-time protection.  This script is a demonstration tool more than anything.  It can however be 
+Here is the moment of truth, depending on your AV this specific file may or may not be detected
+and block upon download (or later upon execution).  If you need to, go ahead and disable your AV's
+real-time protection.  This script is a demonstration tool more than anything.  It can however be
 modified to be hyper effective.
 
-Once you have the file downloaded, go ahead and head over to your terminal in ADHD and 
+Once you have the file downloaded, go ahead and head over to your terminal in ADHD and
 press **`Ctrl + C`** to stop the web server.
 
 Ghostwriting.sh will now ask you if you would like to start the payload handler, tell it yes (y).
@@ -82,7 +78,7 @@ The reverse handler on ADHD should receive the incoming connection and launch a 
 
         [*] Sending state (769536 bytes) to 192.168.27.1
         [*] Meterpreter session 1 opened (192.168.27.171:8080 -> 192.168.27.1:9832) at 2014-06-30 12:41:33
-    
+
         meterpreter \>
 
 There you go, happy pwning!

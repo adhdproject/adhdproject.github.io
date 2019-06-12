@@ -14,11 +14,7 @@ Thug is a Python low-interaction honeyclient aimed at mimicing the behavior of a
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Thug.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155684&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155684&authkey=AJW4WLe0zpjbXrE" width="320" height="200" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Usage
 ----------------

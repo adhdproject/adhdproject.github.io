@@ -21,19 +21,19 @@ By using all of the techniques mentioned below:
 
 The Portspoof program's primary goal is to enhance OS security through a set of new techniques:
 
-* All TCP ports are always open 
+* All TCP ports are always open
 
 Instead of informing an attacker that a particular port is CLOSED or FILTERED a system with Portspoof will return SYN+ACK for every port connection attempt.
 
 As a result it is impractical to use stealth (SYN, ACK, etc.) port scanning against your system, since all ports are always reported as OPEN. With this approach it is really difficult to determine if a valid software is listening on a particular port (check out the screenshots).
 
-* Every open TCP port emulates a service 
+* Every open TCP port emulates a service
 
 Portspoof has a huge dynamic service signature database, which will be used to generate responses to your offenders scanning software service probes.
 
 Scanning software usually tries to determine a service that is running on an open port. This step is mandatory if one would want to identify port numbers on which you are running your services on a system behind the Portspoof. For this reason Portspoof will respond to every service probe with a valid service signature, which is dynamically generated based on a service signature regular expression database.
 
-As a result an attacker will not be able to determine which port numbers your system is truly using. 
+As a result an attacker will not be able to determine which port numbers your system is truly using.
 
 Install Location
 ----------------
@@ -53,7 +53,7 @@ Usage
 
         Usage: portspoof [OPTION]...
         Portspoof - service emulator / frontend exploitation framework.
-        
+
         -i			  ip : Bind to a particular  IP address
         -p			  port : Bind to a particular PORT number
         -s			  file_path : Portspoof service signature regex. file
@@ -71,11 +71,7 @@ Usage
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_PortSpoof.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155689&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155689&authkey=ABR2nZMAPE89xwo" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Starting Portspoof
 -----------------------------
@@ -119,7 +115,7 @@ Note: You *must* run Nmap from a different machine. Scanning from the same machi
         19/tcp open  chargen
         20/tcp open  ftp-data
 
-All ports are reported as open! When run this way, Nmap reports the service that typically runs on each port. 
+All ports are reported as open! When run this way, Nmap reports the service that typically runs on each port.
 
 To get more accurate results, an attacker might run an Nmap service scan, which would actively try to detect the services running. But performing an Nmap service detection scan shows that something is amiss because all ports are reported as running the same type of service.
 

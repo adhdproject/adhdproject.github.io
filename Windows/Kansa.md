@@ -9,8 +9,8 @@ Website
 Description
 -----------
 
-A modular incident response framework in Powershell. It uses 
-Powershell Remoting to run user contributed, ahem, user contributed 
+A modular incident response framework in Powershell. It uses
+Powershell Remoting to run user contributed, ahem, user contributed
 modules across hosts in an enterprise to collect data for use
 during incident response, breach hunts, or for building an environmental
 baseline.
@@ -18,11 +18,7 @@ baseline.
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Kansa.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155667&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155667&authkey=AI6Zr2-z2u-xI7I" width="320" height="200" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Usage
 ----------------
@@ -32,7 +28,7 @@ folder in the Windows\_Labs folder on your class USB.
 
 ![](Kansa_files/image001.png)
 
-Let's move the whole Kansa_Output folder to the C:\Tools Directory on your Windows system. 
+Let's move the whole Kansa_Output folder to the C:\Tools Directory on your Windows system.
 
 Like so:
 

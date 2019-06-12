@@ -22,11 +22,7 @@ rewarding and interesting to try!
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_PowerCat.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155688&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155688&authkey=AHB538Hnsqz7-E8" width="320" height="200" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Setup
 ----------------
@@ -283,7 +279,7 @@ Hint 3:
 `argpng -anbo`
 
 **Optional Question \#2**
- 
+
 See what methods could be used to get around execution restriction
 policies. Hint : there are at least 15 techniques available to bypass
 execution restriction policies.

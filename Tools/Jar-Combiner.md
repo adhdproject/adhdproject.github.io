@@ -10,7 +10,7 @@ Website
 Description
 -----------
 
-Jar-Combiner is a tool used to combine two seperate Java applets into one.  The resultant combined applet will run one of the former applets normally, while hiding the second one in the background.  
+Jar-Combiner is a tool used to combine two seperate Java applets into one.  The resultant combined applet will run one of the former applets normally, while hiding the second one in the background.
 This is incredibly useful for backdooring legitimate Java applets.
 A user running the new combined applet will see what they expect, while your code runs in the background.
 
@@ -27,23 +27,19 @@ Usage
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Jar_Combiner.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155669&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155669&authkey=AGBOyyL_dQsqGLg" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Finding the Entrypoints
 ----------------------------------
 
-In order to combine two applets, you must first know the entrypoints into both of those applets.  
-The entrypoints are the classes that extend `JApplet` or `Applet`; they are where the code starts.  
-Every applet has a different entrypoint.  
+In order to combine two applets, you must first know the entrypoints into both of those applets.
+The entrypoints are the classes that extend `JApplet` or `Applet`; they are where the code starts.
+Every applet has a different entrypoint.
 
-The easiest way to determine the entrypoints is by looking at html files made to launch the 
-applets in question.  Take an html file or webpage that launches one of your Java applets and 
-view its source.  In the source of the file you should be able to find the `applet` tag.  
-Inside of this tag, find the parameter `code`.  The value to which the parameter `code` is set, 
+The easiest way to determine the entrypoints is by looking at html files made to launch the
+applets in question.  Take an html file or webpage that launches one of your Java applets and
+view its source.  In the source of the file you should be able to find the `applet` tag.
+Inside of this tag, find the parameter `code`.  The value to which the parameter `code` is set,
 is your entrypoint for that applet.
 
 For example, the html that launches the HoneyBadger geolocation applet looks something like this:
@@ -94,7 +90,7 @@ Run Jar-Combiner like so:
 When this operation is complete a new jar file should appear at `/opt/jar-combiner/Linux/finished.jar`.
 This is your combined jar file.
 
-When executed, `finished.jar` will run code from the first applet (jrdesktop) in the foreground, 
+When executed, `finished.jar` will run code from the first applet (jrdesktop) in the foreground,
 (with access to the screen) and the second applet (honey) in the background.
 
 Now that the applet has been created, we need to sign it.
@@ -107,25 +103,25 @@ Signing your newly created jar file is no big deal.
 First create a keystore.
 `/opt/jar-combiner/Linux$` **`keytool -genkey -alias signFiles -keystore mykeystore`**
 
-        Enter keystore password:  
-        Re-enter new password: 
+        Enter keystore password:
+        Re-enter new password:
         What is your first and last name?
-          [Unknown]:  
+          [Unknown]:
         What is the name of your organizational unit?
-          [Unknown]:  
+          [Unknown]:
         What is the name of your organization?
-          [Unknown]:  
+          [Unknown]:
         What is the name of your City or Locality?
-          [Unknown]:  
+          [Unknown]:
         What is the name of your State or Province?
-          [Unknown]:  
+          [Unknown]:
         What is the two-letter country code for this unit?
-          [Unknown]:  
+          [Unknown]:
         Is CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
           [no]:  yes
-          
+
         Enter key password for <signFiles>
-            (RETURN if same as keystore password): 
+            (RETURN if same as keystore password):
 
 You can just hit enter for most of the options, but fill the form out if you desire.  Do make sure to type *yes* when it asks you if all the preceding information was correct or else it will loop back to the start.
 
@@ -133,12 +129,12 @@ Now that the keystore is created, let's sign our new jar.
 
 `/opt/jar-combiner/Linux` **`jarsigner -keystore mykeystore -signedjar combinedandsigned.jar finished.jar signFiles`**
 
-        Enter Passphrase for keystore: 
-        
-        Warning: 
+        Enter Passphrase for keystore:
+
+        Warning:
         The signer certificate will expire within six months.
 
-This will create a new jar file called `combinedandsigned.jar` from `finished.jar` that will be 
+This will create a new jar file called `combinedandsigned.jar` from `finished.jar` that will be
 signed and ready to go!
 
 Next, let's launch the jar with the help of an html file.
@@ -182,28 +178,28 @@ To find your ADHD instance's IP Address simply run:
 
 `~$` **`ifconfig`**
 
-        eth0      Link encap:Ethernet  HWaddr 00:0c:29:40:1c:d3  
+        eth0      Link encap:Ethernet  HWaddr 00:0c:29:40:1c:d3
               inet addr:192.168.27.158  Bcast:192.168.27.255  Mask:255.255.255.0
               inet6 addr: fe80::20c:29ff:fe40:1cd3/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:91614 errors:0 dropped:0 overruns:0 frame:0
               TX packets:54289 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:123877563 (123.8 MB)  TX bytes:4351183 (4.3 MB)
-              Interrupt:19 Base address:0x2000 
+              Interrupt:19 Base address:0x2000
 
 Your IP address is the section listed as the `inet addr` for your eth0 interface.
 
-It is important to note, that if you are running ADHD in a VM, if the VM is set to network via NAT, 
+It is important to note, that if you are running ADHD in a VM, if the VM is set to network via NAT,
 you will only be able to access the VM from the host machine.
 
-If you have done everything right.  When you navigate to the test.html resource and run the applet.  
+If you have done everything right.  When you navigate to the test.html resource and run the applet.
 You should see something like this:
 
 ![navigating to the applet in Chrome](Jar-combiner_files/chome.png)
 
-To view your results (and to make sure that you did everything right) navigate to your HoneyBadger 
-reporting console.  In a web browser of your choice, head to http://YOUR_ADHD_IP_ADDRESS/honeybadger 
+To view your results (and to make sure that you did everything right) navigate to your HoneyBadger
+reporting console.  In a web browser of your choice, head to http://YOUR_ADHD_IP_ADDRESS/honeybadger
 and log in.
 
 ![HoneyBadger login page](Jar-combiner_files/Log_in.png)
@@ -213,7 +209,7 @@ Assuming you haven't changed them, the default credentials are:
     Username: adhd
     Password: adhd
 
-Once you have logged in to the page, simply select the target name you set in test.html (under the 
+Once you have logged in to the page, simply select the target name you set in test.html (under the
 "target" parameter) in the menu on the left.
 
 ![honey.jar results](Jar-combiner_files/badger.png "Voila")
@@ -227,7 +223,7 @@ Note: These instructions have been tested with Java 8 Update 31.
 
 The newer versions of Java enforce strict security settings for the purposes of avoiding drive-by-pwning.
 
-Though the effectiveness of these settings is up for debate, they will hinder our progress in this 
+Though the effectiveness of these settings is up for debate, they will hinder our progress in this
 lab by blocking our self-signed applet.
 
 Here is how to change them on windows.
@@ -244,7 +240,7 @@ Fill the entry in like so `http://YOUR_ADHD_IP_ADDRESS`
 
 ![Add a site exception](Jar-combiner_files/security_1.png)
 
-Finally, click okay to accept your changes.  Accept any warning banners.  
+Finally, click okay to accept your changes.  Accept any warning banners.
 You should now be ready to rock!
 
 

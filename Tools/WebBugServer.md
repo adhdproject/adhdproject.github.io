@@ -32,11 +32,7 @@ Requests should be in the form `http://<server IP addres>/web-bug-server/index.p
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_WebBug.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155683&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155683&authkey=AGDz4h2cf-SaKbM" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Setting up the Web Bug Doc
 -------------------------------------
@@ -87,7 +83,7 @@ Example 2: Viewing Bug Connections in the Database
 Any time a web bug is triggered, it makes a connection back to the
 server running on the ADHD server, which then records information about
 the connection in a database. To view the information stored in the
-database, open a web browser and visit [http://127.0.0.1/adminer/](http://127.0.0.1/adminer/) 
+database, open a web browser and visit [http://127.0.0.1/adminer/](http://127.0.0.1/adminer/)
 and log in using `127.0.0.1`, `webbuguser`, `adhd`, and `webbug` for the Server,
 Username, Password, and Database respectively.
 

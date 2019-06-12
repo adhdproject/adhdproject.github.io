@@ -11,9 +11,9 @@ Website
 Description
 -----------
 
-WebLabyrinth is designed to create a maze of bogus web pages to confuse 
-web scanners. It can be run on any Apache server with mod_rewrite and PHP. 
-It includes features for detecting search engine web crawlers, randomly 
+WebLabyrinth is designed to create a maze of bogus web pages to confuse
+web scanners. It can be run on any Apache server with mod_rewrite and PHP.
+It includes features for detecting search engine web crawlers, randomly
 returning different HTTP status codes, and alerting signature-based IDS.
 
 Install Location
@@ -29,11 +29,7 @@ Visit [http://127.0.0.1/labyrinth/index.php](http://127.0.0.1/labyrinth/index.ph
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Weblabyrinth.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155682&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155682&authkey=ABLPcDaStZNitnE" width="320" height="179" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Basic Usage
 ----------------------
@@ -64,7 +60,7 @@ at [http://127.0.0.1/adminer/index.php](http://127.0.0.1/adminer/index.php) or b
 
 ![](Weblabyrinth_files/image003.png)
 
-Once logged in, click on the `crawlers` table and then click `Select data` 
+Once logged in, click on the `crawlers` table and then click `Select data`
 to view all the entries Weblabyrinth has logged.
 
 ![](Weblabyrinth_files/image004.png) ![](Weblabyrinth_files/image005.png)

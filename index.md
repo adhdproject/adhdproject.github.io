@@ -21,6 +21,8 @@ ADHD
 - [BeEF](Tools/Beef.md)
     - [Example 1: Hooking a Web Browser](Tools/Beef.md#Example_1:_Hooking_a_Web_Browser)
     - [Example 2: Browser Based Exploitation With BeEF](Tools/Beef.md#Example_2:_Browser_Based_Exploitation_With_BeEF)
+- [Canary Local Demo](Tools/CanaryDemo.md)
+- [Canary Live](Tools/CanaryLive.md)
 - [Cowrie](Tools/Cowrie.md)
     - [Example 1: Running Cowrie](Tools/Cowrie.md#Example_1:_Running_Cowrie)
     - [Example 2: Cowrie In Action](Tools/Cowrie.md#Example_2:_Cowrie_In_Action)
@@ -36,7 +38,6 @@ ADHD
     - [Example 3: Cryptolocked-ng's Tentacles](Tools/Cryptolocked-ng.md#Example_3:_Cryptolocked-ng's_Tentacles)
     - [Example 4: Cryptolocked-ng's Huntr](Tools/Cryptolocked-ng.md#Example_4:_Cryptolocked-ng's_Huntr)
     - [Example 5: Email Alerts](Tools/Cryptolocked-ng.md#Example_5:_Email_Alerts)
-
 - [Decloak](Tools/Decloak.md)
     - [Example 1: Compiling Flash and Java Objects](Tools/Decloak.md#Example_1:_Compiling_Flash_and_Java_Objects)
     - [Example 2: Setting Up the Decloak DNS Server](Tools/Decloak.md#Example_2:_Setting_Up_the_Decloak_DNS_Server)
@@ -121,6 +122,7 @@ ADHD
     - [Example 1: Finding Hosts With Bing](Tools/Recon-ng.md#Example_1:_Finding_Hosts_With_Bing)
     - [Example 2: Viewing Stored Data](Tools/Recon-ng.md#Example_2:_Viewing_Stored_Data)
     - [Example 3: Reporting From Within Recon-ng](Tools/Recon-ng.md#Example_3:_Reporting_From_Within_Recon-ng)
+- [RITA](Tools/RITA.md)
 - [Rubberglue](Tools/Rubberglue.md)
 	- [Example 1: Setting a Trap](Tools/Rubberglue.md#Example_1:_Setting_a_Trap)
 - [SET](Tools/SET.md)
@@ -156,7 +158,7 @@ ADHD
     - [Example 3: Wget Gets Lost in the Labyrinth](Tools/Weblabyrinth.md#Example_3:_Wget_Gets_Lost_in_the_Labyrinth)
 - [Wordpot](Tools/Wordpot.md)
 	- [Example 1: Running a fake Wordpress install](Tools/Wordpot.md#Example_1:_Running_a_fake_Wordpress_install)
-	
+
 HoneyDrive
 ----------
 
@@ -187,3 +189,8 @@ Windows
     - [Example 9: Cleanup](Windows/Powercat.md#Example_9:_Cleanup)
 - [Software Restriction Policies](Windows/SRP.md)
     - [Example 1: Usage](Windows/SRP.md#Example_1:_Usage)
+
+Introduction to SANS 550
+------------------------
+
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155670&authkey=AEFDwOc9yf-Uyxk" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>

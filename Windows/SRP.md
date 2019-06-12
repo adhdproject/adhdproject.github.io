@@ -20,11 +20,7 @@ AV.
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_SRP.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155686&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155686&authkey=ACtJIBzE49Wz0hc" width="320" height="179" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Usage
 ----------------

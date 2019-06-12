@@ -14,11 +14,7 @@ Conpot is an ICS honeypot with the goal to collect intelligence about the motive
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Conpot.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155678&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155678&authkey=AD-nIPRy4yLuBBg" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Usage
 ----------------

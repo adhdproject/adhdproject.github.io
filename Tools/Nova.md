@@ -30,11 +30,7 @@ Install Location
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_NOVA.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155665&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155665&authkey=AFZWDfn-R-KpsXE" width="320" height="179" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Starting Nova
 ------------------------
@@ -98,14 +94,14 @@ button.
 
 This is the page where you can get creative. You can try and make
 something believable, or you can make something that sticks out like a
-sore thumb and will keep an attacker scratching his head for quite a while trying to 
+sore thumb and will keep an attacker scratching his head for quite a while trying to
 come up with an explanation for what he's seeing.
 
 Give your profile a name and uncheck the "Inherit?" box next to
 "Operating System Personality." Here's where you can find some fun
 devices to impersonate. You can either scroll through the list or start
 typing in the box and see what comes up. Try typing "Nintendo", "Sony
-Playstation", or "Microsoft Xbox" for some fun ones! Feel free to change your 
+Playstation", or "Microsoft Xbox" for some fun ones! Feel free to change your
 "Ethernet Vendor" as well.
 
 ![](Nova_files/image009.png)
@@ -129,7 +125,7 @@ uses it. To start, select the "Nodes" tab, look down and click the "Add New Node
 
 Select your new Profile from the drop-down menu. The Portset and
 Ethernet Vendor should be automatically selected for you. Then click the
-"Create New Nodes" button and you should see a fourth node with your profile 
+"Create New Nodes" button and you should see a fourth node with your profile
 added to the current configuration.
 
 ![](Nova_files/image013.png)

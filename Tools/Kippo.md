@@ -10,8 +10,8 @@ Website
 Description
 -----------
 
-Kippo is a medium interaction SSH honeypot designed to log brute force attacks and, 
-most importantly, the entire shell interaction performed by the attacker. Kippo is inspired, 
+Kippo is a medium interaction SSH honeypot designed to log brute force attacks and,
+most importantly, the entire shell interaction performed by the attacker. Kippo is inspired,
 but not based on Kojoney. (From Website)
 
 Install Location
@@ -36,11 +36,7 @@ The config file is located at
 Video Walkthrough
 -----------------
 
-<video controls>
-  <source src="Videos/1_550_Kippo.mp4">
-  <source src="https://onedrive.live.com/download.aspx?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155666&canary=">
- <p>Your browser does not support html5 video.</p>
-</video>
+<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155666&authkey=ADEX7FFe6kanai4" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Example 1: Running Kippo
 ------------------------
@@ -79,7 +75,7 @@ Assuming Kippo is already running and listening on port 2222, (if not see [Examp
         Password:
         Password:
         Password:
-        adhd@localhost's password: 
+        adhd@localhost's password:
         Permission denied, please try again.
 
 It looks like our attempts to authenticate were met with failure.
@@ -95,18 +91,18 @@ Now tail the contents of kippo.log:
 
 `/opt/kippo/log$` **`tail kippo.log`**
 
-        2014-02-17 21:52:12-0700 [-] unauthorized login: 
+        2014-02-17 21:52:12-0700 [-] unauthorized login:
         2014-02-17 21:54:51-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] adhd trying auth password
         2014-02-17 21:54:51-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] login attempt [adhd/asdf] failed
         2014-02-17 21:54:52-0700 [-] adhd failed auth password
-        2014-02-17 21:54:52-0700 [-] unauthorized login: 
+        2014-02-17 21:54:52-0700 [-] unauthorized login:
         2014-02-17 21:54:53-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] adhd trying auth password
         2014-02-17 21:54:53-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] login attempt [adhd/adhd] failed
         2014-02-17 21:54:54-0700 [-] adhd failed auth password
-        2014-02-17 21:54:54-0700 [-] unauthorized login: 
+        2014-02-17 21:54:54-0700 [-] unauthorized login:
         2014-02-17 21:54:54-0700 [HoneyPotTransport,0,127.0.0.1] connection lost
 
-Here we can clearly see my login attempts and the username/password combos I employed as I tried 
+Here we can clearly see my login attempts and the username/password combos I employed as I tried
 to gain access in [Example 2: Kippo In Action].  This could be very useful!
 
 
