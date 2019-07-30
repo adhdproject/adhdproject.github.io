@@ -25,7 +25,8 @@
 
   - [Decloak](Tools/Decloak.md)
   - [Docz.py](Tools/Docz.md)
-  - [Honeybadger](Tools/HoneyBadger.md)
+  - [HoneyBadger](Tools/HoneyBadger.md)
+  - [HoneyBadger Red](Tools/HoneyBadger-Red.md)
   - [Jar-Combiner](Tools/Jar-Combiner.md)
   - [Sqlite Bug Server](Tools/SqliteBugServer.md)
   - [Web Bug Server](Tools/WebBugServer.md)

