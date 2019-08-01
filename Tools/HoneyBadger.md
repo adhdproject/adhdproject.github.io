@@ -4,7 +4,7 @@ HoneyBadger
 
 Website
 -------
-<https://github.com/bkonsela/honeybadger>
+<https://github.com/adhdproject/honeybadger>
 
 
 Description
