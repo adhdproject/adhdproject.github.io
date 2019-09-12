@@ -5,7 +5,7 @@ Artillery
 Website
 -------
 
-<https://www.trustedsec.com/downloads/artillery/>
+<https://github.com/BinaryDefense/artillery>
 
 Description
 -----------
