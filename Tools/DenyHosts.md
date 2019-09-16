@@ -5,14 +5,14 @@ DenyHosts
 Website
 -------
 
-<http://denyhosts.sourceforge.net>
+<https://github.com/denyhosts/denyhosts>
 
 Description
 -----------
 
-DenyHosts is a Python script written by Phil Schwartz that analyzes your service logs to uncover 
-attempts to hack into your system.  Upon discovering a repeatedly malicious host, the `/etc/hosts.deny` 
-file is updated to prevent future break-in attempts from that host. 
+DenyHosts is a utility developed by Phil Schwartz and maintained by a number of developers which aims
+to thwart sshd (ssh server) brute force attacks. Upon discovering a repeatedly malicious host, the `/etc/hosts.deny` 
+file is updated to prevent future break-in attempts from that host.
 
 
 Install Location
