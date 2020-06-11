@@ -21,9 +21,12 @@
 
 [Attribution]()
 
+  - [Creepy](Tools/Attribution/Creepy.md)
   - [Decloak](Tools/Attribution/Decloak.md)
   - [HoneyBadger](Tools/Attribution/HoneyBadger.md)
   - [Jar-Combiner](Tools/Attribution/Jar-Combiner.md)
+  - [OpenCanary](Tools/Attribution/OpenCanary.md)
+  - [RITA](Tools/Attribution/RITA.md)
   - [Web Bug Server](Tools/Attribution/WebBugServer.md)
 
 [Attack]()
