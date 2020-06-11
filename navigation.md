@@ -21,6 +21,7 @@
 
 [Attribution]()
 
+  - [CanaryTokens](Tools/Attribution/CanaryTokens.md)
   - [Creepy](Tools/Attribution/Creepy.md)
   - [Decloak](Tools/Attribution/Decloak.md)
   - [HoneyBadger](Tools/Attribution/HoneyBadger.md)
