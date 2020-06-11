@@ -24,7 +24,16 @@ Install Location
 Example 1: Installing DenyHosts
 -------------------------------
 
-`~$` **`sudo apt-get install denyhosts`**
+`~$` **`wget https://github.com/denyhosts/denyhosts/releases/download/v3.1/DenyHosts-3.1.2.tar.gz`**
+`~$` **`tar zxvf DenyHosts-3.1.tar.gz`**
+The rest of the install process requires elevated privileges. You can either switch to root, or run the 
+following commands with `sudo`.
+
+`~#` **`mv DenyHosts-3.1 /opt`**
+`~#` **`cd /opt/DenyHosts-3.1`**
+`~#` **`python3 setup.py install`**
+`~#` **`cp denyhosts.conf /etc`**
+`~#` **`cp denyhosts.py /usr/bin`**
 
 It really doesn't get much simpler than that.
 
