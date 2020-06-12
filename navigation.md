@@ -9,6 +9,7 @@
   - [Cowrie](Tools/Annoyance/Cowrie.md)
   - [DenyHosts](Tools/Annoyance/DenyHosts.md)
   - [Honey Ports](Tools/Annoyance/HoneyPorts.md)
+  - [Kippo](Tools/Annoyance/Kippo.md)
   - [OsChameleon](Tools/Annoyance/OsChameleon.md)
   - [PHP-HTTP-Tarpit](Tools/Annoyance/PHP-HTTP-Tarpit.md)
   - [Portspoof](Tools/Annoyance/Portspoof.md)
