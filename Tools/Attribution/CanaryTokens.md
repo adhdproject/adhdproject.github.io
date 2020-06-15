@@ -7,6 +7,8 @@ Website
 
 <http://canarytokens.org/>
 
+<https://github.com/thinkst/canarytokens-docker>
+
 Description
 -----------
 
