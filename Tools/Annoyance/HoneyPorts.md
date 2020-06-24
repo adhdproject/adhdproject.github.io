@@ -15,19 +15,18 @@ A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 Install Location
 ----------------
 
-`/opt/honeyports/cross-platform/honeyports/`
+`/opt/honeyports/`
 
 Usage
 -----
 
 Change to the Honeyports directory and execute the latest version of the script:
 
-`~$` **`cd /opt/honeyports/cross-platform/honeyports`**
+`~$` **`cd /opt/honeyports`**
 
-`/opt/honeyports/cross-platform/honeyports$` **`python2 ./honeyports-0.4a.py`**
+`/opt/honeyports$` **`python3 ./honeyports.py`**
 
-        Usage: honeyports-0.4a.py -p port
-        Please specify a valid port range (1-65535) using the -p option
+        
 
 Video Walkthrough
 -----------------
@@ -45,13 +44,13 @@ Example 1: Monitoring A Port With HoneyPorts
 
 From the honeyports directory, run:
 
-`/opt/honeyports/cross-platform/honeyports$` **`sudo python2 ./honeyports-0.4a.py -p 3389`**
+`/opt/honeyports$` **`sudo python3 ./honeyports.py -p 3389`**
 
         Listening on  0.0.0.0 IP:  0.0.0.0  :  3389
 
 We can confirm that the listening is taking place with lsof:
 
-`/opt/honeyports/cross-platform/honeyports$` **`sudo lsof -i -P | grep python`**
+`/opt/honeyports$` **`sudo lsof -i -P | grep python`**
 
         python   26560     root    3r  IPv4 493595      0t0  TCP *:3389 (LISTEN)
 
