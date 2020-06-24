@@ -45,11 +45,13 @@
   - [Conpot](HoneyDrive/Conpot.md)
   - [Dionaea](HoneyDrive/Dionaea.md)
   - [Thug](HoneyDrive/Thug.md)
-  
+-->
+
+<!--
 [Windows]()
 
   - [Kansa](Windows/Kansa.md)
   - [OsFuscate](Windows/OsFuscate.md)
   - [Powercat](Windows/Powercat.md)
   - [Software Restriction Policies](Windows/SRP.md)
-  -->
+-->
