@@ -36,6 +36,5 @@
   - [Gcat](Tools/Attack/Gcat.md)
   - [Ghostwriting.sh](Tools/Attack/Ghostwriting.md)
   - [Java-Web-Attack](Tools/Attack/Java-Web-Attack.md)
-  - [Pushpin](Tools/Attack/Pushpin.md)
   - [Recon-ng](Tools/Attack/Recon-ng.md)
   - [SET](Tools/Attack/SET.md)
