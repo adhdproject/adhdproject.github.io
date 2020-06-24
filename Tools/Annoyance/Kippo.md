@@ -80,6 +80,8 @@ Assuming Kippo is already running and listening on port 2222, (if not see [Examp
 
 It looks like our attempts to authenticate were met with failure.
 
+To log in successfully, ssh to the Kippo server and use any credentials found in `data/userdb.txt`. In this example, the credentials are `root`:`123456`
+
 Example 3: Viewing Kippo's Logs
 -------------------------------
 
