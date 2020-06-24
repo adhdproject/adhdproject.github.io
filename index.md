@@ -91,7 +91,9 @@ ADHD
     - [Example 1: Finding Hosts With Bing](Tools/Attack/Recon-ng.md#Example_1:_Finding_Hosts_With_Bing)
     - [Example 2: Viewing Stored Data](Tools/Attack/Recon-ng.md#Example_2:_Viewing_Stored_Data)
     - [Example 3: Reporting From Within Recon-ng](Tools/Attack/Recon-ng.md#Example_3:_Reporting_From_Within_Recon-ng)
+<!--
 - [RITA](Tools/RITA.md)
+-->
 - [Rubberglue](Tools/Annoyance/Rubberglue.md)
 	- [Example 1: Setting a Trap](Tools/Annoyance/Rubberglue.md#Example_1:_Setting_a_Trap)
 - [SET](Tools/Attack/SET.md)
