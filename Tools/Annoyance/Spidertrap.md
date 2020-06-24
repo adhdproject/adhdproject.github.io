@@ -21,7 +21,7 @@ Install Location
 Usage
 -----
 
-`/opt/spidertrap$` **`python2 spidertrap.py --help`**
+`/opt/spidertrap$` **`python3 spidertrap.py --help`**
 
         Usage: spidertrap.py [FILE]
 
@@ -39,7 +39,7 @@ Example 1: Basic Usage
 Start Spidertrap by opening a terminal, changing into the Spidertrap
 directory, and typing the following:
 
-`/opt/spidertrap$` **`python2 spidertrap.py`**
+`/opt/spidertrap$` **`python3 spidertrap.py`**
 
         Starting server on port 8000...
 
@@ -57,7 +57,7 @@ Example 2: Providing a List of Links
 
 Start Spidertrap. This time give it a file to use to generate its links.
 
-`/opt/spidertrap$` **`python2 spidertrap.py big.txt`**
+`/opt/spidertrap$` **`python3 spidertrap.py big.txt`**
 
         Starting server on port 8000...
 
