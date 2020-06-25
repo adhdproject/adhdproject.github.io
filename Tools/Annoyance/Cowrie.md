@@ -5,6 +5,7 @@ Cowrie
 Website
 -------
 
+<https://github.com/adhdproject/cowrie>
 <https://github.com/micheloosterhof/cowrie>
 
 Description

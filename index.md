@@ -67,10 +67,12 @@ ADHD
     - [Example 3: Starting the Attack Server](Tools/Attack/Java-Web-Attack.md#Example_3:_Starting_the_Attack_Server)
     - [Example 4: Stopping the Attack Server](Tools/Attack/Java-Web-Attack.md#Example_4:_Stopping_the_Attack_Server)
     - [Example 5: Customizing the Payloads](Tools/Attack/Java-Web-Attack.md#Example_5:_Customizing_the_Payloads)
+<!--
 - [Kippo](Tools/Annoyance/Kippo.md)
     - [Example 1: Running Kippo](Tools/Annoyance/Kippo.md#Example_1:_Running_Kippo)
     - [Example 2: Kippo In Action](Tools/Annoyance/Kippo.md#Example_2:_Kippo_In_Action)
     - [Example 3: Viewing Kippo's Logs](Tools/Annoyance/Kippo.md#Example_3:_Viewing_Kippo's_Logs)
+-->
 - [OpenCanary](Tools/Attribution/OpenCanary.md)
     - [Example 1: Deploying OpenCanary as a Service](Tools/Attribution/OpenCanary.md#Example_1:_Deploying_OpenCanary_as_a_Service)
 - [OsChameleon](Tools/Annoyance/OsChameleon.md)
