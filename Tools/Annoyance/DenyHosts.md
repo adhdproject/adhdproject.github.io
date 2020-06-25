@@ -48,9 +48,9 @@ Example 2: Enabling DenyHosts
 
 To enable DenyHosts, simply start its service.
 
-`~$` **`sudo python3 /usr/bin/denyhosts.py --config /etc/denyhosts.conf --daemon`**
+`~$` **`sudo /opt/denyhosts/daemon-control start`**
 
-This command launces DenyHosts and runs it in teh background. The /etc/denyhosts.conf
+This command launces DenyHosts and runs it in the background. The /etc/denyhosts.conf
 file can be edited to configure its behavour.
 
 Example 3: Basic Configuration
