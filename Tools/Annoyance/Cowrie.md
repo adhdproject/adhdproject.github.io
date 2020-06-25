@@ -44,7 +44,7 @@ By default Cowrie listens on port 2222 and emulates an ssh server.
 To run Cowrie, cd into the Cowrie directory and execute:
 
 `~$` **`cd /opt/cowrie`**
-`~$` **`./start.sh`**
+`~$` **`./bin/cowrie start`**
 
         Starting cowrie with extra arguments [] ...
 
@@ -81,11 +81,11 @@ Example 3: Viewing Cowrie's Logs
 
 Change into the Cowrie log Directory:
 
-`~$` **`cd /opt/cowrie/log`**
+`~$` **`cd /opt/cowrie/var/log/cowrie`**
 
 Now tail the contents of cowrie.log:
 
-`/opt/cowrie/log$` **`tail cowrie.log`**
+`/opt/cowrie/var/log/cowrie$` **`tail cowrie.log`**
 
         2016-02-17 21:52:12-0700 [-] unauthorized login: 
         2016-02-17 21:54:51-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] adhd trying auth password
