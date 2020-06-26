@@ -41,7 +41,7 @@ Launching rubberglue is super simple.  Just cd into the directory.
 
 And run the script
 
-`/opt/rubberglue$` **`python ./rubberglue.py`**
+`/opt/rubberglue$` **`python3 ./rubberglue.py`**
 
 The help dialog will be displayed.
 
@@ -56,7 +56,7 @@ For this example, let's create a simple trap with Rubberglue.
 The usage is very simple.  If we want to have rubberglue listen on port 4444
 we just run it like this.
 
-`/opt/rubberglue` **`sudo python ./rubberglue.py 4444`**
+`/opt/rubberglue` **`sudo python3 ./rubberglue.py 4444`**
 
 That's it.  
 
