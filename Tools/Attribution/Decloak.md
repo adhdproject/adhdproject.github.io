@@ -5,7 +5,7 @@ Decloak
 Website
 -------
 
-<http://decloak.net/>
+<https://bitbucket.org/ethanr/decloak>
 
 Description
 -----------

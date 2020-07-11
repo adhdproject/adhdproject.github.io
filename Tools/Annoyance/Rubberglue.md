@@ -5,7 +5,7 @@ Rubberglue
 Website
 -------
 
-<https://bitbucket.org/Zaeyx/rubberglue>
+<https://github.com/adhdproject/rubberglue>
 
 Description
 -----------

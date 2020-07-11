@@ -6,7 +6,6 @@ Website
 -------
 
 <https://bitbucket.org/ethanr/weblabyrinth>
-<https://code.google.com/p/weblabyrinth/>
 
 Description
 -----------

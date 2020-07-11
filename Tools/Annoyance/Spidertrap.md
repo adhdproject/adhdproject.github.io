@@ -5,7 +5,7 @@ Spidertrap
 Website
 -------
 
-<https://bitbucket.org/ethanr/spidertrap>
+<https://github.com/adhdproject/spidertrap>
 
 Description
 -----------

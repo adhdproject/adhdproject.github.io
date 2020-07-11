@@ -5,7 +5,7 @@ Honey Ports
 Website
 -------
 
-<https://code.google.com/p/honeyports/>
+<https://github.com/adhdproject/honeyports>
 
 Description
 -----------
