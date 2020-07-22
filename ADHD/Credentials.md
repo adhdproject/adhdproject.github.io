@@ -45,16 +45,9 @@ BeEF
 | beef       | beef     | Run '/opt/beef/beef' and visit: <http://127.0.0.1:3000/ui/panel> |
 
 HoneyBadger
------------
-
-| Username   | Password | Login                                            |
-|------------|----------|--------------------------------------------------|
-| adhd       | adhd     | Visit: <http://127.0.0.1/honeybadger/badger.php> |
-
-HoneyBadgerV2
 -------------
 
 | Username   | Password | Login                                            |
 |------------|----------|--------------------------------------------------|
-| adhd       | adhd     | Run the server & Visit: <http://127.0.0.1:5000>  |
+| adhd       | adhd     | Run the server and visit: <http://127.0.0.1:5000>  |
 
