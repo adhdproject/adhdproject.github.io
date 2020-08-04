@@ -4,7 +4,7 @@ Java Applet Web Attack
 Website
 -------
 
-<https://bitbucket.org/ethanr/java-web-attack>
+<https://github.com/adhdproject/java-web-attack>
 
 Description
 -----------

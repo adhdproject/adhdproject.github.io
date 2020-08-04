@@ -24,7 +24,7 @@ Launching psad is super simple.
 
 You just need to start the service.  (NOTE: You will need to make sure everything is installed first.)
 
-`#` **`/etc/init.d/psad start`**
+`#` **`systemctl start psad`**
 
 This will start psad, kmsgsd and psadwatchd.
 
@@ -106,7 +106,7 @@ Simply edit the file located at **/etc/psad/psad.conf** using your text editor o
 
 Making sure to seperate emails with a comma, and end the line with a semicolon.  It's that easy.  Then simply restart the psad service.
 
-`#` **`/etc/init.d/psad restart`**
+`#` **`systemctl restart psad`**
 
 
 Example 5: Updating Signatures
@@ -120,7 +120,7 @@ To do this, simply run:
 
 Then restart the psad service.
 
-`#` **`/etc/init.d/psad restart`**
+`#` **`systemctl restart psad`**
 
 
 

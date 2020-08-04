@@ -5,7 +5,7 @@ Wordpot
 Website
 -------
 
-<https://github.com/gbrindisi/wordpot>
+<https://github.com/adhdproject/wordpot>
 
 Description
 -----------

@@ -27,7 +27,7 @@ NOTE: If opencanary throws any sort of error while launching, the most likely ex
 
 `~$` **`cd /opt/opencanary`**
 
-`/opt/opencanary$` **`sudo venv/bin/opencanaryd --start`**
+`/opt/opencanary$` **`sudo opencanaryd --start`**
 
 This will launch the opencanary daemon. 
 
@@ -88,9 +88,8 @@ That's it.
 
 To kill opencanary simply:
 
-`/opt/opencanary$` **`venv/bin/opencanaryd --stop`**
-
-or
-
 `/opt/opencanary$` **`sudo killall twistd`**
+
+
+
 

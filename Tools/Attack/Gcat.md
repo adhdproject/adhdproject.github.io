@@ -5,7 +5,7 @@ Gcat
 Website
 -------
 
-<https://github.com/byt3bl33d3r/gcat>
+<https://github.com/adhdproject/gcat>
 
 Description
 -----------
