@@ -24,7 +24,7 @@ attacker comes in, and connects to your box on port 21, it will redirect
 back to the attacker's box.  Better yet, if the attacker actually has
 an ftp server on port 21, rubberglue will record all the traffic
 passed through it's pipe.  So you can watch and giggle as the attacker
-hacks himself.
+hacks themself.
 
 Install Location
 ----------------
