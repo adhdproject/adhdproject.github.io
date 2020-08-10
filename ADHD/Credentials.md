@@ -42,7 +42,7 @@ BeEF
 
 | Username   | Password | Login                                                            |
 |------------|----------|------------------------------------------------------------------|
-| beef       | beef     | Run '/opt/beef/beef' and visit: <http://127.0.0.1:3000/ui/panel> |
+| adhdbeef   | adhdbeef | Run '/opt/beef/beef' and visit: <http://127.0.0.1:3000/ui/panel> |
 
 HoneyBadger
 -------------
