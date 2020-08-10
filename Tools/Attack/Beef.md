@@ -102,8 +102,8 @@ or by visiting [http://127.0.0.1](http://127.0.0.1) and clicking the link **BeEF
 
 Authenticate:
 
-    Username:    beef
-    Password:    beef
+    Username:    adhdbeef
+    Password:    adhdbeef
 
 After authentication you should be able to see your hooked browser on the left hand side
 under "Online Browsers"
