@@ -100,6 +100,15 @@ Now tail the contents of cowrie.log:
 Here we can clearly see my login attempts and the username/password combos I employed as I tried 
 to gain access in [Example 2: Cowrie In Action].  This could be very useful!
 
+Also, when you get a chance, take a look at the command configuration files in the `/opt/cowrie/honeyfs` directory.
+
+Finally, the actual user accounts for logging into the fake ssh server are in the `/opt/cowrie/etc/userdb.txt` file.
+
+What happens when you log in with one of the valid userID and password combos?
+
+What happens when you exit the session?
+
+
 
 
 
