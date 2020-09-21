@@ -6,7 +6,7 @@ We will be using Real Intelligence Threat Analytics (RITA) for this lab.
 
 To start we first need to open Windows File Explorer and navigate to the tools directory.
 
-First, open File Explorer and navigate to the /opt/RITA_Report directory.  To do this, select + Other Locations when the Ubuntu File Explorer opens
+First, open File Explorer and navigate to the /opt/rita-html-report directory.  To do this, select + Other Locations when the Ubuntu File Explorer opens
 
 
 Then, select index.html:
