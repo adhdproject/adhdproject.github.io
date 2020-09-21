@@ -51,7 +51,7 @@ In order to see the information Weblabyrinth logs, you must log into the
 MySQL database called 'weblabyrinth' and use 'weblabyrinthuser' and
 'adhd' as the username and password, respectively. Enter '127.0.0.1' for
 the server. Log into the database using a tool called Adminer, located
-at [http://127.0.0.1/adminer/index.php](http://127.0.0.1/adminer/index.php) or by following the link at [http://127.0.0.1/](http://127.0.0.1/)
+at [http://127.0.0.1/adminer/](http://127.0.0.1/adminer/) or by following the link at [http://127.0.0.1/](http://127.0.0.1/)
 
 ![](Weblabyrinth_files/image003.png)
 
