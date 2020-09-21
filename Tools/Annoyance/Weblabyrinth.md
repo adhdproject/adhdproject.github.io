@@ -25,10 +25,6 @@ Usage
 
 Visit [http://127.0.0.1/labyrinth/index.php](http://127.0.0.1/labyrinth/index.php) to view the Weblabyrinth.
 
-Video Walkthrough
------------------
-
-<iframe src="https://onedrive.live.com/embed?cid=8D6C4317A39E3D29&resid=8D6C4317A39E3D29%2155682&authkey=ABLPcDaStZNitnE" width="320" height="179" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin"></iframe>
 
 Example 1: Basic Usage
 ----------------------
