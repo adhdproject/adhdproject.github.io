@@ -27,7 +27,7 @@
   - [Jar-Combiner](Tools/Attribution/Jar-Combiner.md)
   - [OpenCanary](Tools/Attribution/OpenCanary.md)
   <!--- [RITA](Tools/Attribution/RITA.md)-->
-  - [RITA HTML] (Tools/Attribution/rita_html.md)
+  - [RITA_HTML](Tools/Attribution/rita_html.md)
   - [Web Bug Server](Tools/Attribution/WebBugServer.md)
 
 [Attack]()
