@@ -10,7 +10,7 @@ Website
 Description
 -----------
 
-Cowrie is a medium interaction SSH honeypot designed to log brute force attacks and, 
+Cowrie is a medium interaction SSH honeypot designed to log brute force attacks and,
 most importantly, the entire shell interaction performed by the attacker.
 
 Cowrie is developed by Michel Oosterhof and is based on Kippo by Upi Tamminen (desaster).
@@ -45,9 +45,17 @@ To run Cowrie, cd into the Cowrie directory and execute:
 `~$` **`cd /opt/cowrie`**
 `~$` **`./bin/cowrie start`**
 
-        Starting cowrie with extra arguments [] ...
+        Not using Python virtual environment
+        version check
+        Starting cowrie: [twistd   --umask=0022 --pidfile=var/run/cowrie.pid --logger cowrie.python.logfile.logger cowrie ]...
 
-We can confirm Cowrie is listening with lsof:
+We can confirm Cowrie is listening with Cowrie's own `status` command:
+
+`~$` **`./bin/cowrie status`**
+
+        cowrie is running (PID: 21473).
+
+We can also confirm Cowrie is listening with lsof:
 
 `~$` **`sudo lsof -i -P | grep twistd`**
 
@@ -70,7 +78,7 @@ Assuming Cowrie is already running and listening on port 2222, (if not see [Exam
         Password:
         Password:
         Password:
-        adhd@localhost's password: 
+        adhd@localhost's password:
         Permission denied, please try again.
 
 It looks like our attempts to authenticate were met with failure.
@@ -86,18 +94,18 @@ Now tail the contents of cowrie.log:
 
 `/opt/cowrie/var/log/cowrie$` **`tail cowrie.log`**
 
-        2016-02-17 21:52:12-0700 [-] unauthorized login: 
+        2016-02-17 21:52:12-0700 [-] unauthorized login:
         2016-02-17 21:54:51-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] adhd trying auth password
         2016-02-17 21:54:51-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] login attempt [adhd/asdf] failed
         2016-02-17 21:54:52-0700 [-] adhd failed auth password
-        2016-02-17 21:54:52-0700 [-] unauthorized login: 
+        2016-02-17 21:54:52-0700 [-] unauthorized login:
         2016-02-17 21:54:53-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] adhd trying auth password
         2016-02-17 21:54:53-0700 [SSHService ssh-userauth on HoneyPotTransport,0,127.0.0.1] login attempt [adhd/adhd] failed
         2016-02-17 21:54:54-0700 [-] adhd failed auth password
-        2016-02-17 21:54:54-0700 [-] unauthorized login: 
+        2016-02-17 21:54:54-0700 [-] unauthorized login:
         2016-02-17 21:54:54-0700 [HoneyPotTransport,0,127.0.0.1] connection lost
 
-Here we can clearly see my login attempts and the username/password combos I employed as I tried 
+Here we can clearly see my login attempts and the username/password combos I employed as I tried
 to gain access in [Example 2: Cowrie In Action].  This could be very useful!
 
 Also, when you get a chance, take a look at the command configuration files in the `/opt/cowrie/honeyfs` directory.
@@ -107,9 +115,3 @@ Finally, the actual user accounts for logging into the fake ssh server are in th
 What happens when you log in with one of the valid userID and password combos?
 
 What happens when you exit the session?
-
-
-
-
-
-
