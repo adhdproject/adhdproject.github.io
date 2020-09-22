@@ -27,7 +27,7 @@ What's new in HoneyBadger?
 
 Install Location
 ----------------
-`/opt/honeybadgerv3/`
+`/opt/honeybadger/`
 
 
 Usage
