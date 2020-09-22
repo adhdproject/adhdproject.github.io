@@ -110,7 +110,11 @@ to gain access in [Example 2: Cowrie In Action].  This could be very useful!
 
 Also, when you get a chance, take a look at the command configuration files in the `/opt/cowrie/honeyfs` directory.
 
-Finally, the actual user accounts for logging into the fake ssh server are in the `/opt/cowrie/etc/userdb.txt` file.
+Finally, user accounts for logging into the fake ssh server can be placed in a `/opt/cowrie/etc/userdb.txt` file. This file no longer exists by default, so Cowrie uses credentials specified near the top of `/opt/cowrie/src/cowrie/core/auth.py` by default
+
+An example userdb file can be found in `/opt/cowrie/etc/userdb.example`. Cowrie
+credentials can be specified using patterns. These patterns are explained in the
+example file.
 
 What happens when you log in with one of the valid userID and password combos?
 
