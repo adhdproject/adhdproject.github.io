@@ -23,6 +23,8 @@ hidden within each scenario. These signify the completion of the lab. For those
 participating in the WWHF CTF, this is how you can get the flags for the ADHD
 portion of the lab.
 
+You can download WWHF's ADHD version here: https://wwhf-adhd.s3.amazonaws.com/adhd4-wwhf-SHA1.ova
+
 **Bonus Points?!?!**
 
 If you have an idea for ADHD that consists of an awesome new tool, a
