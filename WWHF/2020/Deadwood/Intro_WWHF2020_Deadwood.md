@@ -10,11 +10,11 @@ The documentation contains setup, install, and usage instructions for all of the
 tools included in ADHD. If you run into trouble, this might help you out!
 
 Here are the tools we've created labs for so far:
-* [Canary Tokens](CanaryTokens_WWHF2020_Deadwood.md)
-* [Cowrie](Cowrie_WWHF2020_Deadwood.md)
-* [HoneyBadger](HoneyBadger_WWHF2020_Deadwood.md)
-* [PortSpoof](PortSpoof_WWHF2020_Deadwood.md)
-* [PSAD](PSAD_WWHF2020_Deadwood.md)
+- [Canary Tokens](CanaryTokens_WWHF2020_Deadwood.md)
+- [Cowrie](Cowrie_WWHF2020_Deadwood.md)
+- [HoneyBadger](HoneyBadger_WWHF2020_Deadwood.md)
+- [PortSpoof](PortSpoof_WWHF2020_Deadwood.md)
+- [PSAD](PSAD_WWHF2020_Deadwood.md)
 
 The nature of these labs has you use these tools to analyze attacks that were
 carried out against the lab Virtual Machine. Each tool will have you analyze a
