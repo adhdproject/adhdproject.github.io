@@ -37,8 +37,10 @@ In order to use the latest version of HoneyBadger, Python 3 must be installed, a
 Install HoneyBadger's required packages with the following command:
 `pip3 install -r requirements.txt`
 
+NOTE: Only run the database initialization step if the database isn't already initialized.
+
 Next, initialize the database. To do so, navigate to the directory that contains the HoneyBadger files and run the Python interpreter:
-`cd /opt/honeybadgerv3/server`
+`cd /opt/honeybadger/server`
 `python3`
 
 From the python interpreter, run the following:
