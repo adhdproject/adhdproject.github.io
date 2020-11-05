@@ -55,7 +55,7 @@ down dnsmasq and apache and master.
 Now we can start Canary with the following command:
 `$sudo docker-compose up`
 
-Next, browse to http://localhost/generator with Firefox and you will see the Canary user interface.
+Next, browse to http://localhost/generate with Firefox and you will see the Canary user interface.
 
 ![UI](CanaryDemo_files/Selection_003.png  "UI")
 
