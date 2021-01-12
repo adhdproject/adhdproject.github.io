@@ -4,7 +4,7 @@ Howdy folks! Welcome to the Wild West Hackin' Fest ADHD labs! We have some new
 things for you to play with, so stick around and let's get to it!
 
 First, these labs are brand new. We wrote them based off the labs you can find
-in the documentation for the official ADHD release here: adhdproject.github.io
+in the documentation for the official ADHD release here: [adhdproject.github.io](https://adhdproject.github.io)
 
 The documentation contains setup, install, and usage instructions for all of the
 tools included in ADHD. If you run into trouble, this might help you out!
