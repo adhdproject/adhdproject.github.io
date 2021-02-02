@@ -11,6 +11,12 @@ Description
 
 PSAD is an intrusion detection and log analysis tool that runs on the backbone that is iptables.  PSAD itself is a collection of daemons that run to detect port scans and other malicious traffic by analyzing iptables logs.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0027](https://shield.mitre.org/techniques/DTE0026) - Network Monitoring
+
 Install Location
 ----------------
 
@@ -35,7 +41,7 @@ Example 1: Installing PSAD
 
 To get started, we first need to run the psad setup scripts.  This will build you a fresh installation of psad on your system.  Installation is incredibly easy.
 
-So let's get started.  psad comes with its own perl script called "install.pl" that will do everything for you.  However, there are a few things you may need to do.  For starters, you may need to edit some of the configuration lines near the top of the install script.  
+So let's get started.  psad comes with its own perl script called "install.pl" that will do everything for you.  However, there are a few things you may need to do.  For starters, you may need to edit some of the configuration lines near the top of the install script.
 
 However, most likely you will not need to touch the script at all.  The configurations should only need to be messed with if for some reason the install script errors out.  The lines at the top of this script are all about pointing out where on the system certain resources are.  So if the install script errors, it may simply be because it can't find something it needs.  Just patch it up!
 
@@ -50,7 +56,7 @@ And run the install script.
 
 `/opt/psad#` **`./install.pl`**
 
-It's that easy.  
+It's that easy.
 
 NOTE: The install script will ask you a few questions.  You may answer them differently depending on the specifics you require.  If in doubt however, simply accept the defaults.
 
@@ -78,7 +84,7 @@ Checking for alerts from psad is quite simple.  To start with you can check to s
 `#` **`psad --Status`**
 
 		Iptables prefix counters:
-		
+
 		   "Inbound": 1
 
 You can also check the contents of /var/log/messages for something similar to
@@ -94,7 +100,7 @@ NOTE: If you don't have any alerts and want to try creating some, use nmap to sc
 Example 4: Email Alerts
 -------------------------------
 
-There is a ton more to explore in the toolset that is psad.  One feature that may come in incredibly handy to you in the future is email alerting.  
+There is a ton more to explore in the toolset that is psad.  One feature that may come in incredibly handy to you in the future is email alerting.
 
 Psad can be configured to send you emails whenever an alert is triggered.
 
@@ -112,7 +118,7 @@ Making sure to seperate emails with a comma, and end the line with a semicolon. 
 Example 5: Updating Signatures
 ------------------------------------------
 
-Psad makes use of snort signatures to detect certain types of attacks as they hit your system's firewall.  It is important to keep these signatures up to date.  You are given the option to update them once when you first install psad.  But you'll want to keep them updated atleast occasionally.  
+Psad makes use of snort signatures to detect certain types of attacks as they hit your system's firewall.  It is important to keep these signatures up to date.  You are given the option to update them once when you first install psad.  But you'll want to keep them updated atleast occasionally.
 
 To do this, simply run:
 

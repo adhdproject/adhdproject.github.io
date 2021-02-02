@@ -10,11 +10,18 @@ Website
 Description
 -----------
 
-Wordpot is a script you can use to detect bots and others scanning for 
+Wordpot is a script you can use to detect bots and others scanning for
 wordpress installations.  Wordpress has historically been somewhat vulnerable
 as such, many virtual thieves and criminals actively seek out wordpress.
 
 Wordpot simulates a full install.  Including fake installed themes and plugins.
+
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
 
 Install Location
 ----------------
@@ -35,7 +42,7 @@ And run the application
 This will show you the help dialog.
 
 		Usage: wordpot.py [options]
-		
+
 		Options:
 		-h, --help			show this help message and exit
 		--host=HOST			Host address

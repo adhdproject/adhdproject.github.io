@@ -10,10 +10,18 @@ Website
 Description
 -----------
 
-BearTrap is meant to be a portable network defense utility written entirely 
-in Ruby. It opens "trigger" ports on the host that an attacker would connect 
-to. When the attacker connects and/or performs some interactions with the 
+BearTrap is meant to be a portable network defense utility written entirely
+in Ruby. It opens "trigger" ports on the host that an attacker would connect
+to. When the attacker connects and/or performs some interactions with the
 trigger an alert is raised and the attacker's IP address is potentially blacklisted.
+
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0027](https://shield.mitre.org/techniques/DTE0027) - Network Monitoring
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+
 
 Install Location
 ----------------
@@ -50,16 +58,16 @@ using ifconfig.
 
 `$` **`ifconfig`**
 
-        eth0    Link encap:Ethernet  HWaddr 00:0c:29:6c:14:79  
+        eth0    Link encap:Ethernet  HWaddr 00:0c:29:6c:14:79
                 inet addr:192.168.1.137  Bcast:192.168.1.255  Mask:255.255.255.0
                 inet6 addr: fe80::20c:29ff:fe6c:1479/64 Scope:Link
                 UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
                 RX packets:115178 errors:0 dropped:0 overruns:0 frame:0
                 TX packets:43571 errors:0 dropped:0 overruns:0 carrier:0
-                collisions:0 txqueuelen:1000 
+                collisions:0 txqueuelen:1000
                 RX bytes:104926397 (104.9 MB)  TX bytes:4321023 (4.3 MB)
-                Interrupt:19 Base address:0x2000 
-    
+                Interrupt:19 Base address:0x2000
+
 Here the IP is 192.168.1.137. From a remote computer use FTP to connect
 to the ADHD machine. If it asks for a username, it doesn't matter what
 you type as Bear Trap doesn't actually implement a real FTP server.

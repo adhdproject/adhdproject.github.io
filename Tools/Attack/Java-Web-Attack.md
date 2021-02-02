@@ -11,6 +11,22 @@ Description
 
 This project aims to break out the Java Applet Web Attack method from the Social Engineering Toolkit into a standalone tool.
 
+MITRE Shield
+------------
+
+Associated MITRE ATT&CK techniques:
+* T1059 - Command and Scripting Interpreter ??
+* T1583 - Acquire Infrastructure (to host java applet)
+* T1587 - Develop Capabilities
+* T1588 - Obtain Capabilities
+
+Applicable MITRE Shield techniques to counter:
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+* [DTE0032](https://shield.mitre.org/techniques/DTE0032) - Security Controls
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0022](https://shield.mitre.org/techniques/DTE0022) - Isolation
+* [DTE0018](https://shield.mitre.org/techniques/DTE0018) - Detonate Malware
+
 Install Location
 ----------------
 

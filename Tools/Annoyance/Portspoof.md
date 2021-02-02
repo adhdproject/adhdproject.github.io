@@ -35,6 +35,13 @@ Scanning software usually tries to determine a service that is running on an ope
 
 As a result an attacker will not be able to determine which port numbers your system is truly using.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0026](https://shield.mitre.org/techniques/DTE0026) - Network Manipulation
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+
 Install Location
 ----------------
 

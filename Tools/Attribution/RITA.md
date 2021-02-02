@@ -3,6 +3,13 @@
 ## Brief Intro:
 In this lab we'll be using [RITA](https://www.activecountermeasures.com/free-tools/rita/) (short for Real Intelligent Threat Analytics) from Active Countermeasures.  RITA ingests [Bro](https://www.bro.org/) logs and does analysis on them.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0027](https://shield.mitre.org/techniques/DTE0027) - Network Monitoring
+* [DTE0021](https://shield.mitre.org/techniques/DTE0021) - Hunting
+
 ## Try It Yourself:
 If you're familiar with RITA, start it up and generate a report to find the anomalous traffic.
 

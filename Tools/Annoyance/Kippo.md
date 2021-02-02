@@ -14,6 +14,14 @@ Kippo is a medium interaction SSH honeypot designed to log brute force attacks a
 most importantly, the entire shell interaction performed by the attacker. Kippo is inspired,
 but not based on Kojoney. (From Website)
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
 Install Location
 ----------------
 

@@ -24,6 +24,14 @@ What's new in HoneyBadger?
 * New utilities for automatic wireless surveying (Windows, Linux)
 * New beacon agents (VB.NET, VBA)
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+* [DTE0021](https://shield.mitre.org/techniques/DTE0021) - Hunting
+
 
 Install Location
 ----------------
@@ -326,12 +334,12 @@ The VBA macro code are not included as comments in the generated popup for the s
 
         ' Run the netsh command via powershell for automatic wireless survey
         wifi = objWSH.Exec("powershell netsh wlan show networks mode=bssid | findstr 'SSID Signal Channel'").StdOut.ReadAll
-        
+
         ' Open a file handle to a temporary file and write netsh results to file
         Open Environ("temp") & "\wifidat.txt" For Output As #1
             Print #1, wifi
         Close #1
-        
+
         ' Read contents in from temp file, fixing encoding issues with the web request
         wifi = objWSH.Exec("powershell Get-Content %TEMP%\wifidat.txt -Encoding UTF8 -Raw").StdOut.ReadAll
 
@@ -361,7 +369,7 @@ To use the macro code, simply open a document, paste this macro inside, and save
 The VB.NET code is identical in function and near identical in structure to the VBA macro. Changes needed to be made to make it a valid VB.NET script, for version difference issues between VB.NET and VBA. Like the macro, the VB.NET functionality is explained here:
 
     Imports System.IO
-    
+
     Module HoneyBadgerBeacon
         Sub Main()
             ' Create and initialize a new WSH shell object
@@ -371,19 +379,19 @@ The VB.NET code is identical in function and near identical in structure to the 
             ' Create and initialize the wifi data variable
             Dim wifi As String
             wifi = objWSH.Exec("powershell netsh wlan show networks mode=bssid | findstr 'SSID Signal Channel'").StdOut.ReadAll
-            
+
             ' Create a temp file
             Dim objWriter As New System.IO.StreamWriter(Environ("temp") & "\wifidat.txt")
-            
+
             ' Write data to file
             objWriter.Write(wifi)
 
             ' Close file
             objWriter.Close(0)
-            
+
             ' Read in the temp file contents with proper encoding
             wifi = objWSH.Exec("powershell Get-Content %TEMP%\wifidat.txt -Encoding UTF8 -Raw").StdOut.ReadAll
-            
+
             ' Delete temp file
             Kill(Environ("temp") & "\wifidat.txt")
 
@@ -416,4 +424,4 @@ Navigate to this page in a browser. The server will return a 404
 
 
 ### 5. CMD ###
-The CMD agent is a type of HTML agent, as the beacon is created via web requests on the command line. There are two utilities in the util directory of HoneyBadger, one for windows and one for linux. They utilize Google's geolocation API. Usage information is available in those scripts. 
+The CMD agent is a type of HTML agent, as the beacon is created via web requests on the command line. There are two utilities in the util directory of HoneyBadger, one for windows and one for linux. They utilize Google's geolocation API. Usage information is available in those scripts.

@@ -11,9 +11,16 @@ Description
 -----------
 
 DenyHosts is a utility developed by Phil Schwartz and maintained by a number of developers which aims
-to thwart sshd (ssh server) brute force attacks. Upon discovering a repeatedly malicious host, the `/etc/hosts.deny` 
+to thwart sshd (ssh server) brute force attacks. Upon discovering a repeatedly malicious host, the `/etc/hosts.deny`
 file is updated to prevent future break-in attempts from that host.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+* [DTE0032](https://shield.mitre.org/techniques/DTE0032) - Security Controls
 
 Install Location
 ----------------
@@ -28,7 +35,7 @@ Example 1: Installing DenyHosts
 
 `~$` **`tar zxvf DenyHosts-3.1.tar.gz`**
 
-The rest of the install process requires elevated privileges. You can either switch to root, or run the 
+The rest of the install process requires elevated privileges. You can either switch to root, or run the
 following commands with `sudo`.
 
 `~#` **`mv DenyHosts-3.1 /opt`**
@@ -56,15 +63,15 @@ file can be edited to configure its behavour.
 Example 3: Basic Configuration
 ------------------------------
 
-A majority of DenyHosts’ configurations can be made by editing the configuration file 
+A majority of DenyHosts’ configurations can be made by editing the configuration file
 `/etc/denyhosts.conf`.
 
 DenyHosts makes use of the default Linux whitelist and blacklist.
 
-With a blacklisting service like DenyHosts it can be incredibly important to properly configure 
-your whitelist prior to launch.  
+With a blacklisting service like DenyHosts it can be incredibly important to properly configure
+your whitelist prior to launch.
 
-The default whitelist file for Linux is `/etc/hosts.allow` (this can be changed in the DenyHosts conf file).  
+The default whitelist file for Linux is `/etc/hosts.allow` (this can be changed in the DenyHosts conf file).
 
 The rule structure is the same for the files `/etc/hosts.deny` (blacklist) and `/etc/hosts.allow` (whitelist).
 

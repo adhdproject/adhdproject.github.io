@@ -17,6 +17,13 @@ Files directories. Believe it or not, this stops most drive-by attacks.
 In fact, we find it to be far more effective than traditional black-list
 AV.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
+* [DTE0032](https://shield.mitre.org/techniques/DTE0032) - Security Controls
+
 Video Walkthrough
 -----------------
 

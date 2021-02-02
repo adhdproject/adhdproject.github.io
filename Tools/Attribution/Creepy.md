@@ -12,6 +12,12 @@ Description
 
 Creepy is a geolocation and OSINT (open source intelligence) tool.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0021](https://shield.mitre.org/techniques/DTE0021) - Hunting
+
 Install Location
 ----------------
 
@@ -93,7 +99,7 @@ Now let's run the module.
         --------------------
         [*] Collecting data for an unknown number of tweets...
         [*] 1349 tweets processed.
-        
+
         -------
         SUMMARY
         -------
@@ -153,7 +159,7 @@ Once the module executes, it should automatically open firefox to your report.
 **Map showing where each tweet came from. Clicking on a bubble shows the tweet.**
 
 It's very important to note that gathering and reporting are two separate operations.
-They can be set focus on differing geographical locations.  
+They can be set focus on differing geographical locations.
 
 Gathering loads information into the database.
 

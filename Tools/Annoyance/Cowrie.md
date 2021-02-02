@@ -15,6 +15,14 @@ most importantly, the entire shell interaction performed by the attacker.
 
 Cowrie is developed by Michel Oosterhof and is based on Kippo by Upi Tamminen (desaster).
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
 Install Location
 ----------------
 

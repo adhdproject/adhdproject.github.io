@@ -15,6 +15,14 @@ web scanners. It can be run on any Apache server with mod_rewrite and PHP.
 It includes features for detecting search engine web crawlers, randomly
 returning different HTTP status codes, and alerting signature-based IDS.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0011](https://shield.mitre.org/techniques/DTE0011) - Decoy Content
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
+* [DTE0027](https://shield.mitre.org/techniques/DTE0027) - Network Monitoring
+
 Install Location
 ----------------
 

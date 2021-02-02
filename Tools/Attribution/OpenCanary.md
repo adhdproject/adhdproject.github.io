@@ -11,6 +11,13 @@ Description
 
 OpenCanary is a daemon that runs serveral canary versions of services that alerts when a service is (ab)used.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
 Install location
 ----------------
 
@@ -29,7 +36,7 @@ NOTE: If opencanary throws any sort of error while launching, the most likely ex
 
 `/opt/opencanary$` **`sudo opencanaryd --start`**
 
-This will launch the opencanary daemon. 
+This will launch the opencanary daemon.
 
 Example 1: Deploying OpenCanary as a Service
 --------------------------------------------
@@ -72,7 +79,7 @@ From the same console type this command:
 
 `/opt/opencanary$` **`sudo ftp localhost`**
 		220 ADHD FTP Server v0.1
-		Name (localhost:root): 
+		Name (localhost:root):
 
 You can attempt to authenticate by typing in a user name and password.
 

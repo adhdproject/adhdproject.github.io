@@ -19,6 +19,12 @@ materials after the class has completed. Also, this lab has a challenges
 section. You don't have to ever do these, but they can be exceptionally
 rewarding and interesting to try!
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+
 Video Walkthrough
 -----------------
 

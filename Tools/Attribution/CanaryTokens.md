@@ -20,6 +20,18 @@ You can see a video here:
 
 <https://www.youtube.com/watch?v=mDnaEmpO1C4>
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0011](https://shield.mitre.org/techniques/DTE0011) - Decoy Content
+
+Additional dependencies if not using SaaS deployment:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
+
 ----------------
 
 `/opt/canarytokens-docker`

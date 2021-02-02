@@ -20,6 +20,15 @@ detected, an email is sent to the server owner. Artillery also listens for rogue
 connections. If detected, a notification is sent to the server owner, and
 the offending IP address is banned.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
+
 Install Location
 ----------------
 

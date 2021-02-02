@@ -12,6 +12,14 @@ Description
 
 A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+* [DTE0032](https://shield.mitre.org/techniques/DTE0032) - Security Controls
+
 Install Location
 ----------------
 
@@ -26,7 +34,7 @@ Change to the Honeyports directory and execute the latest version of the script:
 
 `/opt/honeyports$` **`python3 ./honeyports.py`**
 
-        
+
 
 Example 1: Monitoring A Port With HoneyPorts
 --------------------------------------------

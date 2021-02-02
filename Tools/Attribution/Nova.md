@@ -22,6 +22,15 @@ identifies the attackers by their inevitable suspicious activity in
 communicating with decoys, and provides the network administrators a
 situation awareness view of their network.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0013](https://shield.mitre.org/techniques/DTE0013) - Decoy Diversity
+* [DTE0027](https://shield.mitre.org/techniques/DTE0027) - Network Monitoring
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+* [DTE0021](https://shield.mitre.org/techniques/DTE0021) - Hunting
+
 Install Location
 ----------------
 

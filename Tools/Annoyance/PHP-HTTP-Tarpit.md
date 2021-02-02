@@ -11,6 +11,11 @@ Description
 
 PHP-HTTP-Tarpit is a tool designed to confuse and trap misbeheaving webspiders.  It accomplishes this task through a combination of log fuzzing, and error spoofing.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
 
 Install Location
 ----------------
@@ -23,7 +28,7 @@ Usage
 
 Here's what you need to do in order to deploy the tarpit on your webapp.  First you need to copy the file la_brea.php into a folder accessible to the clients of your web application.  Next, Simply include a hidden reference to this page inside some portion of your application.  This reference should be hidden so that no users accidentally stumble onto it.  Something like a hidden link would be perfect.  Something a web spider would want to check out.
 
-Once you've done these two steps.  You're golden.  
+Once you've done these two steps.  You're golden.
 
 Example 1: Deployment
 ------------------------

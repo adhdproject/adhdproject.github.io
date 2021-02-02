@@ -13,6 +13,19 @@ Description
 BeEF, The Browser Exploitation Framework Project is a tool for the pwnage of one of the
 underexplored frontiers in information security, the web browser.
 
+MITRE Shield
+------------
+
+Associated MITRE ATT&CK techniques:
+* T1203 - Exploitation for Client Execution
+* T1204 - User Execution
+* T1190 - Exploit Public-Facing Application
+
+Applicable MITRE Shield techniques to counter:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0004](https://shield.mitre.org/techniques/DTE0004) - Application Diversity,
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
 Install Location
 ----------------
 

@@ -26,6 +26,14 @@ through obscurity and the attacker can still probably figure out the OS
 on a box by other means, but I still think it's kind of cool to play
 with.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0011](https://shield.mitre.org/techniques/DTE0011) - Decoy Content
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
+
+
 Video Walkthrough
 -----------------
 

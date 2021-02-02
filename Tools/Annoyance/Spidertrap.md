@@ -13,6 +13,14 @@ Description
 Trap web crawlers and spiders in an infinite set of dynamically
 generated webpages.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0011](https://shield.mitre.org/techniques/DTE0011) - Decoy Content
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
+
+
 Install Location
 ----------------
 

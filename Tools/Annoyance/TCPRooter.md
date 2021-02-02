@@ -4,9 +4,16 @@ TCPRooter
 Description
 -----------
 
-TCPRooter is a simple script that allows you to mask your available services to an incoming nmap style portscan by making it appear that all scanned ports are open and listening.  
+TCPRooter is a simple script that allows you to mask your available services to an incoming nmap style portscan by making it appear that all scanned ports are open and listening.
 
 This leaves the attacker clueless as to what is true and what is false.  Wasting his time as he tries to find which ports are actually open.
+
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0026](https://shield.mitre.org/techniques/DTE0026) - Network Manipulation
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
 
 Install Location
 ----------------
@@ -32,7 +39,7 @@ This will launch the script
 		Listening on 10 TCP ports from port 1 through 10.
 		0 TCP ports in use by other processes.
 		Ready to accept connections!
-		
+
 		Press <ENTER> to exit.
 
 
@@ -52,7 +59,7 @@ For example, if you wanted to cover the first 10,000 ports you would run...
 		Listening on 9993 TCP ports from port 1 through 10000.
 		7 TCP ports in use by other processes.
 		Ready to accept connections!
-		
+
 		Press <ENTER> to exit.
 
 

@@ -4,6 +4,13 @@ In this lab we are going to look at detecting command and control traffic on a n
 
 We will be using Real Intelligence Threat Analytics (RITA) for this lab.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0027](https://shield.mitre.org/techniques/DTE0027) - Network Monitoring
+* [DTE0021](https://shield.mitre.org/techniques/DTE0021) - Hunting
+
 To start we first need to open Windows File Explorer and navigate to the tools directory.
 
 First, open File Explorer and navigate to the /opt/rita-html-report directory.  To do this, select + Other Locations when the Ubuntu File Explorer opens

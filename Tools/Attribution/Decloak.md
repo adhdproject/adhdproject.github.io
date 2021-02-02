@@ -10,8 +10,14 @@ Website
 Description
 -----------
 
-Used to identify the real IP address of a web user, regardless of proxy 
+Used to identify the real IP address of a web user, regardless of proxy
 settings, using a combination of client-side technologies and custom services.
+
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
 
 Install Location
 ----------------
@@ -78,7 +84,7 @@ specially formatted connections. It logs these connections to a
 database.
 
 In order to start Decloak's DNS server, you first need to deactivate the
-default one that comes with ADHD. 
+default one that comes with ADHD.
 
 `$` **`sudo killall dnsmasq`**
 
@@ -96,10 +102,10 @@ Example 3: Browsing to a Decloak Activated Website
 --------------------------------------------------
 
 You will be using the ADHD machine to visit the website. You need to
-follow [Example 2: Setting Up the Decloak DNS Server] before completing 
-the steps below. 
+follow [Example 2: Setting Up the Decloak DNS Server] before completing
+the steps below.
 
-Note: Setting up a domain name and DNS server settings for the 
+Note: Setting up a domain name and DNS server settings for the
 Decloak server is beyond the scope of this example, but to simulate this
 ADHD has a local entry for **spy.decloak.net** in its **/etc/hosts** file.
 
@@ -107,9 +113,9 @@ Open your web browser and enter
 [http://spy.decloak.net/decloak/index.php](http://spy.decloak.net/decloak/index.php)
 into the address bar. You will be connected to the Decloak webpage which
 uses your browser's built in HTML rendering, along with both Java and
-Flash plugins in an attempt to gather your IP address. 
+Flash plugins in an attempt to gather your IP address.
 
-In order for the Java and Flash plugins to run in newer versions of Java and Firefox, 
+In order for the Java and Flash plugins to run in newer versions of Java and Firefox,
 you will need to first tell the browser to allow both to run.
 
 ![](Decloak_files/allow_plugins_1.png)
@@ -123,14 +129,14 @@ You will then need to tell the Java applet to "run".
 ![](Decloak_files/run_java_applet.png)
 
 Note: Since this is an unsigned applet, newer versions of Java will not allow it to
-run even if the Java plugin is allowed. In a real-world situation, this would be 
-taken care of by purchasing a legitimate code-signing certificate and signing the 
+run even if the Java plugin is allowed. In a real-world situation, this would be
+taken care of by purchasing a legitimate code-signing certificate and signing the
 applet. But within the ADHD environment we have instead added "http://spy.decloak.net"
 to the Java applet site exception list, which allows unsigned and self-signed applets
 to run from this domain. You can view this setting by going to:
 Menu -> Internet -> Oracle Java7 webstart -> Security tab -> Site Exceptions List
 
-Different techniques are used in an attempt to bypass any anonymizing proxy: 
+Different techniques are used in an attempt to bypass any anonymizing proxy:
 DNS via an embedded image in the web page, UDP via Java, DNS via Java, and TCP via Flash.
 Even if only one of these ignores the proxy settings, we will have the target's real
 IP address, source port, and a timestamp, which we can use to locate the individual.

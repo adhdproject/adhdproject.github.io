@@ -13,6 +13,17 @@ Description
 Easily embed a web bug inside word processing documents. These bugs are
 hidden to the casual observer by using things like linked style sheets and 1 pixel images.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0011](https://shield.mitre.org/techniques/DTE0011) - Decoy Content
+
+Dependencies:
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0016](https://shield.mitre.org/techniques/DTE0016) - Decoy Process
+* [DTE0034](https://shield.mitre.org/techniques/DTE0034) - System Activity Monitoring
+
 Install Location
 ----------------
 

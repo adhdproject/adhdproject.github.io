@@ -14,6 +14,22 @@ Jar-Combiner is a tool used to combine two seperate Java applets into one.  The 
 This is incredibly useful for backdooring legitimate Java applets.
 A user running the new combined applet will see what they expect, while your code runs in the background.
 
+MITRE Shield
+------------
+
+Associated MITRE ATT&CK techniques:
+* T1583 - Acquire Infrastructure
+* T1587 - Develop Capabilities
+* T1588 - Obtain Capabilities
+
+Applicable MITRE Shield techniques:
+
+Jar-Combiner assists adversaries in developing resources they can leverage later on in an attack lifecycle. MITRE Shield does not currently have any capabilities for detecting or deceiving this activity, though it does have capabilities that can be used once the resource is actually utilized against the victim or publicly available.
+
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0022](https://shield.mitre.org/techniques/DTE0022) - Isolation
+* [DTE0018](https://shield.mitre.org/techniques/DTE0018) - Detonate Malware
+
 Install Location
 ----------------
 

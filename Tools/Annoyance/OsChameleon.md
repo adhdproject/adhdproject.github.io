@@ -11,6 +11,12 @@ Description
 
 OsChameleon is a tool that hides the fingerprint of modern linux kernels from tools such as nmap.
 
+MITRE Shield
+------------
+
+Applicable MITRE Shield techniques:
+* [DTE0036](https://shield.mitre.org/techniques/DTE0036) - Software Manipulation
+
 Install Location
 ----------------
 
@@ -65,7 +71,7 @@ This is a pretty simple result we have here.  You can see that nmap was able to 
 
 Now let's run oschameleon and try again.
 
-You'll need to open up a new terminal first.  So you have two terminals open.  One for oschameleon and one for nmap.  
+You'll need to open up a new terminal first.  So you have two terminals open.  One for oschameleon and one for nmap.
 
 In your oschameleon terminal run these commands.
 
@@ -81,9 +87,9 @@ Now in your second terminal run your nmap scan again.
 
 You should notice oschameleon throwing output to the screen shortly after you begin the scan.  Don't worry about this.  This just shows us that the script is working.  What we're more interested in right now is the result that nmap gives us when it's done.
 
-Your exact result back from nmap map differ.  But it should look quite different now.  
+Your exact result back from nmap map differ.  But it should look quite different now.
 
-		
+
 		Starting Nmap 6.47 ( http://nmap.org ) at 2016-06-12 23:14 EDT
 		Nmap scan report for localhost (127.0.0.1)
 		Host is up (0.000020s latency).
@@ -92,7 +98,7 @@ Your exact result back from nmap map differ.  But it should look quite different
 		80/tcp   open  http
 		3306/tcp open  mysql
 		No exact OS matches for host (If you know what OS is running on it, see http://nmap.org/submit/ ).
-		
+
 
 This is what we're expecting (followed by a lengthy TCP/IP fingerprint section).
 

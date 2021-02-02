@@ -7,6 +7,22 @@ Description
 Ghostwriting is a method of anti-virus bypass utilizing binary deconstruction, insertion of arbitrary assembly code, and reconstruction.
 We will make use of built in metasploit tools to perform the actions listed above.  Ghostwriting.sh is a tool used to automate the process.
 
+MITRE Shield
+------------
+
+Associated MITRE ATT&CK techniques:
+* T1562 - Impair Defenses
+* T1211 - Exploitation for Defense Evasion
+* T1587 - Develop Capabilities
+
+Applicable MITRE Shield techniques to counter:
+
+Ghostwriting assists adversaries in developing resources they can leverage later on in an attack lifecycle. MITRE Shield does not currently have any capabilities for detecting or deceiving this activity, though it does have capabilities that can be used once the resource is actually utilized against the victim or publicly available.
+
+* [DTE0017](https://shield.mitre.org/techniques/DTE0017) - Decoy System
+* [DTE0022](https://shield.mitre.org/techniques/DTE0022) - Isolation
+* [DTE0018](https://shield.mitre.org/techniques/DTE0018) - Detonate Malware
+
 Install Location
 ----------------
 
