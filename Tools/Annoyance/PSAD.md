@@ -15,7 +15,7 @@ MITRE Shield
 ------------
 
 Applicable MITRE Shield techniques:
-* [DTE0027](https://shield.mitre.org/techniques/DTE0026) - Network Monitoring
+* [DTE0027](https://shield.mitre.org/techniques/DTE0027) - Network Monitoring
 
 Install Location
 ----------------
