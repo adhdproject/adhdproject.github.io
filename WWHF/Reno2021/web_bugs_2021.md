@@ -10,7 +10,7 @@ Let's login to the database and see if we have any hits! Browse to http://127.0.
 
 We have a lot of hits! It's important to remember that a handful of triggers for each bug is probably normal, especially if we consider the user agent and ip address. Triggers with an ip address that comes from our own internal network are not as concerning. With that in mind, we can easily rule out Tim from being the suspect. His bug was only triggered 4 times. and all from inside our internal network at the office. 
 
-Jim also probably isn't the suspect, since his bug was only triggered twice. It looks like an external ip address though; maybe he's accessing company material on a personal device at home? The user agent for Jim also looks strange, maybe it's worth investigating further! 
+Jim also probably isn't the suspect, since his bug was only triggered twice. It looks like he was on the vpn though; maybe he's accessing company material on a personal device at home? The user agent for Jim also looks strange, maybe it's worth investigating further! 
 
 That leaves only Slim to look at, and with 42 different hits it definitely looks like he's the culprit. Let's look at some of the external ip addresses and see if we can find any information about them! That 104.23.99.190 ip address keeps popping up a lot. Give it a google and see if you can find solid evidence that Slim is the culprit! 
 
