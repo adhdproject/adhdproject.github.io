@@ -41,9 +41,16 @@
 
 [WWHF Deadwood 2020]()
 
-  - [Introduction](WWHF/2020/Deadwood/Intro_WWHF2020_Deadwood.md)
-  - [CanaryTokens](WWHF/2020/Deadwood/CanaryTokens_WWHF2020_Deadwood.md)
-  - [Cowrie](WWHF/2020/Deadwood/Cowrie_WWHF2020_Deadwood.md)
-  - [HoneyBadger](WWHF/2020/Deadwood/HoneyBadger_WWHF2020_Deadwood.md)
-  - [Portspoof](WWHF/2020/Deadwood/Portspoof_WWHF2020_Deadwood.md)
-  - [PSAD](WWHF/2020/Deadwood/PSAD_WWHF2020_Deadwood.md)
+  - [Introduction](WWHF/Deadwood2020/Intro_WWHF2020_Deadwood.md)
+  - [CanaryTokens](WWHF/Deadwood2020/CanaryTokens_WWHF2020_Deadwood.md)
+  - [Cowrie](WWHF/Deadwood2020/Cowrie_WWHF2020_Deadwood.md)
+  - [HoneyBadger](WWHF/Deadwood2020/HoneyBadger_WWHF2020_Deadwood.md)
+  - [Portspoof](WWHF/Deadwood2020/Portspoof_WWHF2020_Deadwood.md)
+  - [PSAD](WWHF/Deadwood2020/PSAD_WWHF2020_Deadwood.md)
+
+[Way West WWHF Reno 2021]()
+  - [Introduction](WWHF/Reno2021/Intro_WayWest2021.md)
+  - [Artillery](Reno2021/Spidertrap_WayWest2021.md)
+  - [Spidertrap](Reno2021/Spidertrap_WayWest2021.md)
+  - [Weblabyrinth](Weblabyrinth/Spidertrap_WayWest2021.md)
+  - [Word Web Bugs](Reno2021/WordWebBugs_WayWest2021.md)
