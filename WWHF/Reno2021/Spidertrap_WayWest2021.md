@@ -25,3 +25,11 @@ You may have seen some other link names that strike you as interesting.
 The values are surrounded by `st2.x{...}` instead of `flag{...}`, which indicates there's more that needs to be done. There are 14 components to this flag (0 - 13). You may find the following Wikipedia article useful:
 https://en.wikipedia.org/wiki/List_of_file_signatures
 Consider writing a simple web crawler that can automatically put all the pieces together.
+
+Lab 3
+-----
+Time to get a bit mean. Like the second challenge, there are a number of entries
+surrounded by `st3.x{...}`. This time, there are 29 components to the flag (0 - 28).
+What might the numbers mean? Looking at things differently will help. When you're on
+the right track, you may see it if you squint a little. Some Python may be recommended to
+help put the pieces together...
