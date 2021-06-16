@@ -6,7 +6,7 @@ Check out the Site
 ------------------
 On your local ADHD machine, browse to http://127.0.0.1/waywest-labyrinth/index.php
 You should see a totally normal page with nothing interesting whatsoever! Let's verify that. Use wget to crawl the webpage. 
-`~$`  **`wget -m http://127.0.0.1/waywest-labyrinth/idex.php/`**
+`~$`  **`wget -m http://127.0.0.1/waywest-labyrinth/index.php/`**
 You should see weblabyrinth at work trapping the spider! This works curtesy of a simple html trick. We can link to our weblabyrinth server with a link embedded into a 1x1 pixel image. This looks totally normal to an average user, but anyone trying to crawl our site will be in for a surprise!
 
 ---------------
