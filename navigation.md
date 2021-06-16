@@ -51,7 +51,6 @@
 [Way West WWHF Reno 2021]()
 
   - [Introduction](WWHF/Reno2021/Intro_WayWest2021.md)
-  - [Artillery](WWHF/Reno2021/Artillery_WayWest2021.md)
-  - [Spidertrap](WWHF/sReno2021/Spidertrap_WayWest2021.md)
+  - [Spidertrap](WWHF/Reno2021/Spidertrap_WayWest2021.md)
   - [Weblabyrinth](WWHF/Reno2021/Weblabyrinth_WayWest2021.md)
   - [Word Web Bugs](WWHF/Reno2021/WordWebBugs_WayWest2021.md)
