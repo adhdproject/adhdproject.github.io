@@ -29,7 +29,8 @@ Consider writing a simple web crawler that can automatically put all the pieces 
 Lab 3
 -----
 Time to get a bit mean. Like the second challenge, there are a number of entries
-surrounded by `st3.x{...}`. This time, there are 29 components to the flag (0 - 28).
-What might the numbers mean? Looking at things differently will help. When you're on
-the right track, you may see it if you squint a little. Some Python may be recommended to
+surrounded by `st3.x{...}`. This time, there are 31 components to the flag (0 - 30).
+What might the numbers mean? Looking at things differently will help, and you
+may find that you need to pad (to 37 characters, perhaps). When you're on
+the right track, you may see it if you squint a little. Python is recommended to
 help put the pieces together...
