@@ -7,10 +7,14 @@ Let's make sure we are ready to run Canary Tokens:
 `~$` **`cd /opt/canarytokens-docker`**
 `~$` **`nano switchboard.env`**
 Switchboard.env is a configuration file for canary. Find the line that says CANARY_PUBLIC_IP= and put your ip there. You can find your ip with **`ifconfig`** or **`ip addr`**.  
-Next, we need to shutdown dnsmasq, apache, and master.
+Next, we need to shutdown dnsmasq, apache, artilery, and master.
 `~$` **`sudo killall dnsmasq`**
 `~$` **`sudo service apache2 stop`**
 `~$` **`sudo killall -9 master`**
+To kill artillery, run this command to find the process id.
+`~$` **`sudo netstat -planet | grep python`**
+Then, kill the process.
+`~$` **`sudo kill <process id from previous command>`**
 Finally we can start Canary with this command:
 `~$` **`sudo docker-compose up`**
 
