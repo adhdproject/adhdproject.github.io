@@ -10,7 +10,6 @@ The documentation contains setup, install, and usage instructions for all of the
 ADHD. If you run into trouble, this might help you out.
 
 Here are the tools we've created new labs for:
- - [Artillery](Reno2021/Artillery_WayWest2021.md)
  - [Spidertrap](Reno2021/Spidertrap_WayWest2021.md)
  - [Weblabyrinth](Reno2021/Weblabyrinth_WayWest2021.md)
  - [Word Web Bugs](Reno2021/WordWebBugs_WayWest2021.md)
